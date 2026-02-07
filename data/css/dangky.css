@@ -1,0 +1,30 @@
+/* ===== sign-up ===== */
+.sign-up-form {
+  display: none;
+}
+
+#rigister:target ~ .sign-up-form {
+  display: block;
+}
+
+/* Gender */
+.gender {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.gender label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Checkbox */
+.checkbox {
+  font-size: 14px;
+}
+
+.checkbox input {
+  margin-right: 6px;
+}
