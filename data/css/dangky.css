@@ -1,4 +1,4 @@
-/* ===== sign-up ===== */
+/* click Tạo tài khoản */
 #sign-up:target ~ .sign-up-form {
   display: block;
 }
@@ -7,7 +7,7 @@
   display: none;
 }
 
-/* Gender */
+/* ===== GENDER ===== */
 .gender {
   display: flex;
   gap: 25px;
@@ -26,10 +26,14 @@
   margin: 0;
 }
 
-/* Checkbox */
+/* ===== CHECKBOX ===== */
 .checkbox {
   font-size: 14px;
   margin-bottom: 15px;
+}
+
+.checkbox input {
+  margin-right: 6px;
 }
 
 .checkbox label {
@@ -42,6 +46,7 @@
   width: auto;
   margin: 0;
 }
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
