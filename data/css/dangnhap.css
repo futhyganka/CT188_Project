@@ -7,7 +7,11 @@
   display: block;
 }
 
-#rigister:target ~ .sign-in-form {
+#sign-in:target ~ .sign-in-form {
+  display: block;
+}
+
+#sign-in:target ~ .sign-up-form {
   display: none;
 }
 
@@ -16,21 +20,28 @@ input {
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
+input:focus {
+  outline: none;
+  border-color: #d71920;
+}
 .btn {
   width: 100%;
   padding: 14px;
   background: #d71920;
   color: #fff;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
-
 /* Social */
 .social {
   display: flex;
   gap: 15px;
+  margin-top: 15px;
 }
 
 .social a {
@@ -40,7 +51,9 @@ input {
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
+  font-size: 14px;
 }
+
 
 .google {
   background: #e04b37;
@@ -48,4 +61,53 @@ input {
 
 .facebook {
   background: #3b5998;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input {
+    padding: 11px;
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .social {
+    gap: 10px;
+  }
+
+  .social a {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
 }

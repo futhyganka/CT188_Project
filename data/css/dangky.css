@@ -1,10 +1,10 @@
 /* ===== sign-up ===== */
-.sign-up-form {
-  display: none;
+#sign-up:target ~ .sign-up-form {
+  display: block;
 }
 
-#rigister:target ~ .sign-up-form {
-  display: block;
+#sign-up:target ~ .sign-in-form {
+  display: none;
 }
 
 /* Gender */
@@ -12,19 +12,55 @@
   display: flex;
   gap: 25px;
   margin-bottom: 15px;
+  font-size: 14px;
 }
 
 .gender label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.gender input[type="radio"] {
+  width: auto;
+  margin: 0;
 }
 
 /* Checkbox */
 .checkbox {
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
-.checkbox input {
-  margin-right: 6px;
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .gender {
+    gap: 15px;
+  }
+
+  .checkbox {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gender {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gender label {
+    align-items: center;
+  }
 }
