@@ -36,7 +36,7 @@
 }
 
 .list-item .item .box-item .discount {
-    z-index: 1.2;
+    /* z-index: 1.2; */
     position: absolute;
     padding: 4px;
     width: 32px;
