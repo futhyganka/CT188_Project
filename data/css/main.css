@@ -1,8 +1,10 @@
 :root {
-    main-color: #d51c24;
-    sub-color: #e6e6e6;
-    light-color: #fff;
-    dark-color: #a9171d;
+    --main-color: #d51c24;
+    --sub-color: #e6e6e6;
+    --light-color: #fff;
+    --dark-color: #a9171d;
+    --grey-color: #494949;
+    --col-item: 5;
 }
 
 html {
@@ -11,4 +13,15 @@ html {
 
 body {
     margin: 0;
+}
+
+main {
+    max-width: 1280px;
+    padding: 0 0px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
