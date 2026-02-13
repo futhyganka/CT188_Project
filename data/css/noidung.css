@@ -6,6 +6,10 @@
     position: relative;
 }
 
+#main .section:hover {
+    /* cursor: progress; */
+}
+
 #main .section .title {
     text-align: center;
 }
@@ -20,6 +24,7 @@
 
 #main .section .content {
     /* background-color: azure; */
+    overflow: hidden;
 }
 
 #main .section .content .btn-slider-left {
@@ -40,12 +45,11 @@
 
 #main .section .content .list-item {
     display: flex;
-    overflow: hidden;
 }
 
 #main .section .content .list-item .item {
     margin: 8px;
-    width: 224px;
+    width: 224px !important;
 }
 
 #main .section .content .btn-more {
@@ -56,6 +60,7 @@
 
 #main .section .content .btn-more:hover {
     color: var(--dark-color);
+    cursor: pointer;
 }
 
 

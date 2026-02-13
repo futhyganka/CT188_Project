@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Thư viện swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <!-- Thư viện font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Roboto:wght@100..900&family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Thư viên font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- File css -->
     <link rel="stylesheet" href="./data/css/main.css">
     <link rel="stylesheet" href="./data/css/dangky.css">
     <link rel="stylesheet" href="./data/css/dangnhap.css">
@@ -15,7 +21,8 @@
     <link rel="stylesheet" href="./data/css/noidung.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./data/css/header.css">
-    <!-- <link rel="stylesheet" href="./data/css/dangnhap.css"> -->
+    <link rel="stylesheet" href="./data/css/dangnhap.css">
+
 </head>
 <body>
     <!--
@@ -117,12 +124,25 @@
             </ul>
         </nav>
 
-        <div class="slider">
-            <div class="slides">
-                <img src="./data//img/slider1.png" class="slide">
-                <img src="./data//img/slider2.png" class="slide">
-                <img src="./data//img/slider3.png" class="slide">
+        <div class="slider swiper">
+            <div class="slides swiper-wrapper">
+                
+                <div class="slide swiper-slide">
+                    <img src="./data/img/slider1.png" class="slide">
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="./data/img/slider2.png" class="slide">
+                </div>
+
+                <div class="slide swiper-slide">
+                    <img src="./data/img/slider3.png" class="slide">
+                </div>
+
             </div>
+
+            <div class="btn-slider-left swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="btn-slider-right swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
         </div>
     </header>
 
@@ -131,10 +151,10 @@
         <section class="section section-ls">
             <h1 class="title"><a href="#">SÁCH PRE-ORDER</a></h1>
 
-            <div class="content">
+            <div class="content swiper">
 
-                <div class="list-item">
-                    <div class="item">
+                <div class="list-item swiper-wrapper">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/576/749/products/41b09028-10d2-4152-9b5d-61c61f26e862.jpg" alt=""></div>
@@ -148,7 +168,7 @@
                         </form>
                     </div>
 
-                    <div class="item">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/576/749/products/c85e9f82-16e4-4c04-9edd-5ab9b32d4dff.jpg" alt=""></div>
@@ -162,7 +182,7 @@
                         </form>
                     </div>
 
-                    <div class="item">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/576/749/products/cff6ba57-6cd4-4edf-93f0-879c66d7f37c.jpg" alt=""></div>
@@ -176,7 +196,7 @@
                         </form>
                     </div>
 
-                    <div class="item">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://product.hstatic.net/200000017360/product/truyen_trangcuoi_vn_3dbcc49ac156465683036927f30416c9_master.jpg" alt=""></div>
@@ -190,7 +210,7 @@
                         </form>
                     </div>
 
-                    <div class="item">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/576/749/products/a9f96571-2237-457b-9041-e95a7b06cca0.jpg" alt=""></div>
@@ -204,7 +224,7 @@
                         </form>
                     </div>
 
-                    <div class="item">
+                    <div class="item swiper-slide">
                         <form action="">
                             <div class="box-item">
                                 <div class="img"><img src="https://product.hstatic.net/200000017360/product/truyen_trangcuoi_vn_3dbcc49ac156465683036927f30416c9_master.jpg" alt=""></div>
@@ -220,8 +240,8 @@
 
                 </div>
                 
-                <div class="btn-slider-left"><i class="fa-solid fa-angle-left"></i></div>
-                <div class="btn-slider-right"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="btn-slider-left swiper-button-prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="btn-slider-right swiper-button-next"><i class="fa-solid fa-angle-right"></i></div>
 
                 <div class="btn-more">Xem thêm >></div>
 
@@ -320,6 +340,12 @@
         </div>
 
     </section>
+
+    <!-- Thư viện swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- File js -->
+     <script src="./data/js/swiper.js"></script>
+    <script src="./data/js/database.js"></script>
 
 </body>
 </html>
