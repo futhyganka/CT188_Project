@@ -5,6 +5,11 @@
   width: 360px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position:fixed;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
 }
 
 h1 {
