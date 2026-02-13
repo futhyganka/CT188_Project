@@ -1,51 +1,7 @@
-/* ===== sign-in ===== */
-.form {
-  display: none;
-}
+    .auth-btn-register{
+                    background:#e53935;
+    }
 
-.sign-in-form {
-  display: block;
-}
-
-#rigister:target ~ .sign-in-form {
-  display: none;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-}
-
-.btn {
-  width: 100%;
-  padding: 14px;
-  background: #d71920;
-  color: #fff;
-  border: none;
-  font-size: 18px;
-}
-
-/* Social */
-.social {
-  display: flex;
-  gap: 15px;
-}
-
-.social a {
-  flex: 1;
-  padding: 12px;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.google {
-  background: #e04b37;
-}
-
-.facebook {
-  background: #3b5998;
-}
+    .auth-btn-register:hover{
+                    background:#ef5350;
+    }

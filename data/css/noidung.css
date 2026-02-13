@@ -1,0 +1,61 @@
+#main {
+    width: calc(240px * var(--col-item));
+}
+
+#main .section {
+    position: relative;
+}
+
+#main .section .title {
+    text-align: center;
+}
+
+#main .section .title a {
+    color: var(--grey-color);
+}
+
+#main .section .title a:hover {
+    color: var(--dark-color);
+}
+
+#main .section .content {
+    /* background-color: azure; */
+}
+
+#main .section .content .btn-slider-left {
+
+}
+
+#main .section .content .btn-slider-left i {
+    
+}
+
+#main .section .content .btn-slider-right {
+    
+}
+
+#main .section .content .btn-slider-right i {
+    
+}
+
+#main .section .content .list-item {
+    display: flex;
+    overflow: hidden;
+}
+
+#main .section .content .list-item .item {
+    margin: 8px;
+    width: 224px;
+}
+
+#main .section .content .btn-more {
+    color: var(--main-color);
+    text-align: right;
+    margin: 8px;
+}
+
+#main .section .content .btn-more:hover {
+    color: var(--dark-color);
+}
+
+
