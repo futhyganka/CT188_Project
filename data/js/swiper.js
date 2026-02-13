@@ -1,5 +1,5 @@
 // header
-const swiper = new Swiper('.slider.swiper', {
+const swiperHeader = new Swiper('.slider.swiper', {
     // Optional parameters
     loop: true,
     grabCursor: true,
@@ -19,25 +19,37 @@ const swiper = new Swiper('.slider.swiper', {
 });
 
 
+var swiper = document.querySelectorAll('#main .section .content');
+var swiperMain = [];
 
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     slidesPerView: 2,
-//     loop: false,
-//     grabCursor: true,
-//     slideToClickedSlide: false,
+var cntSwiper = swiper.length;
 
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
+for(let i = 0; i < cntSwiper; i++) {
+    swiper[i].classList.add(`swiper${i + 1}`);
+    // swiper[i].children[1].classList.add(`swiper-button-prev${i + 1}`);
+    // swiper[i].children[2].classList.add(`swiper-button-prev${i + 1}`);
+    swiperMain[i] = new Swiper(`#main .section .swiper${i + 1}`, {
+        // Optional parameters
+        slidesPerView: 2,
+        loop: false,
+        grabCursor: true,
+        slideToClickedSlide: false,
 
-//     breakpoints: {
-//         // 300: { slidesPerView: 2},
-//         740: { slidesPerView: 3},
-//         1024:{ slidesPerView: 4},
-//         1200:{ slidesPerView: 5},
-//     }
+        // Navigation arrows
+        navigation: {
+            nextEl: `#main .section .swiper${i + 1} .swiper-button-next`,
+            prevEl: `#main .section .swiper${i + 1} .swiper-button-prev`,
+        },
 
-// });
+        breakpoints: {
+            // 300: { slidesPerView: 2},
+            740: { slidesPerView: 3},
+            1024:{ slidesPerView: 4},
+            1200:{ slidesPerView: 5},
+        }
+
+    });
+
+}
+
+
