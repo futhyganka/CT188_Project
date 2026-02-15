@@ -1,7 +1,7 @@
-    .auth-btn-register{
-                    background:#e53935;
-    }
+.project-auth .auth-btn-register{
+    background:#d51c24;
+}
 
-    .auth-btn-register:hover{
-                    background:#ef5350;
-    }
+.project-auth .auth-btn-register:hover{
+    background:#a9171d;
+}
