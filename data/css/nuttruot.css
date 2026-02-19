@@ -6,10 +6,10 @@
     background-color: var(--main-color);
     color: #fff;
     /* z-index: 1.2; */
-    width: 16px;
+    /* width: 16px;
     height: 16px;
     padding: 8px;
-    transform: translateX(50%);
+    transform: translateX(50%); */
 }
 
 .btn-slider-left:hover {
@@ -17,8 +17,10 @@
     background-color: var(--grey-color);
 }
 
-.btn-slider-left i {
+.btn-slider-left i,
+.btn-slider-right i {
     padding: 8px 6px;
+    font-size: 14px;
 }
 
 .btn-slider-right {
@@ -29,19 +31,15 @@
     background-color: var(--main-color);
     color: #fff;
     /* z-index: 1.2; */
-    width: 16px;
+    /* width: 16px;
     height: 16px;
     padding: 8px;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
 }
 
 .btn-slider-right:hover {
     cursor: pointer;
     background-color: var(--grey-color);
-}
-
-.btn-slider-right i {
-    padding: 8px 6px;
 }
 
 .swiper-navigation-icon {

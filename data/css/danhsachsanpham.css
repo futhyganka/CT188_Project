@@ -1,5 +1,13 @@
 .list-item {
-    
+    position: relative;
+    transition: transform .5s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.list-item:hover {
+    cursor: grab;
 }
 
 .list-item .item {
@@ -7,7 +15,6 @@
     /* width: calc((100% / var(--col-item)) ); */
     /* box-sizing: border-box; */
     flex-shrink: 0;
-    
 }
 
 .list-item .item .box-item {
@@ -24,6 +31,9 @@
     width: 100%;
     transform: scale(1);
     transition: transform 0.5s ease;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .list-item .item .box-item .title-item {
@@ -75,7 +85,7 @@
 }
 
 .list-item .item .box-item:hover .img {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .list-item .item .box-item:hover .img img {
