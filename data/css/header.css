@@ -236,23 +236,10 @@
     transition: transform 2s ease;
 }
 
-.slides:hover {
+#header .slider .slides:hover {
     cursor: grab;
 }
 
-<<<<<<< Updated upstream
-.slide {
-    width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-}
-=======
 #header .slider .slides .slide {
     width: 100%;
     
@@ -260,9 +247,10 @@
 }
 
 #header .slider .slides .slide img {
-    object-fit: cover;
     width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-
->>>>>>> Stashed changes
