@@ -84,4 +84,40 @@ database.push(Book(
     "Còn hàng"
 ));
 
+function addBook (
+    id,
+    title,
+    describe,
+    img,
+    topic,
+    review,
+    author,
+    publish,
+    date,
+    size,
+    weight,
+    format,
+    price,
+    quantity = 0,
+    status = "Hết hàng"
+) {
+    database.push(Book(
+    id,
+    title,
+    describe,
+    img,
+    topic,
+    review,
+    author,
+    publish,
+    date,
+    size,
+    weight,
+    format,
+    price,
+    quantity,
+    status
+));
+}
+
 console.log(database);

@@ -100,12 +100,12 @@ const sliderMain = document.querySelectorAll('#main .section .content');
 // let swiperMain = [];
 const cntSlider = [];
 const currSlider = [];
+// Lấy col-item
 let colItem = getComputedStyle(document.documentElement).getPropertyValue('--col-item');
 window.addEventListener('resize', () => {
     colItem = getComputedStyle(document.documentElement).getPropertyValue('--col-item');
     console.log(colItem);
 });
-
 let rowMain = sliderMain.length;
 
 for(let i = 0; i < rowMain; i++) {
@@ -117,6 +117,7 @@ for(let i = 0; i < rowMain; i++) {
     currSlider[i] = 0;
     upDateBtnSlider();
 
+    // Hàm cập nhật các nút chuyển slider ẩn hiện
     function upDateBtnSlider() {
         if(currSlider[i] === 0) { // ở trang đầu
             sliderMain[i].children[1].style.display = 'none';
@@ -127,13 +128,15 @@ for(let i = 0; i < rowMain; i++) {
         }else sliderMain[i].children[2].style.display = 'block';
     }
 
-    function mouseSlider(e)  {
+    // Hàm cập nhật tọa độ X của chuột
+    function mouseSlider(e) {
         currMouseSlider = e.clientX;
         deltaSlider = currMouseSlider - startMouseSlider;
         sliderMain[i].children[0].style.transform = `translateX(calc((-100% * ${currSlider[i]} / ${colItem}) + (${deltaSlider}px)))`;
         console.log(startMouseSlider + ' ' + currMouseSlider + ' ' + deltaSlider);
     }
 
+    // Hàm 2 nút click
     sliderMain[i].children[1].addEventListener('click', () => {
         if(currSlider[i] === 0) return;
         currSlider[i]--;
@@ -148,6 +151,7 @@ for(let i = 0; i < rowMain; i++) {
         upDateBtnSlider();
     });
 
+    // Thao các nhấn chuột
     sliderMain[i].children[0].addEventListener('mousedown', function(e) {
         if(e.button === 0) {
             startMouseSlider = e.clientX;
