@@ -1,0 +1,239 @@
+:root {
+    --main-color: #d51c24;
+    --sub-color: #e6e6e6;
+    --light-color: #fff;
+    --dark-color: #a9171d;
+    --grey-color: #494949;
+    --col-item: 5;
+}
+
+html {
+    font-family:
+        Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+body {
+    margin: 40px;
+}
+
+.page-header {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://www.shutterstock.com/image-photo/book-stacking-open-hardback-books-600nw-2450269257.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 4%;
+}
+.header-content h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.breadcrumb {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #ffc107;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.cart-table {
+    width: 100%;
+    /* nhập các đường viền thành 1 */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.cart-table th {
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table td {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+}
+
+/* .product-info a {
+    font-weight: bold;
+    text-align: left;
+} */
+
+.book-img {
+    width: 80px;
+}
+
+.price {
+    text-align: center;
+}
+
+.new-price {
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--grey-color);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.discount {
+    background-color: var(--main-color);
+    color: white;
+    padding: 3px 6px;
+    font-size: 16px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+/* Container bao quanh 3 nút */
+.quantity-group {
+    display: inline-flex;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    height: 35px;
+}
+
+.quantity-group button {
+    width: 35px;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ô nhập số lượng ở giữa */
+.quantity-group .number {
+    width: 45px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.quantity-group button:hover {
+    background-color: #fff1f1;
+}
+
+.btn-minus,
+.btn-plus {
+    font-weight: bold;
+}
+
+.total-price {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 16px;
+}
+
+.remove {
+    color: red;
+    text-decoration: none;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.note-section textarea {
+    width: 750px;
+    height: 105px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #ddd;
+    resize: none;
+}
+
+.cart-footer {
+    width: 45%;
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+    align-items: flex-end; /* căn sang phải */
+}
+
+.total,
+.saving {
+    width: 100%;
+    text-align: right;
+}
+
+.saving {
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 17px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.total span {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.checkout-btn {
+    margin-top: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 40px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.checkout-btn:hover {
+    background-color: var(--dark-color);
+}

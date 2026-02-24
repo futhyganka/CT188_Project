@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thanh toán</title>
+        <link rel="stylesheet" href="data/css/thanhtoan.css" />
+    </head>
+    <body>
+        <div class="checkout-container">
+            <div class="checkout-left">
+                <div class="logo">
+                    <img src="data/img/logo.png" alt="Logo" />
+                </div>
+
+                <section class="info">
+                    <h3>Thông tin nhận hàng</h3>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        class="input-full"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Họ và tên"
+                        class="input-full"
+                    />
+                    <input
+                        type="tel"
+                        placeholder="Số điện thoại (tùy chọn)"
+                        class="input-full"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Địa chỉ (tùy chọn)"
+                        class="input-full"
+                    />
+
+                    <div class="input-group">
+                        <select>
+                            <option>Tỉnh thành</option>
+                        </select>
+                        <select>
+                            <option>Quận huyện</option>
+                        </select>
+                        <select>
+                            <option>Phường xã</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Ghi chú (tùy chọn)"></textarea>
+                </section>
+
+                <div class="checkout-main-content">
+                    <section class="payment">
+                        <h3>Thanh toán</h3>
+                        <div class="payment-option">
+                            <input type="radio" id="zalo" name="pay" checked />
+                            <label for="zalo">Thanh toán qua ZaloPay </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="cod" name="pay" />
+                            <label for="cod">Thu hộ (COD) </label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="checkout-right">
+                <h3>Đơn hàng (1 sản phẩm)</h3>
+                <hr />
+                <div class="product-summary">
+                    <div class="prod-img">
+                        <img src="data/img/book1.webp" />
+                        <span class="number">1</span>
+                    </div>
+                    <div class="prod-desc">
+                        <p>
+                            Doraemon Movie Story Màu - Nobita và đảo giấu vàng
+                        </p>
+                        <small
+                            >Giảm giá 10% với Toàn bộ sách Kim Đồng
+                            (-3.500đ)</small
+                        >
+                    </div>
+                    <div class="prod-price">31.500đ</div>
+                </div>
+
+                <div class="coupon-box">
+                    <input type="text" placeholder="Nhập mã giảm giá" />
+                    <button>Áp dụng</button>
+                </div>
+
+                <div class="bill-detail">
+                    <div class="row">
+                        <span>Tạm tính</span><span>31.500đ</span>
+                    </div>
+                    <div class="row">
+                        <span>Phí vận chuyển</span><span>-</span>
+                    </div>
+                    <hr />
+                    <div class="total">
+                        <span>Tổng cộng</span>
+                        <span class="total-price">31.500đ</span>
+                    </div>
+                </div>
+
+                <div class="action-footer">
+                    <a href="giohang.html"> < Quay về giỏ hàng</a>
+                    <button class="btn-order">ĐẶT HÀNG</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
