@@ -5,13 +5,8 @@
     --dark-color: #a9171d;
 }
 
-<<<<<<< Updated upstream
 #header .hd-home .info {
-    background-color:var(--dark-color);
-=======
-.info {
     background-color: var(--dark-color);
->>>>>>> Stashed changes
     color: #fff;
     padding: 8px 60px;
     display: flex;
@@ -20,11 +15,7 @@
     font-size: 16px;
 }
 
-<<<<<<< Updated upstream
-#header .hd-home .info .top-left{
-=======
-.top-left {
->>>>>>> Stashed changes
+#header .hd-home .info .top-left {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -47,11 +38,7 @@
     overflow: hidden;
 }
 
-<<<<<<< Updated upstream
-#header .hd-home .info .marquee i{
-=======
-.marquee i {
->>>>>>> Stashed changes
+#header .hd-home .info .marquee i {
     flex-shrink: 0;
     font-size: 12px;
     color: #fff;
@@ -88,17 +75,10 @@
     padding: 20px 60px; */
 }
 
-<<<<<<< Updated upstream
 #header .hd-home .mainbar .logo img {
     height: 100px;
     width: 100px;
     /* border-radius: 50%;    */
-=======
-.logo img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
->>>>>>> Stashed changes
     object-fit: cover;
     padding-left: 30px;
 }
@@ -115,11 +95,7 @@
     margin: 0 40px;
 }
 
-<<<<<<< Updated upstream
-#header .hd-home .mainbar .search-box:hover{
-=======
-.search-box:hover {
->>>>>>> Stashed changes
+#header .hd-home .mainbar .search-box:hover {
     /* border-color: var(--dark-color); */
     box-shadow: 0 0 2px #bbbbbb;
 }
@@ -131,11 +107,7 @@
     font-size: 20px;
 }
 
-<<<<<<< Updated upstream
-#header .hd-home .mainbar .search-box:focus-within{
-=======
-.search-box:focus-within {
->>>>>>> Stashed changes
+#header .hd-home .mainbar .search-box:focus-within {
     border-color: var(--main-color);
     box-shadow: 0 0 2px rgba(213, 28, 36, 0.4);
 }
@@ -146,11 +118,9 @@
 }
 
 /* USER */
-<<<<<<< Updated upstream
+
+/* 
 #header .hd-home .mainbar .user-cart {
-=======
-/* .user-cart {
->>>>>>> Stashed changes
     display: flex;
     align-items: center;
     gap: 30px;
@@ -158,11 +128,7 @@
     padding-right: 30px;
 }
 
-<<<<<<< Updated upstream
 #header .hd-home .mainbar .user-cart :hover{
-=======
-.user-cart :hover {
->>>>>>> Stashed changes
     color: var(--main-color);
 }
 
@@ -193,7 +159,6 @@
 
 /* test thử */
 
-/* --- PHẦN GỐC CỦA BẠN (ĐÃ TỐI ƯU) --- */
 .user-cart {
     display: flex;
     align-items: center;
@@ -405,12 +370,7 @@
     overflow: hidden;
 } */
 
-<<<<<<< Updated upstream
-
 #header .navigation .menu {
-=======
-.menu {
->>>>>>> Stashed changes
     display: flex;
     list-style: none;
     gap: 25px;
@@ -481,7 +441,6 @@
 
 #header .slider .slides .slide {
     width: 100%;
-    
     /* height: 100px; */
 }
 
@@ -492,22 +451,3 @@
     user-select: none;
     -webkit-user-drag: none;
 }
-
-<<<<<<< Updated upstream
-=======
-/* ANIMATION */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(calc(-100% / 3));
-    }
-    66% {
-        transform: translateX(calc(-100% * 2 / 3));
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
->>>>>>> Stashed changes
