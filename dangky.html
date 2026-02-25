@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./data/css/dangky.css">
+
+</head>
+<body>
+    <section class="project-auth auth-section">
+
+    <div class="auth-app">
+        <div class="auth-box">
+
+            <h2 class="auth-title">Đăng ký</h2>
+
+            <form class="auth-form register-form">
+
+                <input class="auth-input" type="text" placeholder="Họ và tên đăng ký" required>
+
+                <input class="auth-input" type="email" placeholder="Email" required>
+
+                <input class="auth-input" type="tel"
+                       placeholder="Số điện thoại"
+                       pattern="[0-9]{10}"
+                       required>
+
+                <input class="auth-input" type="text"
+                       placeholder="Địa chỉ nhà"
+                       required>
+
+                        <div class="password-wrapper">
+                            <input class="auth-input" type="password" 
+                                placeholder="Mật khẩu" required>
+                                    <span class="toggle-password" 
+                                            onclick="togglePassword()">👁
+                                    </span>
+                        </div>
+            
+                       <div class="password-wrapper">
+                            <input class="auth-input" type="password" 
+                                placeholder="Nhập lại mật khẩu" required>
+                                    <span class="toggle-password" 
+                                            onclick="togglePassword()">👁
+                                    </span>
+                        </div>
+                        <div id="passwordRules" class="password-rules">
+                            <p id="length" class="invalid">• Tối thiểu 6 ký tự</p>
+                            <p id="uppercase" class="invalid">• Ít nhất một chữ cái in hoa (A–Z)</p>
+                            <p id="lowercase" class="invalid">• Ít nhất một chữ cái in thường (a–z)</p>
+                            <p id="number" class="invalid">• Ít nhất một chữ số (0–9)</p>
+                            <p id="special" class="invalid">• Ít nhất một ký tự đặc biệt (!@#$%^&*())</p>
+                            <p id="allowed" class="invalid">• Không chứa ký tự ngoài các nhóm trên</p>
+                        </div>
+
+                <button type="submit" class="auth-btn auth-btn-register">
+                    Tạo tài khoản
+                </button>
+
+                <div class="auth-switch">
+                    Đã có tài khoản?
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</section>
+    
+</body>
+</html>

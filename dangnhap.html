@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./data/css/dangnhap.css">
+</head>
+<body>
+ <section class="project-auth auth-section">
+
+    <div class="auth-app">
+        <div class="auth-box">
+
+            <h2 class="auth-title">Đăng nhập</h2>
+
+            <form class="auth-form login-form">
+                <input class="auth-input" type="text" placeholder="Họ và tên đăng nhập" required>
+                <input class="auth-input" type="email" placeholder="Email" required>
+                <div class="password-wrapper">
+                <input class="auth-input" type="password" placeholder="Mật khẩu" required>
+                        <span class="toggle-password" onclick="togglePassword()">👁</span>
+                </div>
+
+                <div class="auth-forgot">
+                    <a href="#forgot-box">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="auth-btn">Đăng nhập</button>
+
+                <div class="auth-switch">
+                    Chưa có tài khoản?
+                    <a href="dangky.html">Đăng ký</a>
+                </div>
+
+                <div class="auth-divider">Hoặc đăng nhập bằng</div>
+
+                <div class="auth-social">
+
+                    <div class="social-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+                        <a class="auth-facebook" href="#">Facebook</a>
+                    </div>
+
+                    <div class="social-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png">
+                        <a class="auth-google" href="#">Google</a>
+                    </div>
+
+                </div>
+
+                <div id="forgot-box" class="auth-forgot-box">
+                    <p><strong>Quên mật khẩu?</strong><br>
+                    Vui lòng nhập email để khôi phục mật khẩu</p>
+
+                    <input class="auth-input" type="email" placeholder="Nhập email">
+                    <button type="button" class="auth-btn">Gửi yêu cầu</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
