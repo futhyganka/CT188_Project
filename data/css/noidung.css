@@ -12,6 +12,7 @@
 
 #main .section .title {
     text-align: center;
+    text-transform: uppercase;
 }
 
 #main .section .title a {
