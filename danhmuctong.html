@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục tổng</title>
+    <!-- Thư viện font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Roboto:wght@100..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <!-- Thư viên font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Document</title>
+    <!-- File css -->
+    <link rel="stylesheet" href="./data/css/main.css">
+    <link rel="stylesheet" href="./data/css/dangky.css">
+    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <link rel="stylesheet" href="./data/css/danhsachsanpham.css">
+    <link rel="stylesheet" href="./data/css/nuttruot.css">
+    <link rel="stylesheet" href="./data/css/noidung.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./data/css/header.css">
+    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <link rel="stylesheet" href="./data/css/footer.css">
+    <link rel="stylesheet" href="./data/css/danhmuc.css">
+    <!-- inon -->
+    <link rel="icon" href="./data/img/logo.png">
 </head>
+
 <body>
     <!--
     - header:
@@ -25,14 +48,268 @@
         - ft-content
         - ft-copyright
     -->
-    
-    <header id="header">
 
+    <header id="header">
+        <div class="hd-home">
+            <div class="info">
+                <div class="top-left">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div class="marquee">
+                    <i class="fa-solid fa-rss"></i>
+                    <div class="marquee-text">
+                        <span>Chào mừng bạn đến với Fivehasha. Nếu bạn cần giúp đỡ, hãy liên hệ với chúng tôi qua
+                            hotline: (+84) 1900505050 hoặc email: cskhFivehasha@fivehasha.com.vn</span>
+                    </div>
+                </div>
+
+
+                <div class="top-right">
+                    <span><i class="fa-solid fa-phone"></i> (+84) 190050505050</span>
+                    <span><i class="fa-solid fa-envelope"></i> cskhFivehasha@fivehasha.com.vn</span>
+                </div>
+            </div>
+            <div class="mainbar">
+                <!-- LOGO -->
+                <div class="logo">
+                    <img src="data/img/logo.png" alt="Fivehasha">
+                </div>
+                <!-- SEARCH -->
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="user-cart">
+                    <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="badge">0</span>
+                    </a>
+
+                    <div class="cart-wrapper">
+                        <input type="checkbox" id="cart-check" hidden>
+
+                        <label for="cart-check" class="icon cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge">1</span>
+                        </label>
+
+                        <div class="cart-dropdown">
+                            <div class="cart-header">Giỏ hàng của tôi (1 sản phẩm)</div>
+                            <div class="cart-body">
+                                <div class="cart-item">
+                                    <img src="data/img/book1.webp" alt="doraemon">
+                                    <div class="item-info">
+                                        <p class="name">Doraemon Movie Story Màu - Nobita và đảo giấu vàng</p>
+                                        <p class="price">31.500đ<span>x 1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-footer">
+                                <div class="total">TẠM TÍNH: <span>31.500đ</span></div>
+                                <div class="actions">
+                                    <button class="btn-view">XEM GIỎ HÀNG</button>
+                                    <button class="btn-checkout">THANH TOÁN</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- test -->
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+
+                <!-- Sản phẩm -->
+                <li class="dropdown">
+                    <a href="#">Sản phẩm▾</a>
+                    <ul class="submenu">
+                        <li><a href="#">Lịch sử</a></li>
+                        <li><a href="#">Văn học Việt Nam</a></li>
+                        <li><a href="#">Văn học nước ngoài</a></li>
+                        <li><a href="#">Kỹ năng</a></li>
+                        <li><a href="#">Truyện tranh</a></li>
+                        <li><a href="#">Khoa học</a></li>
+                        <li><a href="#">Sách giáo khoa</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Flash Sale</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main id="main">
-        <p>i can fit that</p>
-<!-- ai làm làm đoạn này thoi nhe -->
+        <div class="book-shop">
+            <div class="bs-container">
+                <div class="bs-sidebar">
+                    <div class="sidebar-box">
+                        <h3>DANH MỤC</h3>
+                        <ul>
+                            <li><a href="">Tất cả sản phẩm</a></li>
+                            <li> <a href="">Lịch Sử</a></li>
+                            <li><a href="">Văn Học Việt Nam</a></li>
+                            <li><a href="">Văn Học Nước Ngoài</a>
+                            </li>
+                            <li><a href="">Truyện Tranh</a></li>
+                            <li><a href="">Kĩ Năng</a></li>
+                            <li><a href="">Khoa Học</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box bs-collapse-sidebar">
+                        <div class="sidebar-header" onclick="toggleSidebar()">
+                            <h3>THỂ LOẠI SÁCH</h3>
+                            <i class="fa-solid fa-chevron-up" id="toggle-icon"></i>
+                        </div>
+                        <ul id="sidebar-menu">
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Tạp chí</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Khác</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học nước ngoài</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Manga - comic</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học Việt Nam</a></li>
+                            <li><a href="#"><i class="fa-regular fa-circle"></i> Lịch sử - truyền thống</a></li>
+                        </ul>
+                    </div>
+                    <script>
+                        function toggleSidebar() {
+                            const sidebar = document.querySelector('.bs-collapse-sidebar');
+                            const icon = document.getElementById('toggle-icon');
+
+                            // Toggle class "collapsed"
+                            sidebar.classList.toggle('collapsed');
+
+                            // Thay đổi icon mũi tên
+                            if (sidebar.classList.contains('collapsed')) {
+                                icon.classList.remove('fa-chevron-up');
+                                icon.classList.add('fa-chevron-down');
+                            } else {
+                                icon.classList.remove('fa-chevron-down');
+                                icon.classList.add('fa-chevron-up');
+                            }
+                        }
+                    </script>
+                </div>
+
+
+
+
+                <div class="bs-content">
+                    <section class="section">
+                        <h3 class="title"><a href="#">TẤT CẢ SẢN PHẨM</a></h3>
+
+                        <div class="content">
+
+                            <div class="list-item">
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="btn-slider-left"><i class="fa-solid fa-angle-left"></i></div>
+                            <div class="btn-slider-right"><i class="fa-solid fa-angle-right"></i></div>
+
+                            <div class="btn-more">Xem thêm >></div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+
     </main>
 
     <footer id="footer">
@@ -43,5 +320,57 @@
 
     </div>
 
+    <footer id="footer">
+        <div class="footer-container">
+
+            <!-- GIỚI THIỆU -->
+            <div class="footer-box">
+                <h3>Fivehasha</h3>
+                <p>
+                    Fivehasha là hiệu sách online chuyên cung cấp sách chất lượng,
+                    đa dạng thể loại, mang tri thức đến gần hơn với bạn.
+                </p>
+            </div>
+
+            <!-- MENU -->
+            <div class="footer-box">
+                <h3>Danh mục</h3>
+                <ul>
+                    <li><a href="#">Sách mới</a></li>
+                    <li><a href="#">Sách bán chạy</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Blog sách</a></li>
+                </ul>
+            </div>
+
+            <!-- HỖ TRỢ -->
+            <div class="footer-box">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- MẠNG XÃ HỘI -->
+            <div class="footer-box">
+                <h3>Kết nối</h3>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            © 2026 Fivehasha. All rights reserved.
+        </div>
+    </footer>
 </body>
+
 </html>
