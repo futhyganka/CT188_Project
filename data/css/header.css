@@ -393,7 +393,7 @@
 
 /* DROPDOWN */
 #header .navigation .menu .dropdown .submenu {
-    z-index: 3;
+    z-index: 10;
     position: absolute;
     top: 100%;
     left: 0;
@@ -450,4 +450,29 @@
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
+}
+
+#header .background-header{
+    position: relative;
+
+}
+
+#header .background-header h1{
+    position: absolute;
+    top: 30%;
+    z-index: 3;
+    color: white;
+    left: 50px;
+}
+
+}
+#header .background-header .img{
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    overflow: hidden;
+}
+
+#header .background-header .img img{
+    width: 100%;
+    filter: brightness(60%);
 }
