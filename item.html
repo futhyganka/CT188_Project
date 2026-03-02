@@ -28,19 +28,92 @@
     -->
 
     
-    <header id="header">
+    <header class="header">
 
     </header>
 
-    <main id="main">
-<!-- ai làm làm đoạn này thoi nhe -->
+
+
+<main class="main">
+
+    <!-- INFO PRODUCT -->
+    <section class="info">
+
+        <!-- IMG -->
+        <div class="img">
+            <div class="thumbs" class="thumbs"></div>
+            <img class="main-img">
+        </div>
+
+        <!-- DETAIL -->
+        <div class="detail">
+
+            <h1 class="title"></h1>
+
+            <div class="price">
+                <span class="new" class="price"></span>
+                <span class="old" class="oldPrice"></span>
+            </div>
+
+            <ul class="meta">
+                <li>Tác giả: <span class="author"></span></li>
+                <li>Độ tuổi: <span class="age"></span></li>
+                <li>Kích thước: <span class="size"></span></li>
+                <li>Số trang: <span class="pages"></span></li>
+                <li>Loại bìa: <span class="type"></span></li>
+            </ul>
+
+            <div class="quantity">
+                <button class="minus">-</button>
+                <input class="text" class="qty" value="1">
+                <button class="plus">+</button>
+            </div>
+
+            <button class="btn add">Thêm vào giỏ hàng</button>
+            <button class="btn buy">Mua ngay</button>
+
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="describe">
+        <h2>Mô tả sản phẩm</h2>
+        <p class="desc"></p>
+    </section>
+
+    <!-- EVALUATE -->
+    <section class="evaluate">
+        <h2>Đánh giá</h2>
+        <div class="rating"></div>
+    </section>
+
+    <!-- SAME TOPIC -->
+    <section class="topic-same">
+        <h2>Sách cùng thể loại</h2>
+        <div class="related"></div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer"></footer>
+
+<!-- FLOAT BUTTON -->
+<div class="fixed">
+    <i class="fa-solid fa-cart-shopping"></i>
+</div>
+
+<!-- JS -->
+<script src="data/js/database.js"></script>
+<script src="data/js/item.js"></script>
+
     </main>
 
-    <footer id="footer">
+    <footer class="footer">
 
     </footer>
 
-    <div id="fixed">
+    <div class="fixed">
 
     </div>
 
