@@ -45,3 +45,28 @@
 .swiper-navigation-icon {
     display: none;
 }
+
+/* Nút to top */
+
+#fixed .btn-back-to-top {
+    position: fixed;
+    z-index: 100;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--main-color);
+    border: solid 5px var(--dark-color);
+    width: 40px;
+    height: 32px;
+    border-radius: 18px;
+    opacity: 0.4;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 8px;
+    display: none;
+}
+
+#fixed .btn-back-to-top:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
