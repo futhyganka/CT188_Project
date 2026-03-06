@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- File css -->
     <link rel="stylesheet" href="./data/css/main.css">
-    <link rel="stylesheet" href="./data/css/dangky.css">
-    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <!-- <link rel="stylesheet" href="./data/css/dangky.css">
+    <link rel="stylesheet" href="./data/css/dangnhap.css"> -->
     <link rel="stylesheet" href="./data/css/danhsachsanpham.css">
     <link rel="stylesheet" href="./data/css/nuttruot.css">
     <link rel="stylesheet" href="./data/css/noidung.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./data/css/header.css">
-    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <!-- <link rel="stylesheet" href="./data/css/dangnhap.css"> -->
     <link rel="stylesheet" href="./data/css/footer.css">
     <link rel="stylesheet" href="./data/css/danhmuc.css">
     <!-- inon -->
@@ -159,44 +159,181 @@
                             <li><a href="">Tất cả sản phẩm</a></li>
                             <li> <a href="">Lịch Sử</a></li>
                             <li><a href="">Văn Học Việt Nam</a></li>
-                            <li><a href="">Văn Học Nước Ngoài</a>
-                            </li>
+                            <li><a href="">Văn Học Nước Ngoài</a></li>
                             <li><a href="">Truyện Tranh</a></li>
                             <li><a href="">Kĩ Năng</a></li>
                             <li><a href="">Khoa Học</a></li>
                         </ul>
                     </div>
+                    <aside class="aside-item filter-type">
+                        <div class="sidebar-box bs-collapse-sidebar">
+                            <div class="sidebar-header" onclick="toggleSidebar()">
+                                <h3>THỂ LOẠI SÁCH</h3>
+                                <i class="fa-solid fa-chevron-up" id="toggle-icon"></i>
+                            </div>
+                            <ul id="sidebar-menu">
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-doan-doi">
+                                        <input type="checkbox" id="filter-doan-doi" onchange="toggleFilter(this)"
+                                            data-group="Loại" data-field="product_type.filter_key"
+                                            data-text="Sách công cụ Đoàn - Đội"
+                                            value="(&#34;Sách công cụ Đoàn - Đội&#34;)" data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Sách công cụ Đoàn - Đội
+                                    </label>
+                                </li>
 
-                    <div class="sidebar-box bs-collapse-sidebar">
-                        <div class="sidebar-header" onclick="toggleSidebar()">
-                            <h3>THỂ LOẠI SÁCH</h3>
-                            <i class="fa-solid fa-chevron-up" id="toggle-icon"></i>
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-tap-chi">
+                                        <input type="checkbox" id="filter-tap-chi" onchange="toggleFilter(this)"
+                                            data-group="Loại" data-field="product_type.filter_key" data-text="Tạp chí"
+                                            value="(&#34;Tạp chí&#34;)" data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Tạp chí
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-khac">
+                                        <input type="checkbox" id="filter-khac" onchange="toggleFilter(this)"
+                                            data-group="Loại" data-field="product_type.filter_key" data-text="Khác"
+                                            value="(&#34;Khác&#34;)" data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Khác
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-manga-comic">
+                                        <input type="checkbox" id="filter-manga-comic" onchange="toggleFilter(this)"
+                                            data-group="Loại" data-field="product_type.filter_key"
+                                            data-text="Manga - comic" value="(&#34;Manga - comic&#34;)"
+                                            data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Manga - comic
+                                    </label>
+                                </li>
+
+                            </ul>
                         </div>
-                        <ul id="sidebar-menu">
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Tạp chí</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Khác</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học nước ngoài</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Manga - comic</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học Việt Nam</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Lịch sử - truyền thống</a></li>
-                        </ul>
-                    </div>
+                    </aside>
+
+                    <aside class="aside-item filter-vendor">
+                        <div class="sidebar-box bs-collapse-sidebar" id="nxb-box">
+                            <div class="sidebar-header" onclick="toggleSection('nxb-box', 'nxb-icon')">
+                                <h3>NHÀ XUẤT BẢN</h3>
+                                <i class="fa-solid fa-chevron-up" id="nxb-icon"></i>
+                            </div>
+                            <ul>
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-nxb-kim-dong">
+                                        <input type="checkbox" id="filter-nxb-kim-dong" onchange="toggleFilter(this)"
+                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
+                                            data-text="Nhà Xuất Bản Kim Đồng" value="(&#34;Kim Đồng&#34;)"
+                                            data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Nhà Xuất Bản Kim Đồng
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-nxb-tre">
+                                        <input type="checkbox" id="filter-nxb-tre" onchange="toggleFilter(this)"
+                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
+                                            data-text="Nhà Xuất Bản Trẻ" value="(&#34;Trẻ&#34;)" data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Nhà Xuất Bản Trẻ
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-nxb-phu-nu">
+                                        <input type="checkbox" id="filter-nxb-phu-nu" onchange="toggleFilter(this)"
+                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
+                                            data-text="Nhà Xuất Bản Phụ Nữ" value="(&#34;Phụ Nữ&#34;)"
+                                            data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Nhà Xuất Bản Phụ Nữ
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-nxb-khac">
+                                        <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
+                                            data-group="Nhà xuất bản" data-field="publisher.filter_key" data-text="Khác"
+                                            value="(&#34;Khác&#34;)" data-operator="OR">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Khác
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <aside class="aside-item filter-price">
+                        <div class="sidebar-box bs-collapse-sidebar" id="sort-box">
+                            <div class="sidebar-header" onclick="toggleSection('sort-box', 'sort-icon')">
+                                <h3>SẮP XẾP THEO GIÁ</h3>
+                                <i class="fa-solid fa-chevron-up" id="sort-icon"></i>
+                            </div>
+                            <ul>
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-sort-az">
+                                        <input type="checkbox" id="filter-sort-az" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" data-field="sort_by" data-text="Tên A-Z"
+                                            value="name_asc">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Tên A-Z
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-sort-za">
+                                        <input type="checkbox" id="filter-sort-za" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" data-field="sort_by" data-text="Tên Z-A"
+                                            value="name_desc">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Tên Z-A
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-price-asc">
+                                        <input type="checkbox" id="filter-price-asc" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" data-field="sort_by" data-text="Giá thấp đến cao"
+                                            value="price_asc">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Giá thấp đến cao
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-price-desc">
+                                        <input type="checkbox" id="filter-price-desc" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" data-field="sort_by" data-text="Giá cao xuống thấp"
+                                            value="price_desc">
+                                        <i class="fa-regular fa-circle"></i>
+                                        Giá cao xuống thấp
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+
                     <script>
-                        function toggleSidebar() {
-                            const sidebar = document.querySelector('.bs-collapse-sidebar');
-                            const icon = document.getElementById('toggle-icon');
+                        function toggleSection(boxId, iconId) {
+                            const box = document.getElementById(boxId);
+                            const icon = document.getElementById(iconId);
 
-                            // Toggle class "collapsed"
-                            sidebar.classList.toggle('collapsed');
+                            // Bật/tắt class collapsed
+                            box.classList.toggle('collapsed');
 
-                            // Thay đổi icon mũi tên
-                            if (sidebar.classList.contains('collapsed')) {
-                                icon.classList.remove('fa-chevron-up');
-                                icon.classList.add('fa-chevron-down');
+                            // Đổi icon mũi tên
+                            if (box.classList.contains('collapsed')) {
+                                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
                             } else {
-                                icon.classList.remove('fa-chevron-down');
-                                icon.classList.add('fa-chevron-up');
+                                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
                             }
                         }
                     </script>
@@ -207,7 +344,7 @@
 
                 <div class="bs-content">
                     <section class="section">
-                        <h3 class="title"><a href="#">TẤT CẢ SẢN PHẨM</a></h3>
+                        <h2>TẤT CẢ SẢN PHẨM</h2>
 
                         <div class="content">
 
@@ -282,6 +419,7 @@
                                     </form>
                                 </div>
 
+                                
                                 <div class="item">
                                     <form action="">
                                         <div class="box-item">
@@ -296,19 +434,138 @@
                                     </form>
                                 </div>
 
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
 
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-
-
-                            <div class="btn-slider-left"><i class="fa-solid fa-angle-left"></i></div>
-                            <div class="btn-slider-right"><i class="fa-solid fa-angle-right"></i></div>
-
-                            <div class="btn-more">Xem thêm >></div>
 
                         </div>
                     </section>
+
+                    <div class="pagination-wrapper">
+                        <ul class="pagination" id="dynamic-pagination">
+                        </ul>
+                    </div>
+
+                    <script>
+                        function renderPagination(totalProducts, currentPage) {
+                            const productsPerPage = 20; // Giới hạn 20 sản phẩm mỗi trang
+                            const totalPages = Math.ceil(totalProducts / productsPerPage); // Tính tổng số trang
+                            const container = document.getElementById('dynamic-pagination');
+
+                            let html = '';
+
+                            // Nút lùi (Back)
+                            html += `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:;" onclick="goToPage(${currentPage - 1})">«</a>
+             </li>`;
+
+                            // Thuật toán hiển thị các vòng tròn số
+                            for (let i = 1; i <= totalPages; i++) {
+                                // Hiển thị trang 1, trang cuối, và các trang lân cận trang hiện tại
+                                if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+                                    html += `<li class="page-item ${i === currentPage ? 'active' : ''}">
+                        <a class="page-link" href="javascript:;" onclick="goToPage(${i})">${i}</a>
+                     </li>`;
+                                }
+                                // Hiển thị dấu ba chấm nếu khoảng cách quá xa
+                                else if (i === currentPage - 3 || i === currentPage + 3) {
+                                    html += `<li class="page-item dots"><a class="page-link">...</a></li>`;
+                                }
+                            }
+
+                            // Nút tiến (Next)
+                            html += `<li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:;" onclick="goToPage(${currentPage + 1})">»</a>
+             </li>`;
+
+                            container.innerHTML = html;
+                        }
+
+                        // Hàm được gọi khi người dùng bấm vào hình tròn số
+                        function goToPage(page) {
+                            // 1. Cuộn lên đầu danh sách sản phẩm
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                            // 2. Gọi hàm tìm kiếm/load dữ liệu của bạn (ví dụ doSearch)
+                            // doSearch(page); 
+
+                            // 3. Vẽ lại thanh phân trang (Giả sử tổng sản phẩm là 500)
+                            renderPagination(500, page);
+                        }
+
+                        // Khởi tạo ban đầu với giả định có 500 sản phẩm
+                        renderPagination(500, 1);
+                    </script>
                 </div>
             </div>
+
 
     </main>
 
