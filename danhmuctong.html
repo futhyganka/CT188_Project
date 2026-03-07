@@ -56,14 +56,15 @@
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-youtube"></i>
-                </div>   
+                </div>
                 <div class="marquee">
                     <i class="fa-solid fa-rss"></i>
                     <div class="marquee-text">
-                        <span>Chào mừng bạn đến với Fivehasha. Nếu bạn cần giúp đỡ, hãy liên hệ với chúng tôi qua hotline: (+84) 1900505050 hoặc email: cskhFivehasha@fivehasha.com.vn</span>
+                        <span>Chào mừng bạn đến với Fivehasha. Nếu bạn cần giúp đỡ, hãy liên hệ với chúng tôi qua
+                            hotline: (+84) 1900505050 hoặc email: cskhFivehasha@fivehasha.com.vn</span>
                     </div>
-                </div>    
-                
+                </div>
+
 
                 <div class="top-right">
                     <span><i class="fa-solid fa-phone"></i> (+84) 190050505050</span>
@@ -96,7 +97,7 @@
                     </a>
                 </div>  -->
 
-<!-- test -->
+                <!-- test -->
                 <div class="user-cart">
                     <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
                     <a href="#"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
@@ -107,7 +108,7 @@
                     </a>
 
                     <div class="cart-wrapper">
-                        <input type="checkbox" id="cart-check" hidden> 
+                        <input type="checkbox" id="cart-check" hidden>
 
                         <label for="cart-check" class="icon cart-btn">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -135,7 +136,7 @@
                         </div>
                     </div>
                 </div>
-<!-- test -->
+                <!-- test -->
             </div>
         </div>
 
@@ -209,54 +210,115 @@
                         </ul>
                     </div>
                     <aside class="aside-item filter-type">
-                        <div class="sidebar-box bs-collapse-sidebar">
-                            <div class="sidebar-header" onclick="toggleSidebar()">
+                        <div class="sidebar-box bs-collapse-sidebar" id="type-box">
+                            <div class="sidebar-header" onclick="toggleSection('type-box', 'type-icon')">
                                 <h3>THỂ LOẠI SÁCH</h3>
-                                <i class="fa-solid fa-chevron-up" id="toggle-icon"></i>
+                                <i class="fa-solid fa-chevron-up" id="type-icon"></i>
                             </div>
-                            <ul id="sidebar-menu">
+                            <ul id="sidebar-menu" class="sidebar-menu-list">
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-giai-ma">
+                                        <input type="checkbox" id="filter-giai-ma" onchange="toggleFilter(this)"
+                                            data-text="Giải mã bản thân" value="giai-ma-ban-than">
+                                        <i class="fa-regular fa-circle"></i> Giải mã bản thân
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-combo">
+                                        <input type="checkbox" id="filter-combo" onchange="toggleFilter(this)"
+                                            data-text="Combo" value="combo">
+                                        <i class="fa-regular fa-circle"></i> Combo
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-do-dung">
+                                        <input type="checkbox" id="filter-do-dung" onchange="toggleFilter(this)"
+                                            data-text="Đồ dùng" value="do-dung">
+                                        <i class="fa-regular fa-circle"></i> Đồ dùng
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-ngoai-van">
+                                        <input type="checkbox" id="filter-ngoai-van" onchange="toggleFilter(this)"
+                                            data-text="Sách ngoại văn" value="sach-ngoai-van">
+                                        <i class="fa-regular fa-circle"></i> Sách ngoại văn
+                                    </label>
+                                </li>
+
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-doan-doi">
                                         <input type="checkbox" id="filter-doan-doi" onchange="toggleFilter(this)"
-                                            data-group="Loại" data-field="product_type.filter_key"
-                                            data-text="Sách công cụ Đoàn - Đội"
-                                            value="(&#34;Sách công cụ Đoàn - Đội&#34;)" data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Sách công cụ Đoàn - Đội
+                                            data-text="Sách công cụ Đoàn - Đội" value="doan-doi">
+                                        <i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội
                                     </label>
                                 </li>
 
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-tap-chi">
                                         <input type="checkbox" id="filter-tap-chi" onchange="toggleFilter(this)"
-                                            data-group="Loại" data-field="product_type.filter_key" data-text="Tạp chí"
-                                            value="(&#34;Tạp chí&#34;)" data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Tạp chí
+                                            data-text="Tạp chí" value="tap-chi">
+                                        <i class="fa-regular fa-circle"></i> Tạp chí
                                     </label>
                                 </li>
 
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-khac">
                                         <input type="checkbox" id="filter-khac" onchange="toggleFilter(this)"
-                                            data-group="Loại" data-field="product_type.filter_key" data-text="Khác"
-                                            value="(&#34;Khác&#34;)" data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Khác
+                                            data-text="Khác" value="khac">
+                                        <i class="fa-regular fa-circle"></i> Khác
                                     </label>
                                 </li>
 
                                 <li class="filter-item filter-item--check-box">
-                                    <label for="filter-manga-comic">
-                                        <input type="checkbox" id="filter-manga-comic" onchange="toggleFilter(this)"
-                                            data-group="Loại" data-field="product_type.filter_key"
-                                            data-text="Manga - comic" value="(&#34;Manga - comic&#34;)"
-                                            data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Manga - comic
+                                    <label for="filter-van-hoc-nn">
+                                        <input type="checkbox" id="filter-van-hoc-nn" onchange="toggleFilter(this)"
+                                            data-text="Văn học nước ngoài" value="van-hoc-nuoc-ngoai">
+                                        <i class="fa-regular fa-circle"></i> Văn học nước ngoài
                                     </label>
                                 </li>
 
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-manga">
+                                        <input type="checkbox" id="filter-manga" onchange="toggleFilter(this)"
+                                            data-text="Manga-comic" value="manga-comic">
+                                        <i class="fa-regular fa-circle"></i> Manga-comic
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-lich-su">
+                                        <input type="checkbox" id="filter-lich-su" onchange="toggleFilter(this)"
+                                            data-text="Lịch sử-truyền thống" value="lich-su-truyen-thong">
+                                        <i class="fa-regular fa-circle"></i> Lịch sử-truyền thống
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-kien-thuc">
+                                        <input type="checkbox" id="filter-kien-thuc" onchange="toggleFilter(this)"
+                                            data-text="Kiến thức - khoa học" value="kien-thuc-khoa-hoc">
+                                        <i class="fa-regular fa-circle"></i> Kiến thức - khoa học
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-wings">
+                                        <input type="checkbox" id="filter-wings" onchange="toggleFilter(this)"
+                                            data-text="Wings books" value="wings-books">
+                                        <i class="fa-regular fa-circle"></i> Wings books
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-truyen-tranh">
+                                        <input type="checkbox" id="filter-truyen-tranh" onchange="toggleFilter(this)"
+                                            data-text="Truyện tranh" value="truyen-tranh">
+                                        <i class="fa-regular fa-circle"></i> Truyện tranh
+                                    </label>
+                                </li>
                             </ul>
                         </div>
                     </aside>
@@ -267,46 +329,60 @@
                                 <h3>NHÀ XUẤT BẢN</h3>
                                 <i class="fa-solid fa-chevron-up" id="nxb-icon"></i>
                             </div>
-                            <ul>
-                                <li class="filter-item filter-item--check-box">
+                            <ul class="sidebar-menu-list">
+                                <li class="filter-item">
                                     <label for="filter-nxb-kim-dong">
                                         <input type="checkbox" id="filter-nxb-kim-dong" onchange="toggleFilter(this)"
-                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
-                                            data-text="Nhà Xuất Bản Kim Đồng" value="(&#34;Kim Đồng&#34;)"
-                                            data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Nhà Xuất Bản Kim Đồng
+                                            data-group="NXB" value="Kim Đồng">
+                                        <i class="fa-regular fa-circle"></i> Nhà Xuất Bản Kim Đồng
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
-                                    <label for="filter-nxb-tre">
-                                        <input type="checkbox" id="filter-nxb-tre" onchange="toggleFilter(this)"
-                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
-                                            data-text="Nhà Xuất Bản Trẻ" value="(&#34;Trẻ&#34;)" data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Nhà Xuất Bản Trẻ
+                                <li class="filter-item">
+                                    <label for="filter-tagger">
+                                        <input type="checkbox" id="filter-tagger" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Tagger">
+                                        <i class="fa-regular fa-circle"></i> Tagger
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
-                                    <label for="filter-nxb-phu-nu">
-                                        <input type="checkbox" id="filter-nxb-phu-nu" onchange="toggleFilter(this)"
-                                            data-group="Nhà xuất bản" data-field="publisher.filter_key"
-                                            data-text="Nhà Xuất Bản Phụ Nữ" value="(&#34;Phụ Nữ&#34;)"
-                                            data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Nhà Xuất Bản Phụ Nữ
+                                <li class="filter-item">
+                                    <label for="filter-nhieu-tac-gia">
+                                        <input type="checkbox" id="filter-nhieu-tac-gia" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Nhiều tác giả">
+                                        <i class="fa-regular fa-circle"></i> Nhiều tác giả
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
+                                <li class="filter-item">
+                                    <label for="filter-kosaku">
+                                        <input type="checkbox" id="filter-kosaku" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Kosaku Anakubo">
+                                        <i class="fa-regular fa-circle"></i> Kosaku Anakubo
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-naoki">
+                                        <input type="checkbox" id="filter-naoki" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Naoki Urasawa">
+                                        <i class="fa-regular fa-circle"></i> Naoki Urasawa
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-fujiko">
+                                        <input type="checkbox" id="filter-fujiko" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Fujiko F. Fujio">
+                                        <i class="fa-regular fa-circle"></i> Fujiko F. Fujio
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
                                     <label for="filter-nxb-khac">
                                         <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
-                                            data-group="Nhà xuất bản" data-field="publisher.filter_key" data-text="Khác"
-                                            value="(&#34;Khác&#34;)" data-operator="OR">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Khác
+                                            data-group="NXB" value="Khác">
+                                        <i class="fa-regular fa-circle"></i> Khác
                                     </label>
                                 </li>
                             </ul>
@@ -316,53 +392,44 @@
                     <aside class="aside-item filter-price">
                         <div class="sidebar-box bs-collapse-sidebar" id="sort-box">
                             <div class="sidebar-header" onclick="toggleSection('sort-box', 'sort-icon')">
-                                <h3>SẮP XẾP THEO GIÁ</h3>
+                                <h3>SẮP XẾP SẢN PHẨM</h3>
                                 <i class="fa-solid fa-chevron-up" id="sort-icon"></i>
                             </div>
-                            <ul>
-                                <li class="filter-item filter-item--check-box">
+                            <ul class="sidebar-menu-list">
+                                <li class="filter-item">
                                     <label for="filter-sort-az">
                                         <input type="checkbox" id="filter-sort-az" onchange="toggleFilter(this)"
-                                            data-group="Sắp xếp" data-field="sort_by" data-text="Tên A-Z"
-                                            value="name_asc">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Tên A-Z
+                                            data-group="Sắp xếp" value="name_asc">
+                                        <i class="fa-regular fa-circle"></i> Tên A-Z
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
+                                <li class="filter-item">
                                     <label for="filter-sort-za">
                                         <input type="checkbox" id="filter-sort-za" onchange="toggleFilter(this)"
-                                            data-group="Sắp xếp" data-field="sort_by" data-text="Tên Z-A"
-                                            value="name_desc">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Tên Z-A
+                                            data-group="Sắp xếp" value="name_desc">
+                                        <i class="fa-regular fa-circle"></i> Tên Z-A
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
+                                <li class="filter-item">
                                     <label for="filter-price-asc">
                                         <input type="checkbox" id="filter-price-asc" onchange="toggleFilter(this)"
-                                            data-group="Sắp xếp" data-field="sort_by" data-text="Giá thấp đến cao"
-                                            value="price_asc">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Giá thấp đến cao
+                                            data-group="Sắp xếp" value="price_asc">
+                                        <i class="fa-regular fa-circle"></i> Giá thấp đến cao
                                     </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
+                                <li class="filter-item">
                                     <label for="filter-price-desc">
                                         <input type="checkbox" id="filter-price-desc" onchange="toggleFilter(this)"
-                                            data-group="Sắp xếp" data-field="sort_by" data-text="Giá cao xuống thấp"
-                                            value="price_desc">
-                                        <i class="fa-regular fa-circle"></i>
-                                        Giá cao xuống thấp
+                                            data-group="Sắp xếp" value="price_desc">
+                                        <i class="fa-regular fa-circle"></i> Giá cao xuống thấp
                                     </label>
                                 </li>
                             </ul>
                         </div>
                     </aside>
-
 
                     <script>
                         function toggleSection(boxId, iconId) {
@@ -372,12 +439,27 @@
                             // Bật/tắt class collapsed
                             box.classList.toggle('collapsed');
 
-                            // Đổi icon mũi tên
+                            // Đổi icon mũi tên linh hoạt
                             if (box.classList.contains('collapsed')) {
                                 icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
                             } else {
                                 icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
                             }
+                        }
+
+                        function toggleFilter(element) {
+                            // Xử lý đổi icon vòng tròn khi tích chọn
+                            const icon = element.parentElement.querySelector('i');
+                            if (element.checked) {
+                                icon.classList.replace('fa-regular', 'fa-solid'); // Đổi sang hình tròn đặc hoặc tích
+                                icon.classList.replace('fa-circle', 'fa-circle-check');
+                            } else {
+                                icon.classList.replace('fa-solid', 'fa-regular');
+                                icon.classList.replace('fa-circle-check', 'fa-circle');
+                            }
+
+                            // Gọi hàm Search của bạn tại đây
+                            // doSearch();
                         }
                     </script>
                 </div>
@@ -462,7 +544,7 @@
                                     </form>
                                 </div>
 
-                                
+
                                 <div class="item">
                                     <form action="">
                                         <div class="box-item">

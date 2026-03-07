@@ -13,6 +13,8 @@
 
 .book-shop .bs-sidebar {
     width: 260px;
+    min-width: 260px;
+    padding-right: 15px;
 }
 
 .book-shop .bs-content {
@@ -97,9 +99,7 @@
     overflow: hidden;
 }
 
-.bs-collapse-sidebar:not(.collapsed) ul {
-    max-height: 500px; /* Độ cao tối đa khi mở */
-}
+
 
 /* Ẩn ô checkbox mặc định */
 .filter-item input[type="checkbox"] {
@@ -188,3 +188,47 @@
     background-color: transparent;
     font-size: 20px;
 }
+
+/* Áp dụng cho tất cả danh sách trong sidebar */
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+    max-height: 1000px; /* Đủ lớn để chứa danh sách dài nhất */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease; /* Tốc độ đóng mở đồng nhất */
+}
+
+/* Trạng thái đóng chung cho tất cả các khối */
+.sidebar-box.collapsed ul {
+    max-height: 0 !important;
+    opacity: 0;
+}
+
+/* Xoay icon cho tất cả các khối */
+.sidebar-header i {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed .sidebar-header i {
+    transform: rotate(-180deg);
+}
+
+/* Trạng thái khi Sidebar bị đóng */
+.sidebar-box.collapsed #sidebar-menu {
+    max-height: 0; /* Thu nhỏ chiều cao về 0 */
+    opacity: 0;    /* Làm mờ dần */
+}
+
+/* Xoay icon mượt mà */
+#toggle-icon {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed #toggle-icon {
+    transform: rotate(-180deg); /* Xoay ngược mũi tên khi đóng */
+}
+
+
+
