@@ -18,7 +18,7 @@ body{
 }
 
 
-.info{
+.main .info{
     display:flex;
     gap:40px;
     background:white;
@@ -26,13 +26,18 @@ body{
     border-radius:6px;
 }
 
-.img{
+.main .img{
     width:40%;
 }
 
-.main-img{
-    width:100%;
-    border:1px solid #eee;
+.main .title{
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.main .price{
+    margin-bottom:20px;
 }
 
 
