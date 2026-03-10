@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>item</title>
+
+    <!-- Thư viện font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Roboto:wght@100..900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    <link rel="stylesheet" href="./data/css/trangsanpham.css">
-    <title>item</title>
-    <link rel="stylesheet" href="./data/css/header.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="./data/css/main.css">
+    <link rel="stylesheet" href="./data/css/header.css">
     <link rel="stylesheet" href="./data/css/footer.css">
+
+    <link rel="stylesheet" href="./data/css/dangky.css">
+    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <link rel="stylesheet" href="./data/css/danhsachsanpham.css">
     <link rel="stylesheet" href="./data/css/nuttruot.css">
-    <!-- Thư viên font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <!-- inon -->
+    <link rel="stylesheet" href="./data/css/noidung.css">
+
+    <link rel="stylesheet" href="item.css">
+
     <link rel="icon" href="./data/img/logo.png">
+
 </head>
 <body>
     <!-- 
@@ -37,7 +52,7 @@
         - ft-copyright
     -->
 
-    
+
     <header id="header">
         <div class="hd-home">
             <div class="info">
@@ -181,8 +196,6 @@
         </div>
     </header>
 
-
-
     <main class="main">
 
         <!-- INFO PRODUCT -->
@@ -192,6 +205,7 @@
             <div class="img">
                 <div class="thumbs" class="thumbs"></div>
                 <img class="main-img">
+
             </div>
 
             <!-- DETAIL -->
@@ -221,6 +235,10 @@
                 <button class="btn add">Thêm vào giỏ hàng</button>
                 <button class="btn buy">Mua ngay</button>
 
+            <div class="quantity">
+                <button class="minus">-</button>
+                <input  class="qty" value="1">
+                <button class="plus">+</button>
             </div>
         </section>
 
@@ -236,16 +254,16 @@
             <div class="rating"></div>
         </section>
 
+
         <!-- SAME TOPIC -->
         <section class="topic-same">
             <h2>Sách cùng thể loại</h2>
             <div class="related"></div>
         </section>
-
     </main>
 
-<!-- FOOTER -->
-<footer id="footer">
+    <!-- FOOTER -->
+    <footer id="footer">
         <div class="footer-container">
 
             <!-- GIỚI THIỆU -->
@@ -296,14 +314,6 @@
             © 2026 Fivehasha. All rights reserved.
         </div>
     </footer>
-
-    <!-- FLOAT BUTTON -->
-    <div class="fixed">
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-
-
-    </main>
 
 
     <div id="fixed">
