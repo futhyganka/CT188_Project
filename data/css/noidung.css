@@ -61,8 +61,6 @@
     color: var(--main-color);
     text-align: right;
     margin: 8px;
-    width: fit-content;
-    float: right;
 }
 
 #main .section .content .btn-more:hover {
