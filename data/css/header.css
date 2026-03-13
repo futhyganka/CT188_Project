@@ -80,7 +80,7 @@
     width: 100px;
     /* border-radius: 50%;    */
     object-fit: cover;
-    padding-left: 30px;
+    /* padding-left: 15px; */
 }
 
 /* SEARCH */
@@ -465,7 +465,7 @@
     left: 50px;
 }
 
-}
+
 #header .background-header .img{
     width: 100%;
     aspect-ratio: 4 / 1;
