@@ -2,7 +2,7 @@
 function upDateSlider(slider, i, n) {
     slider.style.transform = `translateX(calc(-100% * ${i} / ${n}))`;
 }
-
+/*
 // Header
 
 const sliderHeader = document.querySelector('#header .slider');
@@ -92,7 +92,7 @@ sliderHeader.children[0].addEventListener('mousedown', function(e) {
 
     }
 });
-
+*/
 
 // Main
 

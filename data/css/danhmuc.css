@@ -230,5 +230,28 @@
     transform: rotate(-180deg); /* Xoay ngược mũi tên khi đóng */
 }
 
+/* list-item */
+#main .section .content .list-item {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 10px 0;
+}
 
+#main .section .content .list-item .item {
+    margin: 8px;
+    width: 100% !important;
+}
+
+#main .section .content .btn-more {
+    color: var(--main-color);
+    text-align: right;
+    margin: 8px;
+}
+
+#main .section .content .btn-more:hover {
+    color: var(--dark-color);
+    cursor: pointer;
+}
 

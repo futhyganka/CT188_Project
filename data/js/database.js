@@ -2,7 +2,7 @@
  * object Book {
  *     id,
  *     title,
- *     describe,
+ *     description,
  *     img,
  *     topic[],
  *     review[],
@@ -27,7 +27,7 @@
 // function Book (
 //     id,
 //     title,
-//     describe,
+//     description,
 //     img,
 //     topic,
 //     review,
@@ -44,7 +44,7 @@
 //     return {
 //         id,
 //         title,
-//         describe,
+//         description,
 //         img,
 //         topic,
 //         review,
@@ -64,12 +64,10 @@
 //     return {star, content};
 // };
 
-var database = [];
-
-database.push({
+var database = [{
     "id": 10, 
     "title": "tiêu đề", 
-    "describe": "mô tả", 
+    "description": "mô tả", 
     "img": "hình ảnh", 
     "topic": ["chủ đề 1", "chủ đề 2"], 
     "review": [
@@ -85,12 +83,12 @@ database.push({
     "price": 30000, 
     "quantity": 30, 
     "status": "Còn hàng"
-});
+}];
 
 // function addBook (
 //     id,
 //     title,
-//     describe,
+//     description,
 //     img,
 //     topic,
 //     review,
@@ -107,7 +105,7 @@ database.push({
 //     database.push(Book(
 //     id,
 //     title,
-//     describe,
+//     description,
 //     img,
 //     topic,
 //     review,
