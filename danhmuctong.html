@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- File css -->
     <link rel="stylesheet" href="./data/css/main.css">
-    <link rel="stylesheet" href="./data/css/dangky.css">
-    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <!-- <link rel="stylesheet" href="./data/css/dangky.css">
+    <link rel="stylesheet" href="./data/css/dangnhap.css"> -->
     <link rel="stylesheet" href="./data/css/danhsachsanpham.css">
     <link rel="stylesheet" href="./data/css/nuttruot.css">
     <link rel="stylesheet" href="./data/css/noidung.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./data/css/header.css">
-    <link rel="stylesheet" href="./data/css/dangnhap.css">
+    <!-- <link rel="stylesheet" href="./data/css/dangnhap.css"> -->
     <link rel="stylesheet" href="./data/css/footer.css">
     <link rel="stylesheet" href="./data/css/danhmuc.css">
     <!-- inon -->
@@ -74,23 +74,38 @@
             <div class="mainbar">
                 <!-- LOGO -->
                 <div class="logo">
-                    <a href="./gioithieu.html">
-                        <img src="data/img/logo.png" alt="Fivehasha">
-                    </a>
+                    <img src="data/img/logo.png" alt="Fivehasha">
                 </div>
                 <!-- SEARCH -->
                 <div class="search-box">
                     <input type="text" placeholder="Tìm kiếm sản phẩm">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <div class="user-cart">
-                    <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
-                    <a href="./dangky.html"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+                <!-- USER + CART -->
+                <!-- <div class="user-cart">
+                    <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
 
-                    <!-- <a href="#" class="icon">
+                    <a href="#" class="icon">
                         <i class="fa-regular fa-heart"></i>
                         <span class="badge">0</span>
-                    </a> -->
+                    </a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge">0</span>
+                    </a>
+                </div>  -->
+
+                <!-- test -->
+                <div class="user-cart">
+                    <a href="#"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+
+                    <a href="#" class="icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="badge">0</span>
+                    </a>
 
                     <div class="cart-wrapper">
                         <input type="checkbox" id="cart-check" hidden>
@@ -114,12 +129,8 @@
                             <div class="cart-footer">
                                 <div class="total">TẠM TÍNH: <span>31.500đ</span></div>
                                 <div class="actions">
-                                    <a href="./giohang.html">
-                                        <button class="btn-view">XEM GIỎ HÀNG</button>
-                                    </a>
-                                    <a href="./thanhtoan.html">
-                                        <button class="btn-checkout">THANH TOÁN</button>
-                                    </a>
+                                    <button class="btn-view">XEM GIỎ HÀNG</button>
+                                    <button class="btn-checkout">THANH TOÁN</button>
                                 </div>
                             </div>
                         </div>
@@ -131,13 +142,12 @@
 
         <nav class="navigation">
             <ul class="menu">
-                <li><a href="./gioithieu.html">Trang chủ</a></li>
+                <li><a href="#">Trang chủ</a></li>
 
                 <!-- Sản phẩm -->
                 <li class="dropdown">
                     <a href="#">Sản phẩm▾</a>
                     <ul class="submenu">
-                        <li><a href="./danhmuctong.html">Tất cả sản phẩm</a></li>
                         <li><a href="#">Lịch sử</a></li>
                         <li><a href="#">Văn học Việt Nam</a></li>
                         <li><a href="#">Văn học nước ngoài</a></li>
@@ -154,6 +164,33 @@
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
+
+        <!-- <div class="slider">
+            <div class="slides">
+                
+                <div class="slide">
+                    <img src="./data/img/slider1.png">
+                </div>
+
+                <div class="slide">
+                    <img src="./data/img/slider2.png">
+                </div>
+
+                <div class="slide">
+                    <img src="./data/img/slider3.png">
+                </div>
+
+            </div>
+
+            <div class="btn-slider-left"><i class="fa-solid fa-angle-left"></i></div>
+            <div class="btn-slider-right"><i class="fa-solid fa-angle-right"></i></div>
+        </div> -->
+        <div class="background-header">
+            <h1>Tất cả sản phẩm</h1>
+            <div class="img">
+                <img src="./data/img/background_header.png" alt="backgruond-header">
+            </div>
+        </div>
     </header>
 
     <main id="main">
@@ -166,45 +203,263 @@
                             <li><a href="">Tất cả sản phẩm</a></li>
                             <li> <a href="">Lịch Sử</a></li>
                             <li><a href="">Văn Học Việt Nam</a></li>
-                            <li><a href="">Văn Học Nước Ngoài</a>
-                            </li>
+                            <li><a href="">Văn Học Nước Ngoài</a></li>
                             <li><a href="">Truyện Tranh</a></li>
                             <li><a href="">Kĩ Năng</a></li>
                             <li><a href="">Khoa Học</a></li>
                         </ul>
                     </div>
+                    <aside class="aside-item filter-type">
+                        <div class="sidebar-box bs-collapse-sidebar" id="type-box">
+                            <div class="sidebar-header" onclick="toggleSection('type-box', 'type-icon')">
+                                <h3>THỂ LOẠI SÁCH</h3>
+                                <i class="fa-solid fa-chevron-up" id="type-icon"></i>
+                            </div>
+                            <ul id="sidebar-menu" class="sidebar-menu-list">
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-giai-ma">
+                                        <input type="checkbox" id="filter-giai-ma" onchange="toggleFilter(this)"
+                                            data-text="Giải mã bản thân" value="giai-ma-ban-than">
+                                        <i class="fa-regular fa-circle"></i> Giải mã bản thân
+                                    </label>
+                                </li>
 
-                    <div class="sidebar-box bs-collapse-sidebar">
-                        <div class="sidebar-header" onclick="toggleSidebar()">
-                            <h3>THỂ LOẠI SÁCH</h3>
-                            <i class="fa-solid fa-chevron-up" id="toggle-icon"></i>
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-combo">
+                                        <input type="checkbox" id="filter-combo" onchange="toggleFilter(this)"
+                                            data-text="Combo" value="combo">
+                                        <i class="fa-regular fa-circle"></i> Combo
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-do-dung">
+                                        <input type="checkbox" id="filter-do-dung" onchange="toggleFilter(this)"
+                                            data-text="Đồ dùng" value="do-dung">
+                                        <i class="fa-regular fa-circle"></i> Đồ dùng
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-ngoai-van">
+                                        <input type="checkbox" id="filter-ngoai-van" onchange="toggleFilter(this)"
+                                            data-text="Sách ngoại văn" value="sach-ngoai-van">
+                                        <i class="fa-regular fa-circle"></i> Sách ngoại văn
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-doan-doi">
+                                        <input type="checkbox" id="filter-doan-doi" onchange="toggleFilter(this)"
+                                            data-text="Sách công cụ Đoàn - Đội" value="doan-doi">
+                                        <i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-tap-chi">
+                                        <input type="checkbox" id="filter-tap-chi" onchange="toggleFilter(this)"
+                                            data-text="Tạp chí" value="tap-chi">
+                                        <i class="fa-regular fa-circle"></i> Tạp chí
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-khac">
+                                        <input type="checkbox" id="filter-khac" onchange="toggleFilter(this)"
+                                            data-text="Khác" value="khac">
+                                        <i class="fa-regular fa-circle"></i> Khác
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-van-hoc-nn">
+                                        <input type="checkbox" id="filter-van-hoc-nn" onchange="toggleFilter(this)"
+                                            data-text="Văn học nước ngoài" value="van-hoc-nuoc-ngoai">
+                                        <i class="fa-regular fa-circle"></i> Văn học nước ngoài
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-manga">
+                                        <input type="checkbox" id="filter-manga" onchange="toggleFilter(this)"
+                                            data-text="Manga-comic" value="manga-comic">
+                                        <i class="fa-regular fa-circle"></i> Manga-comic
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-lich-su">
+                                        <input type="checkbox" id="filter-lich-su" onchange="toggleFilter(this)"
+                                            data-text="Lịch sử-truyền thống" value="lich-su-truyen-thong">
+                                        <i class="fa-regular fa-circle"></i> Lịch sử-truyền thống
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-kien-thuc">
+                                        <input type="checkbox" id="filter-kien-thuc" onchange="toggleFilter(this)"
+                                            data-text="Kiến thức - khoa học" value="kien-thuc-khoa-hoc">
+                                        <i class="fa-regular fa-circle"></i> Kiến thức - khoa học
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-wings">
+                                        <input type="checkbox" id="filter-wings" onchange="toggleFilter(this)"
+                                            data-text="Wings books" value="wings-books">
+                                        <i class="fa-regular fa-circle"></i> Wings books
+                                    </label>
+                                </li>
+
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-truyen-tranh">
+                                        <input type="checkbox" id="filter-truyen-tranh" onchange="toggleFilter(this)"
+                                            data-text="Truyện tranh" value="truyen-tranh">
+                                        <i class="fa-regular fa-circle"></i> Truyện tranh
+                                    </label>
+                                </li>
+                            </ul>
                         </div>
-                        <ul id="sidebar-menu">
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Tạp chí</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Khác</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học nước ngoài</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Manga - comic</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Văn học Việt Nam</a></li>
-                            <li><a href="#"><i class="fa-regular fa-circle"></i> Lịch sử - truyền thống</a></li>
-                        </ul>
-                    </div>
+                    </aside>
+
+                    <aside class="aside-item filter-vendor">
+                        <div class="sidebar-box bs-collapse-sidebar" id="nxb-box">
+                            <div class="sidebar-header" onclick="toggleSection('nxb-box', 'nxb-icon')">
+                                <h3>NHÀ XUẤT BẢN</h3>
+                                <i class="fa-solid fa-chevron-up" id="nxb-icon"></i>
+                            </div>
+                            <ul class="sidebar-menu-list">
+                                <li class="filter-item">
+                                    <label for="filter-nxb-kim-dong">
+                                        <input type="checkbox" id="filter-nxb-kim-dong" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Kim Đồng">
+                                        <i class="fa-regular fa-circle"></i> Nhà Xuất Bản Kim Đồng
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-tagger">
+                                        <input type="checkbox" id="filter-tagger" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Tagger">
+                                        <i class="fa-regular fa-circle"></i> Tagger
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-nhieu-tac-gia">
+                                        <input type="checkbox" id="filter-nhieu-tac-gia" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Nhiều tác giả">
+                                        <i class="fa-regular fa-circle"></i> Nhiều tác giả
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-kosaku">
+                                        <input type="checkbox" id="filter-kosaku" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Kosaku Anakubo">
+                                        <i class="fa-regular fa-circle"></i> Kosaku Anakubo
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-naoki">
+                                        <input type="checkbox" id="filter-naoki" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Naoki Urasawa">
+                                        <i class="fa-regular fa-circle"></i> Naoki Urasawa
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-fujiko">
+                                        <input type="checkbox" id="filter-fujiko" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Fujiko F. Fujio">
+                                        <i class="fa-regular fa-circle"></i> Fujiko F. Fujio
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-nxb-khac">
+                                        <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="Khác">
+                                        <i class="fa-regular fa-circle"></i> Khác
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <aside class="aside-item filter-price">
+                        <div class="sidebar-box bs-collapse-sidebar" id="sort-box">
+                            <div class="sidebar-header" onclick="toggleSection('sort-box', 'sort-icon')">
+                                <h3>SẮP XẾP SẢN PHẨM</h3>
+                                <i class="fa-solid fa-chevron-up" id="sort-icon"></i>
+                            </div>
+                            <ul class="sidebar-menu-list">
+                                <li class="filter-item">
+                                    <label for="filter-sort-az">
+                                        <input type="checkbox" id="filter-sort-az" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" value="name_asc">
+                                        <i class="fa-regular fa-circle"></i> Tên A-Z
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-sort-za">
+                                        <input type="checkbox" id="filter-sort-za" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" value="name_desc">
+                                        <i class="fa-regular fa-circle"></i> Tên Z-A
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-price-asc">
+                                        <input type="checkbox" id="filter-price-asc" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" value="price_asc">
+                                        <i class="fa-regular fa-circle"></i> Giá thấp đến cao
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-price-desc">
+                                        <input type="checkbox" id="filter-price-desc" onchange="toggleFilter(this)"
+                                            data-group="Sắp xếp" value="price_desc">
+                                        <i class="fa-regular fa-circle"></i> Giá cao xuống thấp
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
                     <script>
-                        function toggleSidebar() {
-                            const sidebar = document.querySelector('.bs-collapse-sidebar');
-                            const icon = document.getElementById('toggle-icon');
+                        function toggleSection(boxId, iconId) {
+                            const box = document.getElementById(boxId);
+                            const icon = document.getElementById(iconId);
 
-                            // Toggle class "collapsed"
-                            sidebar.classList.toggle('collapsed');
+                            // Bật/tắt class collapsed
+                            box.classList.toggle('collapsed');
 
-                            // Thay đổi icon mũi tên
-                            if (sidebar.classList.contains('collapsed')) {
-                                icon.classList.remove('fa-chevron-up');
-                                icon.classList.add('fa-chevron-down');
+                            // Đổi icon mũi tên linh hoạt
+                            if (box.classList.contains('collapsed')) {
+                                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
                             } else {
-                                icon.classList.remove('fa-chevron-down');
-                                icon.classList.add('fa-chevron-up');
+                                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
                             }
+                        }
+
+                        function toggleFilter(element) {
+                            // Xử lý đổi icon vòng tròn khi tích chọn
+                            const icon = element.parentElement.querySelector('i');
+                            if (element.checked) {
+                                icon.classList.replace('fa-regular', 'fa-solid'); // Đổi sang hình tròn đặc hoặc tích
+                                icon.classList.replace('fa-circle', 'fa-circle-check');
+                            } else {
+                                icon.classList.replace('fa-solid', 'fa-regular');
+                                icon.classList.replace('fa-circle-check', 'fa-circle');
+                            }
+
+                            // Gọi hàm Search của bạn tại đây
+                            // doSearch();
                         }
                     </script>
                 </div>
@@ -214,7 +469,7 @@
 
                 <div class="bs-content">
                     <section class="section">
-                        <h3 class="title"><a href="#">TẤT CẢ SẢN PHẨM</a></h3>
+                        <h2>TẤT CẢ SẢN PHẨM</h2>
 
                         <div class="content">
 
@@ -289,6 +544,7 @@
                                     </form>
                                 </div>
 
+
                                 <div class="item">
                                     <form action="">
                                         <div class="box-item">
@@ -303,19 +559,138 @@
                                     </form>
                                 </div>
 
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
 
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="item">
+                                    <form action="">
+                                        <div class="box-item">
+                                            <div class="img"><img src="./data/img/img107.png" alt=""></div>
+                                            <h4 class="title-item">Mẫu</h4>
+                                            <div class="discount">-10%</div>
+                                            <div class="price">
+                                                <span class="price-new">20.000₫</span>
+                                                <span class="price-old">29.000₫</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-
-
-                            <div class="btn-slider-left"><i class="fa-solid fa-angle-left"></i></div>
-                            <div class="btn-slider-right"><i class="fa-solid fa-angle-right"></i></div>
-
-                            <div class="btn-more">Xem thêm >></div>
 
                         </div>
                     </section>
+
+                    <div class="pagination-wrapper">
+                        <ul class="pagination" id="dynamic-pagination">
+                        </ul>
+                    </div>
+
+                    <script>
+                        function renderPagination(totalProducts, currentPage) {
+                            const productsPerPage = 20; // Giới hạn 20 sản phẩm mỗi trang
+                            const totalPages = Math.ceil(totalProducts / productsPerPage); // Tính tổng số trang
+                            const container = document.getElementById('dynamic-pagination');
+
+                            let html = '';
+
+                            // Nút lùi (Back)
+                            html += `<li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:;" onclick="goToPage(${currentPage - 1})">«</a>
+             </li>`;
+
+                            // Thuật toán hiển thị các vòng tròn số
+                            for (let i = 1; i <= totalPages; i++) {
+                                // Hiển thị trang 1, trang cuối, và các trang lân cận trang hiện tại
+                                if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+                                    html += `<li class="page-item ${i === currentPage ? 'active' : ''}">
+                        <a class="page-link" href="javascript:;" onclick="goToPage(${i})">${i}</a>
+                     </li>`;
+                                }
+                                // Hiển thị dấu ba chấm nếu khoảng cách quá xa
+                                else if (i === currentPage - 3 || i === currentPage + 3) {
+                                    html += `<li class="page-item dots"><a class="page-link">...</a></li>`;
+                                }
+                            }
+
+                            // Nút tiến (Next)
+                            html += `<li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:;" onclick="goToPage(${currentPage + 1})">»</a>
+             </li>`;
+
+                            container.innerHTML = html;
+                        }
+
+                        // Hàm được gọi khi người dùng bấm vào hình tròn số
+                        function goToPage(page) {
+                            // 1. Cuộn lên đầu danh sách sản phẩm
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                            // 2. Gọi hàm tìm kiếm/load dữ liệu của bạn (ví dụ doSearch)
+                            // doSearch(page); 
+
+                            // 3. Vẽ lại thanh phân trang (Giả sử tổng sản phẩm là 500)
+                            renderPagination(500, page);
+                        }
+
+                        // Khởi tạo ban đầu với giả định có 500 sản phẩm
+                        renderPagination(500, 1);
+                    </script>
                 </div>
             </div>
+
 
     </main>
 
@@ -356,7 +731,7 @@
                 <ul>
                     <li><a href="#">Chính sách đổi trả</a></li>
                     <li><a href="#">Hướng dẫn mua hàng</a></li>
-                    <li><a href="./thanhtoan.html">Thanh toán</a></li>
+                    <li><a href="#">Thanh toán</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
             </div>
@@ -378,6 +753,17 @@
             © 2026 Fivehasha. All rights reserved.
         </div>
     </footer>
+
+    <div id="fixed">
+        <div class="btn-takecare-client"></div>
+        <div class="btn-back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+
+
+    <!-- File js -->
+    <script src="./data/js/toTop.js"></script>
 </body>
 
 </html>
