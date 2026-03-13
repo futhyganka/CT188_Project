@@ -393,7 +393,7 @@
 
 /* DROPDOWN */
 #header .navigation .menu .dropdown .submenu {
-    z-index: 10;
+    z-index: 3;
     position: absolute;
     top: 100%;
     left: 0;
@@ -465,7 +465,7 @@
     left: 50px;
 }
 
-
+}
 #header .background-header .img{
     width: 100%;
     aspect-ratio: 4 / 1;
