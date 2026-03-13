@@ -1,6 +1,6 @@
-/* #main {
+#main {
     width: calc(240px * var(--col-item));
-} */
+}
 
 #main .section {
     position: relative;
@@ -45,16 +45,11 @@
 }
 
 #main .section .content .list-item {
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 10px 0;
+    display: flex;
 }
 
 #main .section .content .list-item .item {
     margin: 8px;
-    width: 100% !important;
 }
 
 #main .section .content .btn-more {
