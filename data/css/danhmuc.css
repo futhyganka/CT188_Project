@@ -130,6 +130,132 @@
     display: flex;
     justify-content: center;
     padding: 40px 0;
+<<<<<<< HEAD
+=======
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 10px; /* Khoảng cách giữa các vòng tròn */
+    padding: 0;
+    align-items: center;
+}
+
+/* Định dạng chung cho các nút */
+.pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Chiều rộng cố định */
+    height: 40px; /* Chiều cao cố định bằng chiều rộng */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    background-color: #f1f3f5; /* Màu nền xám nhạt cho các nút chưa chọn */
+    border-radius: 50%;        /* Tạo hình tròn hoàn hảo */
+    transition: all 0.3s ease;
+}
+
+/* Trang hiện tại (Màu đỏ nổi bật) */
+.pagination .page-item.active .page-link {
+    background-color: #d71920; /* Màu đỏ thương hiệu của bạn */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(215, 25, 32, 0.3); /* Đổ bóng nhẹ cho nút active */
+}
+
+/* Hiệu ứng hover cho các nút số */
+.pagination .page-item:not(.active):not(.disabled):hover .page-link {
+    background-color: #e9ecef;
+    color: #d71920;
+    transform: translateY(-2px); /* Nhảy nhẹ lên khi hover */
+}
+
+/* Dấu mũi tên và dấu ba chấm */
+.pagination .page-item.disabled .page-link {
+    color: #ced4da;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.pagination .page-item.dots .page-link {
+    background-color: transparent;
+    cursor: default;
+}
+
+/* Nút mũi tên có thể để nền trong suốt hoặc xám nhẹ */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* Áp dụng cho tất cả danh sách trong sidebar */
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+    max-height: 1000px; /* Đủ lớn để chứa danh sách dài nhất */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease; /* Tốc độ đóng mở đồng nhất */
+}
+
+/* Trạng thái đóng chung cho tất cả các khối */
+.sidebar-box.collapsed ul {
+    max-height: 0 !important;
+    opacity: 0;
+}
+
+/* Xoay icon cho tất cả các khối */
+.sidebar-header i {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed .sidebar-header i {
+    transform: rotate(-180deg);
+}
+
+/* Trạng thái khi Sidebar bị đóng */
+.sidebar-box.collapsed #sidebar-menu {
+    max-height: 0; /* Thu nhỏ chiều cao về 0 */
+    opacity: 0;    /* Làm mờ dần */
+}
+
+/* Xoay icon mượt mà */
+#toggle-icon {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed #toggle-icon {
+    transform: rotate(-180deg); /* Xoay ngược mũi tên khi đóng */
+}
+
+/* list-item */
+#main .section .content .list-item {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px 0;
+}
+
+#main .section .content .list-item .item {
+    margin: 8px;
+    width: 100% !important;
+}
+
+#main .section .content .btn-more {
+    color: var(--main-color);
+    text-align: right;
+    margin: 8px;
+}
+
+#main .section .content .btn-more:hover {
+    color: var(--dark-color);
+    cursor: pointer;
+>>>>>>> c9f414ce05e64dc0d01180cc1aa059ddbe50cc59
 }
 
 .pagination {

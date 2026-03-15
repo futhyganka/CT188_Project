@@ -12,7 +12,7 @@
 
 .list-item .item {
     /* padding: 6px; */
-    /* width: calc((100% / var(--col-item)) ); */
+    width: calc((100% / var(--col-item)));
     /* box-sizing: border-box; */
     flex-shrink: 0;
 }

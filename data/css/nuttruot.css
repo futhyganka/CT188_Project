@@ -5,6 +5,7 @@
     border-radius: 50%;
     background-color: var(--main-color);
     color: #fff;
+    width: 30px;
     /* z-index: 1.2; */
     /* width: 16px;
     height: 16px;
@@ -19,7 +20,7 @@
 
 .btn-slider-left i,
 .btn-slider-right i {
-    padding: 8px 6px;
+    padding: 8px 12px;
     font-size: 14px;
 }
 
@@ -30,6 +31,7 @@
     border-radius: 50%;
     background-color: var(--main-color);
     color: #fff;
+    width: 30px;
     /* z-index: 1.2; */
     /* width: 16px;
     height: 16px;
@@ -46,6 +48,7 @@
     display: none;
 }
 
+<<<<<<< HEAD
 /* Nút to top */
 
 #fixed .btn-back-to-top {
@@ -69,4 +72,8 @@
 #fixed .btn-back-to-top:hover {
     opacity: 0.8;
     cursor: pointer;
+=======
+.carousel-indicators [data-bs-target] {
+    background-color: var(--main-color);
+>>>>>>> c9f414ce05e64dc0d01180cc1aa059ddbe50cc59
 }

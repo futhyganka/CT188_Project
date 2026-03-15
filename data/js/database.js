@@ -2,7 +2,7 @@
  * object Book {
  *     id,
  *     title,
- *     describe,
+ *     description,
  *     img,
  *     topic[],
  *     review[],
@@ -24,100 +24,101 @@
  * 
  */
 
-function Book (
-    id,
-    title,
-    describe,
-    img,
-    topic,
-    review,
-    author,
-    publish,
-    date,
-    size,
-    weight,
-    format,
-    price,
-    quantity = 0,
-    status = "Hết hàng"
-) {
-    return {
-        id,
-        title,
-        describe,
-        img,
-        topic,
-        review,
-        author,
-        publish,
-        date,
-        size,
-        weight,
-        format,
-        price,
-        quantity,
-        status
-    };
-};
+// function Book (
+//     id,
+//     title,
+//     description,
+//     img,
+//     topic,
+//     review,
+//     author,
+//     publish,
+//     date,
+//     size,
+//     weight,
+//     format,
+//     price,
+//     quantity = 0,
+//     status = "Hết hàng"
+// ) {
+//     return {
+//         id,
+//         title,
+//         description,
+//         img,
+//         topic,
+//         review,
+//         author,
+//         publish,
+//         date,
+//         size,
+//         weight,
+//         format,
+//         price,
+//         quantity,
+//         status
+//     };
+// };
 
-function Review (star, content) {
-    return {star, content};
-};
+// function Review (star, content) {
+//     return {star, content};
+// };
 
-var database = [];
+var database = [{
+    "id": 10, 
+    "title": "tiêu đề", 
+    "description": "mô tả", 
+    "img": "hình ảnh", 
+    "topic": ["chủ đề 1", "chủ đề 2"], 
+    "review": [
+        {"star": 5, "content": "đánh giá 1"},
+        {"star": 4, "content": "đánh giá 2"}
+    ],
+    "author": ["tác giả 1", "tác giả 2", "tác giả 3"], 
+    "publish": "NXB Trẻ", 
+    "date": "01/01/2003", 
+    "size": "21 x 28cm",
+    "weight": "300g", 
+    "format": "Bìa cứng", 
+    "price": 30000, 
+    "quantity": 30, 
+    "status": "Còn hàng"
+}];
 
-database.push(Book(
-    10, 
-    "tiêu đề", 
-    "mô tả", 
-    "hình ảnh", 
-    ["chủ đề 1", "chủ đề 2"], 
-    [Review(5, "đánh giá 1"), Review(4, "đánh giá 2")],
-    ["tác giả 1", "tác giả 2", "tác giả 3"], 
-    "NXB Trẻ", 
-    "01/01/2003", 
-    "21 x 28cm",
-    "300g", 
-    "Bìa cứng", 
-    30000, 
-    30, 
-    "Còn hàng"
-));
-
-function addBook (
-    id,
-    title,
-    describe,
-    img,
-    topic,
-    review,
-    author,
-    publish,
-    date,
-    size,
-    weight,
-    format,
-    price,
-    quantity = 0,
-    status = "Hết hàng"
-) {
-    database.push(Book(
-    id,
-    title,
-    describe,
-    img,
-    topic,
-    review,
-    author,
-    publish,
-    date,
-    size,
-    weight,
-    format,
-    price,
-    quantity,
-    status
-));
-}
+// function addBook (
+//     id,
+//     title,
+//     description,
+//     img,
+//     topic,
+//     review,
+//     author,
+//     publish,
+//     date,
+//     size,
+//     weight,
+//     format,
+//     price,
+//     quantity = 0,
+//     status = "Hết hàng"
+// ) {
+//     database.push(Book(
+//     id,
+//     title,
+//     description,
+//     img,
+//     topic,
+//     review,
+//     author,
+//     publish,
+//     date,
+//     size,
+//     weight,
+//     format,
+//     price,
+//     quantity,
+//     status
+// ));
+// }
 
 console.log(database);
