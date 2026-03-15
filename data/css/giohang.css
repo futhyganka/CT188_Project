@@ -12,30 +12,21 @@ html {
         Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
-body {
+main {
     margin: 40px;
 }
 
-.page-header {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("https://www.shutterstock.com/image-photo/book-stacking-open-hardback-books-600nw-2450269257.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    color: white;
-    padding-left: 4%;
-}
-.header-content h1 {
-    font-size: 32px;
-    margin: 0;
+#header .background-header h1 {
 }
 
 .breadcrumb {
-    margin-top: 10px;
+    margin-top: 40px;
     font-size: 14px;
+    position: absolute;
+    top: 40%;
+    z-index: 3;
+    color: white;
+    left: 50px;
 }
 
 .breadcrumb a {

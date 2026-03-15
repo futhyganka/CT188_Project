@@ -451,7 +451,7 @@
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
-}
+} */
 
 #header .background-header{
     position: relative;
@@ -460,13 +460,16 @@
 
 #header .background-header h1{
     position: absolute;
-    top: 30%;
+    top: 40%;
+    margin-top: 0;
     z-index: 3;
     color: white;
     left: 50px;
+    font-size: 32px !important;
+    font-weight: 700;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
 }
 
-}
 #header .background-header .img{
     width: 100%;
     aspect-ratio: 4 / 1;
@@ -476,4 +479,4 @@
 #header .background-header .img img{
     width: 100%;
     filter: brightness(60%);
-} */
+}

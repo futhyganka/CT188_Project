@@ -13,6 +13,8 @@
 #main .section .title {
     text-align: center;
     text-transform: uppercase;
+    font-size: 32px;
+    padding: 16px 0;
 }
 
 #main .section .title a {
@@ -45,19 +47,12 @@
 }
 
 #main .section .content .list-item {
-<<<<<<< HEAD
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 10px 0;
-=======
     display: flex;
->>>>>>> 0e925e87882b950c9d5cd29585e1d4022e06d39f
 }
 
 #main .section .content .list-item .item {
     margin: 8px;
+    width: 224px;
 }
 
 #main .section .content .btn-more {
