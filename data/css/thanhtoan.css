@@ -47,22 +47,17 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* Style Input & Select */
 .input-full,
-select,
 textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
 }
 
-.input-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+.input-full {
+    margin-bottom: 12px;
 }
 
 textarea {
@@ -83,6 +78,20 @@ textarea {
     margin-right: 15px;
 }
 
+.transport-option {
+    display: flex;
+    /* Đẩy nội dung sang 2 đầu đối diện */
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.transport-price {
+    font-weight: bold;
+    /* Đảm bảo số tiền không bị xuống hàng khi thu nhỏ màn hình */
+    white-space: nowrap;
+}
 /* --- CỘT PHẢI --- */
 .checkout-right {
     flex: 0.8;
