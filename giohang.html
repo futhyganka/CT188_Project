@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="./data/css/giohang.css">
         <link rel="stylesheet" href="./data/css/header.css">
         <link rel="stylesheet" href="./data/css/footer.css">
+        <link rel="stylesheet" href="./data/css/nuttruot.css">
         
         <!-- icon -->
         <link rel="icon" href="./data/img/logo.png">
@@ -30,7 +31,7 @@
 
     <body>
         <header id="header">
-        <div class="hd-home">
+            <div class="hd-home">
             <div class="info">
                 <div class="top-left">
                     <i class="fa-brands fa-facebook"></i>
@@ -166,6 +167,9 @@
                     <th>Đơn giá</th>
                     <th>Số lượng</th>
                     <th>Tổng giá</th>
+                    <th>
+                        <i class="fa-solid fa-trash-arrow-up"></i>
+                    </th>
                 </tr>
             </thead>
 
@@ -176,7 +180,6 @@
                         <p>
                             Doraemon Movie Story Màu - Nobita và đảo giấu vàng
                             <br />
-                            <a href="#" class="remove">Xóa</a>
                         </p>
                     </td>
 
@@ -200,6 +203,9 @@
                     </td>
 
                     <td class="total-price">31.500đ</td>
+                    <td class="remove">
+                        <button type="button">Xóa</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -225,48 +231,50 @@
     </main>
 
         <footer id="footer">
-        <div class="footer-container">
+            <div class="footer-container">
+                <!-- GIỚI THIỆU -->
+                <div class="footer-box">
+                    <h3>Fivehasha</h3>
+                    <p>
+                        Fivehasha là hiệu sách online chuyên cung cấp sách chất
+                        lượng, đa dạng thể loại, mang tri thức đến gần hơn với
+                        bạn.
+                    </p>
+                </div>
 
-            <!-- GIỚI THIỆU -->
-            <div class="footer-box">
-                <h3>Fivehasha</h3>
-                <p>
-                    Fivehasha là hiệu sách online chuyên cung cấp sách chất lượng,
-                    đa dạng thể loại, mang tri thức đến gần hơn với bạn.
-                </p>
-            </div>
+                <!-- MENU -->
+                <div class="footer-box">
+                    <h3>Danh mục</h3>
+                    <ul>
+                        <li><a href="#">Sách mới</a></li>
+                        <li><a href="#">Sách bán chạy</a></li>
+                        <li><a href="#">Khuyến mãi</a></li>
+                        <li><a href="#">Blog sách</a></li>
+                    </ul>
+                </div>
 
-            <!-- MENU -->
-            <div class="footer-box">
-                <h3>Danh mục</h3>
-                <ul>
-                    <li><a href="#">Sách mới</a></li>
-                    <li><a href="#">Sách bán chạy</a></li>
-                    <li><a href="#">Khuyến mãi</a></li>
-                    <li><a href="#">Blog sách</a></li>
-                </ul>
-            </div>
+                <!-- HỖ TRỢ -->
+                <div class="footer-box">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="./thanhtoan.html">Thanh toán</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
 
-            <!-- HỖ TRỢ -->
-            <div class="footer-box">
-                <h3>Hỗ trợ</h3>
-                <ul>
-                    <li><a href="#">Chính sách đổi trả</a></li>
-                    <li><a href="#">Hướng dẫn mua hàng</a></li>
-                    <li><a href="./thanhtoan.html">Thanh toán</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
-            </div>
-
-            <!-- MẠNG XÃ HỘI -->
-            <div class="footer-box">
-                <h3>Kết nối</h3>
-                <div class="social">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <!-- MẠNG XÃ HỘI -->
+                <div class="footer-box">
+                    <h3>Kết nối</h3>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
+
 
         </div>
 
@@ -276,5 +284,14 @@
         </div>
     </footer>
 
+    <div id="fixed">
+        <div class="btn-back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <!-- File js -->
+    <script src="./data/js/database.js"></script>
+    <script src="./data/js/toTop.js"></script>
     </body>
 </html>
