@@ -85,7 +85,7 @@
 }
 
 .list-item .item .box-item:hover .img {
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .list-item .item .box-item:hover .img img {

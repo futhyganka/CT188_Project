@@ -6,9 +6,9 @@
     position: relative;
 }
 
-#main .section:hover {
+/* #main .section:hover {
     
-}
+} */
 
 #main .section .title {
     text-align: center;
@@ -28,7 +28,7 @@
     overflow: hidden;
 }
 
-#main .section .content .btn-slider-left {
+/* #main .section .content .btn-slider-left {
 
 }
 
@@ -42,12 +42,12 @@
 
 #main .section .content .btn-slider-right i {
     
-}
+} */
 
 #main .section .content .list-item {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 10px 0;
 }
@@ -61,6 +61,8 @@
     color: var(--main-color);
     text-align: right;
     margin: 8px;
+    width: fit-content;
+    float: right;
 }
 
 #main .section .content .btn-more:hover {
