@@ -112,17 +112,19 @@ body{
 }
 
 .add{
-    background:#c62828;
+    background: var(--main-color);
     color:white;
 }
 
 .buy{
-    background:#d32f2f;
+    background: var(--main-color);
     color:white;
 }
 
-.btn:hover{
-    opacity:0.9;
+.add:hover,
+.buy:hover{
+    background: var(--grey-color);
+    color: white;
 }
 
 

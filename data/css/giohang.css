@@ -39,69 +39,73 @@ main {
     color: #ffc107;
 }
 
-h1 {
+main h1 {
     margin-bottom: 20px;
     font-size: 24px;
 }
 
-.cart-table {
+main .cart-table {
     width: 100%;
     /* nhập các đường viền thành 1 */
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
 
-.cart-table th,
-.cart-table td {
+main .cart-table th,
+main .cart-table td {
     padding: 15px;
     vertical-align: middle;
 }
 
-.cart-table th {
+main .cart-table th {
     font-size: 16px;
     border-bottom: 1px solid #ddd;
 }
 
-.cart-table td {
-    text-align: center;
-}
-
-.left {
+main .cart-table td {
     text-align: left;
 }
-.product-info {
+
+main .cart-table .th-title {
+    width: 60%;
+}
+
+main .left {
+    text-align: left;
+}
+main .product-info {
     display: flex;
     align-items: center;
     gap: 15px;
     font-size: 16px;
 }
 
-/* .product-info a {
+/* main .product-info a {
     font-weight: bold;
     text-align: left;
 } */
 
-.book-img {
+main .book-img {
     width: 80px;
 }
 
-.price {
+main .price {
     text-align: center;
 }
 
-.new-price {
-    color: red;
+main .new-price {
+    color: var(--main-color);
     font-weight: bold;
     font-size: 17px;
 }
 
-.old-price {
+main .old-price {
     text-decoration: line-through;
     color: var(--grey-color);
     font-size: 16px;
 }
 
-.discount {
+main .discount {
     background-color: var(--main-color);
     color: white;
     padding: 3px 6px;
@@ -111,14 +115,14 @@ h1 {
 }
 
 /* Container bao quanh 3 nút */
-.quantity-group {
+main .quantity-group {
     display: inline-flex;
     border: 1px solid #ddd;
     overflow: hidden;
     height: 35px;
 }
 
-.quantity-group button {
+main .quantity-group button {
     width: 35px;
     height: 100%;
     border: none;
@@ -131,7 +135,7 @@ h1 {
 }
 
 /* Ô nhập số lượng ở giữa */
-.quantity-group .number {
+main .quantity-group .number {
     width: 45px;
     height: 100%;
     border: none;
@@ -144,38 +148,38 @@ h1 {
 }
 
 /* Hiệu ứng khi di chuột vào nút */
-.quantity-group button:hover {
+main .quantity-group button:hover {
     background-color: #fff1f1;
 }
 
-.btn-minus,
-.btn-plus {
+main .btn-minus,
+main .btn-plus {
     font-weight: bold;
 }
 
-.total-price {
+main .total-price {
     text-align: center;
     font-weight: bold;
-    color: red;
+    color: var(--main-color);
     font-size: 16px;
 }
 
-.remove button {
-    color: red;
+main .remove button {
+    color: var(--main-color);
     background-color: #fff;
     border: none;
     cursor: pointer;
     font-weight: bold;
 }
 
-.bottom-section {
+main .bottom-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 30px;
 }
 
-.note-section textarea {
+main .note-section textarea {
     width: 750px;
     height: 105px;
     padding: 10px;
@@ -184,38 +188,38 @@ h1 {
     resize: none;
 }
 
-.cart-footer {
+main .cart-footer {
     width: 45%;
     display: flex;
     flex-direction: column; /* xếp dọc */
     align-items: flex-end; /* căn sang phải */
 }
 
-.total,
-.saving {
+main .total,
+main .saving {
     width: 100%;
     text-align: right;
 }
 
-.saving {
+main .saving {
     font-size: 16px;
     text-align: right;
     margin-bottom: 10px;
 }
 
-.total {
+main .total {
     font-size: 17px;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-.total span {
-    color: red;
+main .total span {
+    color: var(--main-color);
     font-weight: bold;
     font-size: 20px;
 }
 
-.checkout-btn {
+main .checkout-btn {
     margin-top: 10px;
     background-color: var(--main-color);
     color: white;
@@ -228,6 +232,6 @@ h1 {
     width: 400px;
 }
 
-.checkout-btn:hover {
+main .checkout-btn:hover {
     background-color: var(--dark-color);
 }

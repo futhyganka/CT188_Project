@@ -55,7 +55,7 @@
     background-color: var(--main-color);
     font-size: 14px;
     /* font-weight: 700; */
-    font-family: 'Open Sans', Calibri, sans-serif;
+    font-family: 'Open Sans', Calibri, sans-serif !important;
     color: #fff;
     line-height: 2.3;
     top: 12px;
@@ -65,7 +65,7 @@
 .list-item .item .box-item .price {
     font-size: 14px;
     font-weight: 700;
-    font-family: 'Open Sans', Calibri, sans-serif;
+    font-family: 'Open Sans', Calibri, sans-serif !important;
     letter-spacing: 1px;
     padding: 8px 0;
 }

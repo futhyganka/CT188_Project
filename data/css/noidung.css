@@ -19,12 +19,8 @@
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
 }
 
-#main .section .title a {
+#main .section .title {
     color: var(--grey-color);
-}
-
-#main .section .title a:hover {
-    color: var(--dark-color);
 }
 
 #main .section .content {

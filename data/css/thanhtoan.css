@@ -78,6 +78,10 @@ textarea {
     margin-right: 15px;
 }
 
+.payment-option:hover{
+    cursor: pointer;
+}
+
 .transport-option {
     display: flex;
     /* Đẩy nội dung sang 2 đầu đối diện */

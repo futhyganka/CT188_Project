@@ -61,11 +61,11 @@
     bottom: 30px;
     right: 30px;
     background-color: var(--main-color);
-    border: solid 5px var(--dark-color);
+    /* border: solid 5px var(--dark-color); */
+    padding: 5px;
     width: 40px;
     height: 40px;
-    border-radius: 18px;
-    opacity: 0.4;
+    border-radius: 14px;
     color: white;
     font-size: 20px;
     text-align: center;
@@ -74,6 +74,5 @@
 }
 
 #fixed .btn-back-to-top:hover {
-    opacity: 0.8;
     cursor: pointer;
 }
