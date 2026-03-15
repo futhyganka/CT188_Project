@@ -1,0 +1,257 @@
+/* ===== 1. LAYOUT CHUNG ===== */
+.book-shop {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px 0;
+}
+
+.book-shop .bs-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.book-shop .bs-sidebar {
+    width: 260px;
+    min-width: 260px;
+    padding-right: 15px;
+}
+
+.book-shop .bs-content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* ===== 2. CẤU TRÚC BOX SIDEBAR (Dùng chung cho cả 2 khối) ===== */
+.sidebar-box {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Tiêu đề đỏ đồng nhất */
+.sidebar-box h3, 
+.sidebar-header {
+    background: #d71920;
+    color: #fff;
+    height: 45px;
+    padding: 0 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Riêng header có icon (Thể loại) */
+.sidebar-header {
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* ===== 3. DANH SÁCH BÊN TRONG ===== */
+.sidebar-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.sidebar-box ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-box ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-box ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.sidebar-box ul li a:hover {
+    color: #d71920;
+    background-color: #f9f9f9;
+}
+
+/* Icon tròn nhỏ trong phần thể loại */
+.sidebar-box ul li i {
+    font-size: 8px;
+    color: #ccc;
+    margin-right: 10px;
+}
+
+/* ===== 4. HIỆU ỨNG ĐÓNG/MỞ (COLLAPSE) ===== */
+.bs-collapse-sidebar.collapsed ul {
+    max-height: 0;
+    overflow: hidden;
+}
+
+
+
+/* Ẩn ô checkbox mặc định */
+.filter-item input[type="checkbox"] {
+    display: none;
+}
+
+/* Khi được tích (checked), đổi màu chữ hoặc icon */
+.filter-item input[type="checkbox"]:checked + i {
+    color: #d71920; /* Màu đỏ khi được chọn */
+    font-weight: bold;
+}
+
+.filter-item input[type="checkbox"]:checked ~ label {
+    color: #d71920;
+}
+
+.filter-item label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 15px; /* Giữ padding để dễ bấm */
+}
+
+
+/* Container chính */
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 10px; /* Khoảng cách giữa các vòng tròn */
+    padding: 0;
+    align-items: center;
+}
+
+/* Định dạng chung cho các nút */
+.pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Chiều rộng cố định */
+    height: 40px; /* Chiều cao cố định bằng chiều rộng */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    background-color: #f1f3f5; /* Màu nền xám nhạt cho các nút chưa chọn */
+    border-radius: 50%;        /* Tạo hình tròn hoàn hảo */
+    transition: all 0.3s ease;
+}
+
+/* Trang hiện tại (Màu đỏ nổi bật) */
+.pagination .page-item.active .page-link {
+    background-color: #d71920; /* Màu đỏ thương hiệu của bạn */
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(215, 25, 32, 0.3); /* Đổ bóng nhẹ cho nút active */
+}
+
+/* Hiệu ứng hover cho các nút số */
+.pagination .page-item:not(.active):not(.disabled):hover .page-link {
+    background-color: #e9ecef;
+    color: #d71920;
+    transform: translateY(-2px); /* Nhảy nhẹ lên khi hover */
+}
+
+/* Dấu mũi tên và dấu ba chấm */
+.pagination .page-item.disabled .page-link {
+    color: #ced4da;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.pagination .page-item.dots .page-link {
+    background-color: transparent;
+    cursor: default;
+}
+
+/* Nút mũi tên có thể để nền trong suốt hoặc xám nhẹ */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+    background-color: transparent;
+    font-size: 20px;
+}
+
+/* Áp dụng cho tất cả danh sách trong sidebar */
+.sidebar-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+    max-height: 1000px; /* Đủ lớn để chứa danh sách dài nhất */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease; /* Tốc độ đóng mở đồng nhất */
+}
+
+/* Trạng thái đóng chung cho tất cả các khối */
+.sidebar-box.collapsed ul {
+    max-height: 0 !important;
+    opacity: 0;
+}
+
+/* Xoay icon cho tất cả các khối */
+.sidebar-header i {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed .sidebar-header i {
+    transform: rotate(-180deg);
+}
+
+/* Trạng thái khi Sidebar bị đóng */
+.sidebar-box.collapsed #sidebar-menu {
+    max-height: 0; /* Thu nhỏ chiều cao về 0 */
+    opacity: 0;    /* Làm mờ dần */
+}
+
+/* Xoay icon mượt mà */
+#toggle-icon {
+    transition: transform 0.4s ease;
+}
+
+.sidebar-box.collapsed #toggle-icon {
+    transform: rotate(-180deg); /* Xoay ngược mũi tên khi đóng */
+}
+
+/* list-item */
+#main .section .content .list-item {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px 0;
+}
+
+#main .section .content .list-item .item {
+    margin: 8px;
+    width: 100% !important;
+}
+
+#main .section .content .btn-more {
+    color: var(--main-color);
+    text-align: right;
+    margin: 8px;
+}
+
+#main .section .content .btn-more:hover {
+    color: var(--dark-color);
+    cursor: pointer;
+}
+

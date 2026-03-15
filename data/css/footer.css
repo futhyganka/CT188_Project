@@ -19,7 +19,7 @@
 
 #footer .footer-container .footer-box h3 {
     margin-bottom: 15px;
-    color: #fff;
+    color: black;
 }
 
 #footer .footer-container .footer-box p {
@@ -29,10 +29,12 @@
 
 #footer .footer-container .footer-box ul {
     list-style: none;
+    padding-left: 0;
 }
 
 #footer .footer-container .footer-box ul li {
     margin-bottom: 8px;
+    
 }
 
 #footer .footer-container .footer-box ul li a {
