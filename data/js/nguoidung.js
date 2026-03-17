@@ -1,2 +1,0 @@
-let logged = -1;
-

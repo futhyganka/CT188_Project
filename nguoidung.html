@@ -188,10 +188,14 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button class="modify">Sửa thông tin</button></td>
+                        <td>
+                            <button class="modify">Sửa thông tin</button>
+                            <button class="log-out">Đăng xuất</button>
+                        </td>
                     </tr>
                 </table>
             </div>
+            <a class="to-adminpage" href="admin.html">Đến trang admin</a>
         </section>
 
         <section class="order">
@@ -200,13 +204,13 @@
                 <div class="container-fluid">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active">Chờ xử lý</a>
+                            <div class="nav-link active">Chờ xử lý</div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Đang giao hàng</a>
+                            <div class="nav-link">Đang giao hàng</div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Giao hàng thành công</a>
+                            <div class="nav-link">Giao hàng thành công</div>
                         </li>
                     </ul>
                 </div>
@@ -278,6 +282,8 @@
     </div>
 
     <!-- File js -->
+    <script src="./data/js/main.js"></script>
+    <script src="./data/js/nguoidung.js"></script>
     <script src="./data/js/database.js"></script>
     <script src="./data/js/toTop.js"></script>
     </body>

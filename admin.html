@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="./data/css/header.css">
         <link rel="stylesheet" href="./data/css/footer.css">
         <link rel="stylesheet" href="./data/css/nuttruot.css">
-        <link rel="stylesheet" href="./data/css/nguoidung.css">
+        <link rel="stylesheet" href="./data/css/admin.css">
         
         <!-- icon -->
         <link rel="icon" href="./data/img/logo.png">
@@ -58,9 +58,19 @@
                         <img src="data/img/logo.png" alt="Fivehasha">
                     </a>
                 </div>
+                <!-- Dropdowm -->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Tìm kiếm bằng id
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><div class="dropdown-item">Tìm kiếm bằng id</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm bằng tên</div></li>
+                    </ul>
+                </div>
                 <!-- SEARCH -->
                 <div class="search-box">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm">
+                    <input type="text" placeholder="Tìm kiếm">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <!-- USER + CART -->
@@ -109,36 +119,18 @@
             </div>
         </div>
 
-<!-- bootstrap navbar -->
+        <!-- bootstrap navbar -->
         <nav class="navbar navbar-expand-sm navigation">
             <div class="container-fluid">
                 <ul class="navbar-nav menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="./gioithieu.html">Trang chủ</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
-                        <ul class="dropdown-menu submenu">
-                            <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
-                            <li><a class="dropdown-item" href="#">Lịch sử</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học nước ngoài</a></li>
-                            <li><a class="dropdown-item" href="#">Kỹ năng</a></li>
-                            <li><a class="dropdown-item" href="#">Khoa học</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
-                        </ul>
+                        <div class="nav-link active">Sản phẩm</div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./gioithieunxb.html">Giới thiệu</a>
+                        <div class="nav-link">User</div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./tintuc.html">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./flashsale.html">Flash Sale</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./lienhe.html">Liên hệ</a>
+                        <div class="nav-link">Đơn hàng</div>
                     </li>
                 </ul>
             </div>
@@ -148,7 +140,128 @@
 
     <main>
 
+        <div class="product active">
+
+            <h5>Cơ sở dữ liệu sản phẩm: </h5>
+
+            <button>Tất cả dữ liệu</button>
+            <button>Thêm</button>
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 68px;">ID SP</th>
+                            <th style="width: 80px;">H/Ả SP</th>
+                            <th style="width: auto;">Tên sản phẩm</th>
+                            <th style="width: 140px;">Thể loại</th>
+                            <th style="width: 110px;">Trạng thái</th>
+                            <th style="width: 100px;">Số lượng</th>
+                            <th style="width: 110px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>B214</td>
+                            <td><img width="50px" src="./data/img/img214.webp" alt=""></td>
+                            <td>Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ</td>
+                            <td>VH nước ngoài<br>Lịch sử</td>
+                            <td>Có hàng</td>
+                            <td>50</td>
+                            <td>
+                                <button>Sửa</button>
+                                <button>Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         
+        </div>
+
+        <div class="user">
+
+            <h5>Cơ sở dữ liệu người dùng: </h5>
+
+            <button>Tất cả dữ liệu</button>
+            <button>Thêm</button>
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>user ID</th>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Quyền</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Admin</td>
+                            <td>Nguyễn Bánh Bèo</td>
+                            <td>01233456789</td>
+                            <td>ab@gmail.com</td>
+                            <td>Cần Thơ</td>
+                            <td>
+                                <button>admin</button>
+                            </td>
+                            <td>
+                                <button>Sửa</button>
+                                <button>Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="order">
+
+            <h5>Cơ sở dữ liệu đơn hàng: </h5>
+
+            <button>Tất cả dữ liệu</button>
+            <button>Thêm</button>
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Admin</td>
+                            <td>Nguyễn Bánh Bèo</td>
+                            <td>01233456789</td>
+                            <td>ab@gmail.com</td>
+                            <td>Cần Thơ</td>
+                            <td>
+                                <button>admin</button>
+                            </td>
+                            <td>
+                                <button>Sửa</button>
+                                <button>Xóa</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        </div>
         
     </main>
 
@@ -215,6 +328,8 @@
 
     <!-- File js -->
     <script src="./data/js/database.js"></script>
+    <script src="./data/js/main.js"></script>
     <script src="./data/js/toTop.js"></script>
+    <script src="./data/js/admin.js"></script>
     </body>
 </html>
