@@ -1,0 +1,87 @@
+
+
+.flashsale-container{
+    padding:40px 10%;
+    background:#f8f8f8;
+}
+
+/* banner */
+.flash-banner{
+    background:linear-gradient(45deg,var(--dark-color),var(--main-color));
+    color:white;
+    text-align:center;
+    padding:50px;
+    border-radius:10px;
+    margin-bottom:40px;
+}
+
+.flash-banner h1{
+    font-size:40px;
+    font-weight:700;
+}
+
+.flash-banner p{
+    font-size:18px;
+}
+
+
+/* danh sách voucher */
+
+.voucher-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.voucher{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    border-left:6px solid var(--main-color);
+}
+
+/* phần trái */
+
+.voucher-left h3{
+    color: var(--main-color);
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.voucher-left p{
+    font-size:14px;
+    color:#555;
+}
+
+/* phần phải */
+
+.voucher-right{
+    text-align:center;
+}
+
+.code{
+    display:block;
+    background:#eee;
+    padding:6px 12px;
+    margin-bottom:10px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.voucher-right button{
+    background:var(--main-color);
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.voucher-right button:hover{
+    background: var(--dark-color);
+}
