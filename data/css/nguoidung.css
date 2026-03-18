@@ -1,0 +1,103 @@
+main {
+    display: flex;
+    padding: 32px;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-weight: 700;
+}
+
+main .not-found {
+    width: 100%;
+    justify-items: center;
+    font-weight: 700 !important;
+    display: none;
+}
+
+main .not-found .err {
+    font-size: 10em;
+}
+
+main .not-found .content {
+    font-size: 4em;
+    text-align: center;
+}
+
+main .user {
+    flex: 1;
+    border-right: solid 1px #ccc;
+}
+
+main .user .info table {
+    width: 100%;
+}
+
+main .user .info tr td:first-child {
+    padding-right: 8px;
+    text-align: right;
+}
+
+main .user .info tr td:nth-child(2) {
+    padding-right: 12px;
+}
+
+main .user .info tr td input {
+    width: 100%;
+}
+
+main .user .info td {
+    padding: 4px;
+}
+
+main .user .modify,
+main .user .log-out {
+    padding: 6px 24px;
+    color: #fff;
+    font-size: 16px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+main .user .modify:hover,
+main .user .log-out:hover {
+    background-color: var(--grey-color);
+}
+
+main .user .to-adminpage {
+    color: var(--main-color);
+    float: right;
+    padding-right: 16px;
+}
+
+main .user .to-adminpage:hover {
+    color: var(--dark-color);
+}
+
+main .order {
+    flex: 2;
+    padding-left: 16px;
+}
+
+main .order .nav-item {
+    margin: 0 8px;
+}
+
+main .order .navbar.navbar-expand-sm .container-fluid .nav-link {
+    background-color: var(--sub-color);
+    padding: 8px 16px;
+    border-radius: 3px;
+}
+
+main .order .navbar.navbar-expand-sm .container-fluid .nav-link.active {
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: 700;
+}
+
+main .order hr {
+    margin-top: -4px;
+}

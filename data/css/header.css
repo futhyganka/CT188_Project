@@ -381,15 +381,18 @@
     position: relative;
 }
 
-#header .navigation .menu a {
+#header .navigation .menu a,
+#header .navigation .menu div {
     text-decoration: none;
     color: #333;
     font-weight: 600;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
-#header .navigation .menu a:hover {
+#header .navigation .menu a:hover,
+#header .navigation .menu div:hover {
     color: var(--dark-color);
+    cursor: pointer;
 }
 
 /* DROPDOWN */
