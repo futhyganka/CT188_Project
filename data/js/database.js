@@ -52,7 +52,7 @@ function createBook(book, callback){
 // sửa sách
 function setBook(id, book, callback) {
     var option = {
-        method: 'patch',
+        method: 'put',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -110,7 +110,7 @@ function createUser(user, callback){
 // sửa user
 function setUser(id, user, callback) {
     var option = {
-        method: 'patch',
+        method: 'put',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -168,7 +168,7 @@ function createOrder(order, callback){
 // sửa order
 function setOrder(id, order, callback) {
     var option = {
-        method: 'patch',
+        method: 'put',
         headers: {
             'Content-Type': 'application/json'
         },

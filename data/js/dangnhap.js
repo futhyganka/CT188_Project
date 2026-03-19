@@ -5,53 +5,29 @@ loginForm.addEventListener("submit", function(e) {
 
     const inputs = loginForm.querySelectorAll(".auth-input");
 
-    let fullname = inputs[0].value.trim();
-    let email = inputs[1].value.trim();
-    let password = inputs[2].value;
+    let id = inputs[0].value.trim();
+    let password = inputs[1].value;
 
-    // Lấy danh sách user
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    getUsers((users) => {
+        let userIndex =  -1;
+        users.forEach((user, i) => {
+            if ((id === user.email || user.id === id) &&
+                user.password === password) {
+                userIndex = i;
+            }
+        });
+        if (userIndex !== -1) {
+            alert("Đăng nhập thành công!");
 
-    // Tìm user
-    let user = users.find(u => 
-        u.email === email &&
-        u.password === password &&
-        u.fullname === fullname
-    );
+            // Lưu trạng thái đăng nhập
+            localStorage.setItem("indexUserCurr", userIndex);
 
-    if (user) {
-        alert("Đăng nhập thành công!");
+            // Chuyển trang (ví dụ về trang chủ)
+            window.location.href = "gioithieu.html";
 
-        // Lưu trạng thái đăng nhập
-        localStorage.setItem("currentUser", JSON.stringify(user));
+        } else {
+            alert("Sai thông tin đăng nhập!");
+        }
+    })
 
-        // Chuyển trang (ví dụ về trang chủ)
-        window.location.href = "http://127.0.0.1:5500/CT188_Project/gioithieu.html";
-
-    } else {
-        alert("Sai thông tin đăng nhập!");
-    }
 });
-
-// trang chủ
-let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-
-if (currentUser) {
-    console.log("Xin chào", currentUser.fullname);
-}
-
-
-function logout() {
-    localStorage.removeItem("currentUser");
-    window.location.href = "dangnhap.html";
-}
-
-if (user) {
-    alert("Đăng nhập thành công!");
-
-    // Lưu user đang đăng nhập
-    localStorage.setItem("currentUser", JSON.stringify(user));
-
-    // 👉 Chuyển về trang chủ
-    window.location.href = "http://127.0.0.1:5500/CT188_Project/gioithieu.html";
-}

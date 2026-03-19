@@ -142,7 +142,7 @@
 
         <div class="product active">
 
-            <h5>Cơ sở dữ liệu sản phẩm: </h5>
+            <h5>Quản lý sản phẩm: </h5>
 
             <button>Tất cả dữ liệu</button>
             <button>Thêm</button>
@@ -151,6 +151,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th style="width: 68px;">STT</th>
                             <th style="width: 68px;">ID SP</th>
                             <th style="width: 80px;">H/Ả SP</th>
                             <th style="width: auto;">Tên sản phẩm</th>
@@ -163,6 +164,7 @@
                     
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>B214</td>
                             <td><img width="50px" src="./data/img/img214.webp" alt=""></td>
                             <td>Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ</td>
@@ -182,7 +184,7 @@
 
         <div class="user">
 
-            <h5>Cơ sở dữ liệu người dùng: </h5>
+            <h5>Quản lý người dùng: </h5>
 
             <button>Tất cả dữ liệu</button>
             <button>Thêm</button>
@@ -191,6 +193,7 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>STT</th>
                             <th>user ID</th>
                             <th>Họ tên</th>
                             <th>Số điện thoại</th>
@@ -203,6 +206,7 @@
                     
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>Admin</td>
                             <td>Nguyễn Bánh Bèo</td>
                             <td>01233456789</td>
@@ -223,7 +227,7 @@
 
         <div class="order">
 
-            <h5>Cơ sở dữ liệu đơn hàng: </h5>
+            <h5>Quản lý đơn hàng: </h5>
 
             <button>Tất cả dữ liệu</button>
             <button>Thêm</button>
@@ -232,11 +236,13 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Họ tên</th>
-                            <th>Số điện thoại</th>
-                            <th>Email</th>
-                            <th>Địa chỉ</th>
+                            <th>STT</th>
+                            <th>Order ID</th>
+                            <th>User ID</th>
+                            <th>Sản phẩm</th>
+                            <th>Tổng tiền</th>
+                            <th>Giảm giá</th>
+                            <th>Thành tiền</th>
                             <th>Trạng thái</th>
                             <th>Thao tác</th>
                         </tr>
@@ -244,17 +250,23 @@
                     
                     <tbody>
                         <tr>
-                            <td>Admin</td>
-                            <td>Nguyễn Bánh Bèo</td>
-                            <td>01233456789</td>
-                            <td>ab@gmail.com</td>
-                            <td>Cần Thơ</td>
+                            <td>1</td>
+                            <td>abcd</td>
+                            <td>admin</td>
                             <td>
-                                <button>admin</button>
+                                sp1[sl] x giá <br>
+                                sp2[sl] x giá
+                            </td>
+                            <td>100000</td>
+                            <td>20000</td>
+                            <td>80000</td>
+                            <td>
+                                Chờ xử lý
+                                <!-- Đã duyệt/ Đã hủy/Đang giao hàng/Giao hành thành công -->
                             </td>
                             <td>
-                                <button>Sửa</button>
-                                <button>Xóa</button>
+                                <button>Xác nhận</button>
+                                <button>Hủy</button>
                             </td>
                         </tr>
                     </tbody>
@@ -264,6 +276,12 @@
         </div>
         
     </main>
+
+    <div class="fixed">
+        <div class="add-product">
+
+        </div>
+    </div>
 
         <footer id="footer">
             <hr>

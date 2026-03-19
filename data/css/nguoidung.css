@@ -24,9 +24,14 @@ main .not-found .content {
     text-align: center;
 }
 
+main .active {
+    display: block !important;
+}
+
 main .user {
     flex: 1;
     border-right: solid 1px #ccc;
+    display: none;
 }
 
 main .user .info table {
@@ -42,7 +47,8 @@ main .user .info tr td:nth-child(2) {
     padding-right: 12px;
 }
 
-main .user .info tr td input {
+main .user .info tr td input,
+main .user .info tr td textarea {
     width: 100%;
 }
 
@@ -80,6 +86,7 @@ main .user .to-adminpage:hover {
 main .order {
     flex: 2;
     padding-left: 16px;
+    display: none;
 }
 
 main .order .nav-item {

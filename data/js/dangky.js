@@ -6,12 +6,13 @@ registerForm.addEventListener("submit", function(e) {
 
     const inputs = registerForm.querySelectorAll(".auth-input");
 
-    let fullname = inputs[0].value.trim();
-    let email = inputs[1].value.trim();
-    let phone = inputs[2].value.trim();
-    let address = inputs[3].value.trim();
-    let password = inputs[4].value;
-    let confirmPassword = inputs[5].value;
+    let idUser = inputs[0].value.trim();
+    let name = inputs[1].value.trim();
+    let email = inputs[2].value.trim();
+    let phone = inputs[3].value.trim();
+    let address = inputs[4].value.trim();
+    let password = inputs[5].value;
+    let confirmPassword = inputs[6].value;
 
     // Kiểm tra password nhập lại
     if (password !== confirmPassword) {
@@ -19,37 +20,24 @@ registerForm.addEventListener("submit", function(e) {
         return;
     }
 
-    // Lấy danh sách user cũ
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // Kiểm tra email đã tồn tại chưa
-    let isExist = users.some(user => user.email === email);
-
-    if (isExist) {
-        alert("Email đã tồn tại!");
-        return;
+    let user = {
+      "id": idUser,
+      "role": "user",
+      "name": name,
+      "phone": phone,
+      "email": email,
+      "password": password,
+      "address": address,
+      "order": []
     }
 
-    // Tạo user mới
-    let newUser = {
-        fullname,
-        email,
-        phone,
-        address,
-        password
-    };
+    createUser(user, (users) => {
+        alert("Đăng ký thành công!");
+        // Reset form
+        registerForm.reset();
 
-    // Thêm vào danh sách
-    users.push(newUser);
+        // Chuyển sang trang login
+        window.location.href = "dangnhap.html";
+    })
 
-    // Lưu lại
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Đăng ký thành công!");
-
-    // Reset form
-    registerForm.reset();
-
-    // Chuyển sang trang login
-    window.location.href = "dangnhap.html";
 });

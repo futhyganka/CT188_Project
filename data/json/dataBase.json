@@ -1608,17 +1608,19 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 4, 
-          "info": "Truyện hay" 
-        }, 
-        { 
-          "star": 5, 
-          "info": "Giao hàng nhanh" 
-        } 
+      "review": [
+        {
+          "star": 4,
+          "info": "Truyện hay"
+        },
+        {
+          "star": 5,
+          "info": "Giao hàng nhanh"
+        }
       ],
-      "author": ["Fujiko F Fujio"],
+      "author": [
+        "Fujiko F Fujio"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2026",
       "size": "18 x 13 cm",
@@ -1637,13 +1639,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Đã coi phim nhưng vẫn mua truyện, đúng là đáng tiền" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Đã coi phim nhưng vẫn mua truyện, đúng là đáng tiền"
+        }
       ],
-      "author": ["Fujiko F Fujio"],
+      "author": [
+        "Fujiko F Fujio"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2025",
       "size": "18 x 13 cm",
@@ -1662,13 +1666,16 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Thích bộ này cực, đã mua trọn bộ tới tập này rồi" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Thích bộ này cực, đã mua trọn bộ tới tập này rồi"
+        }
       ],
-      "author": ["Mifumi INABA","Soichiro YAMAMOTO"],
+      "author": [
+        "Mifumi INABA",
+        "Soichiro YAMAMOTO"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2025",
       "size": "18 x 13 cm",
@@ -1687,13 +1694,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Từ lúc NXB Trẻ thông báo tái bản, mình đã trông mong suốt. Giờ mình đã có thể sưu tầm được Khu rừng đom đóm. Thật Tuyệt vời mà!!!" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Từ lúc NXB Trẻ thông báo tái bản, mình đã trông mong suốt. Giờ mình đã có thể sưu tầm được Khu rừng đom đóm. Thật Tuyệt vời mà!!!"
+        }
       ],
-      "author": ["Yuki Midorikawa"],
+      "author": [
+        "Yuki Midorikawa"
+      ],
       "publish": "NXB Trẻ",
       "date": "2023",
       "size": "19 x 13 cm",
@@ -1712,13 +1721,18 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "MaoMao dễ thương quá" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "MaoMao dễ thương quá"
+        }
       ],
-      "author": ["Natsu Hyuuga", "Touco Shino", "Itsuki Nanao", "Nekokurage"],
+      "author": [
+        "Natsu Hyuuga",
+        "Touco Shino",
+        "Itsuki Nanao",
+        "Nekokurage"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2025",
       "size": "18 x 13 cm",
@@ -1738,7 +1752,10 @@
         "truyentranh"
       ],
       "review": [],
-      "author": ["Mai Anh Đoàn","Châu Phạm"],
+      "author": [
+        "Mai Anh Đoàn",
+        "Châu Phạm"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2026",
       "size": "21 x 21 cm",
@@ -1757,13 +1774,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Truyện hay, bổ ích, vừa được đọc truyện vừa biết thêm về danh nhân thế giới" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Truyện hay, bổ ích, vừa được đọc truyện vừa biết thêm về danh nhân thế giới"
+        }
       ],
-      "author": ["Neung In Publishing Company"],
+      "author": [
+        "Neung In Publishing Company"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2022",
       "size": "20.5 x 14.5 cm",
@@ -1782,13 +1801,16 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Phù hợp với trẻ em, bé nhà mình thích lắm" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Phù hợp với trẻ em, bé nhà mình thích lắm"
+        }
       ],
-      "author": ["Minh Thông","Kim Dung"],
+      "author": [
+        "Minh Thông",
+        "Kim Dung"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2026",
       "size": "14,5 x 16 cm",
@@ -1807,17 +1829,20 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Truyện hay" 
-        }, 
-        { 
-          "star": 3, 
-          "info": "Vận chuyển chậm" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Truyện hay"
+        },
+        {
+          "star": 3,
+          "info": "Vận chuyển chậm"
+        }
       ],
-      "author": ["Bùi Phương Tâm","Hoàng Giang"],
+      "author": [
+        "Bùi Phương Tâm",
+        "Hoàng Giang"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2025",
       "size": "27 x 22 cm",
@@ -1837,7 +1862,10 @@
         "truyentranh"
       ],
       "review": [],
-      "author": ["Hazuki Takeoka", "Tiv"],
+      "author": [
+        "Hazuki Takeoka",
+        "Tiv"
+      ],
       "publish": "NXB Kim Đồng",
       "date": "2026",
       "size": "18 x 13 cm",
@@ -1856,13 +1884,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Hóng bộ này lâu lắm rồi, A Thụ dễ thương quá<3" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Hóng bộ này lâu lắm rồi, A Thụ dễ thương quá<3"
+        }
       ],
-      "author": ["Từ Vụ A"],
+      "author": [
+        "Từ Vụ A"
+      ],
       "publish": "NXB Dân Trí",
       "date": "2022",
       "size": "20.5 x 14.5 cm",
@@ -1882,7 +1912,10 @@
         "truyentranh"
       ],
       "review": [],
-      "author": ["Tường Minh", "Trâm Anh"],
+      "author": [
+        "Tường Minh",
+        "Trâm Anh"
+      ],
       "publish": "NXB Thế giới",
       "date": "2026",
       "size": "20.5 x 14.5 cm",
@@ -1902,16 +1935,18 @@
         "truyentranh"
       ],
       "review": [
-        { 
-          "star": 4, 
-          "info": "Trải nghiệm rất cá nhân, ai không quan tâm đời họa sĩ có thể thấy khó đồng cảm." 
+        {
+          "star": 4,
+          "info": "Trải nghiệm rất cá nhân, ai không quan tâm đời họa sĩ có thể thấy khó đồng cảm."
         },
-        { 
-          "star": 5, 
-          "info": "Câu chuyện chân thật nhưng nhịp kể chậm, đọc cần kiên nhẫn." 
+        {
+          "star": 5,
+          "info": "Câu chuyện chân thật nhưng nhịp kể chậm, đọc cần kiên nhẫn."
         }
       ],
-      "author": ["Phan"],
+      "author": [
+        "Phan"
+      ],
       "publish": "NXB Phụ nữ Việt Nam",
       "date": "2025",
       "size": "19 x 13 cm",
@@ -1930,13 +1965,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Giao hàng nhanh" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Giao hàng nhanh"
+        }
       ],
-      "author": ["Lê Thư"],
+      "author": [
+        "Lê Thư"
+      ],
       "publish": "NXB Phụ nữ Việt Nam",
       "date": "2025",
       "size": "20.5 x 14.5 cm",
@@ -1956,16 +1993,18 @@
         "truyentranh"
       ],
       "review": [
-        { 
-          "star": 4, 
-          "info": "Tình huống gây cười là chính, chiều sâu cảm xúc chưa nhiều." 
+        {
+          "star": 4,
+          "info": "Tình huống gây cười là chính, chiều sâu cảm xúc chưa nhiều."
         },
-        { 
-          "star": 5, 
-          "info": "Phù hợp đọc giải trí nhanh" 
+        {
+          "star": 5,
+          "info": "Phù hợp đọc giải trí nhanh"
         }
       ],
-      "author": ["Kolya Bùi"],
+      "author": [
+        "Kolya Bùi"
+      ],
       "publish": "NXB Lao Động",
       "date": "2025",
       "size": "15 x 15 cm",
@@ -1984,17 +2023,21 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 4, 
-          "info": "Truyện hay, hài hước" 
-        }, 
-        { 
-          "star": 5, 
-          "info": "Giao hàng nhanh" 
-        } 
+      "review": [
+        {
+          "star": 4,
+          "info": "Truyện hay, hài hước"
+        },
+        {
+          "star": 5,
+          "info": "Giao hàng nhanh"
+        }
       ],
-      "author": ["Pương Pương", "Leo Dinh", "Sun Wolf Studio"],
+      "author": [
+        "Pương Pương",
+        "Leo Dinh",
+        "Sun Wolf Studio"
+      ],
       "publish": "NXB Hồng Đức",
       "date": "2024",
       "size": "18.5 x 13 cm",
@@ -2014,12 +2057,14 @@
         "truyentranh"
       ],
       "review": [
-        { 
-          "star": 5, 
-          "info": "Nội dung rất hay, từ khi theo dõi các clip của Thỏ thì mình mới phát hiện ra Thỏ còn có cuốn truyện này nữa. Tuy truyện hơi ngắn nhưng rất hài và mang đậm tính chất của con thỏ. Tuy nhiên truyện ra từ rất lâu rồi và chưa có tập mới, mong sẽ có nhiều tập nữa về con thỏ 7 màu," 
+        {
+          "star": 5,
+          "info": "Nội dung rất hay, từ khi theo dõi các clip của Thỏ thì mình mới phát hiện ra Thỏ còn có cuốn truyện này nữa. Tuy truyện hơi ngắn nhưng rất hài và mang đậm tính chất của con thỏ. Tuy nhiên truyện ra từ rất lâu rồi và chưa có tập mới, mong sẽ có nhiều tập nữa về con thỏ 7 màu,"
         }
       ],
-      "author": ["Huỳnh Thái Ngọc"],
+      "author": [
+        "Huỳnh Thái Ngọc"
+      ],
       "publish": "NXB Dân Trí",
       "date": "2023",
       "size": "19 x 13 cm",
@@ -2038,13 +2083,15 @@
       "topic": [
         "truyentranh"
       ],
-      "review": [ 
-        { 
-          "star": 5, 
-          "info": "Nội dung rất hay" 
-        } 
+      "review": [
+        {
+          "star": 5,
+          "info": "Nội dung rất hay"
+        }
       ],
-      "author": ["Tuấn Dũng"],
+      "author": [
+        "Tuấn Dũng"
+      ],
       "publish": "NXB Hồng Đức",
       "date": "2024",
       "size": "18.5 x 13 cm",
@@ -2064,7 +2111,9 @@
         "truyentranh"
       ],
       "review": [],
-      "author": ["Thăng Fly"],
+      "author": [
+        "Thăng Fly"
+      ],
       "publish": "NXB Dân Trí",
       "date": "2018",
       "size": "19 x 13 cm",
@@ -2084,12 +2133,14 @@
         "truyentranh"
       ],
       "review": [
-        { 
-          "star": 5, 
-          "info": "Tuổi thơ mình suốt ngày đọc truyện tranh thôi doremon nè , conan nè , ..... và không thiếu được bộ Thần đồng đất Việt này . Truyện vẫn thế , nét vẽ giản dị , quen thuộc , vẫn những nội dung và hình vẽ làm mình cười bò lăn a .( Gioi thiệu cho bạn nào không biết là truyện lấy bối cảnh thời Hậu Lê dựa trên những điển tích điển cố có thật ) . Tập này cũng vậy , buồn cười chết , đừng đọc nơi đông người không bạn sẽ bị coi là tâm thần trốn trại đó . Lại mâu thuẫn giữa hai nhân vật quen thuộc bà Tám và ông Bá hộ Mão . Mình thấy mỗi tập đọc trong đó đều chứa giá trị nhân văn hay một kiến thức nào đó . Và đọc tập này bạn sẽ biết được cách tính toán thời gian dựa vào mặt trời một cách \"chuẩn không cần chỉnh\" luôn . Truyện rất hay , hài chỉ tội tập nào cũng mỏng , ngắn đọc nhanh hết lắm ." 
+        {
+          "star": 5,
+          "info": "Tuổi thơ mình suốt ngày đọc truyện tranh thôi doremon nè , conan nè , ..... và không thiếu được bộ Thần đồng đất Việt này . Truyện vẫn thế , nét vẽ giản dị , quen thuộc , vẫn những nội dung và hình vẽ làm mình cười bò lăn a .( Gioi thiệu cho bạn nào không biết là truyện lấy bối cảnh thời Hậu Lê dựa trên những điển tích điển cố có thật ) . Tập này cũng vậy , buồn cười chết , đừng đọc nơi đông người không bạn sẽ bị coi là tâm thần trốn trại đó . Lại mâu thuẫn giữa hai nhân vật quen thuộc bà Tám và ông Bá hộ Mão . Mình thấy mỗi tập đọc trong đó đều chứa giá trị nhân văn hay một kiến thức nào đó . Và đọc tập này bạn sẽ biết được cách tính toán thời gian dựa vào mặt trời một cách \"chuẩn không cần chỉnh\" luôn . Truyện rất hay , hài chỉ tội tập nào cũng mỏng , ngắn đọc nhanh hết lắm ."
         }
       ],
-      "author": ["Công Ty Phan Thị"],
+      "author": [
+        "Công Ty Phan Thị"
+      ],
       "publish": "NXB Đại học Sư phạm",
       "date": "2016",
       "size": "18 x 11 cm",
@@ -2511,8 +2562,17 @@
       "password": "Tuilama@12",
       "address": "Cần Thơ",
       "order": [
-        "id1", "id2"
+        "id1",
+        "id2"
       ]
+    },
+    {
+      "name": "Nguyễn Bánh Bao Ú",
+      "phone": "0987654321",
+      "email": "abcd@gmail.com",
+      "address": "An Giang",
+      "id": "ABC",
+      "password": "Tuilama@12"
     }
   ],
   "orders": [
@@ -2533,7 +2593,6 @@
       "discount": "",
       "status": ""
     }
-    
-
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
