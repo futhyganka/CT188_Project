@@ -47,12 +47,10 @@ getOrders((orders) => {
 })
 
 // Đọc dữ liệu in ra bảng
-function readerDataAdmin() {
-    // product
-    let i = 1;
-    boxsTbodyAdmin[0].innerHTML = dataAdmin[0].map((book) => {
+function readerBookAdmin() {
+    boxsTbodyAdmin[0].innerHTML = dataAdmin[0].map((book, i) => {
         return `<tr>
-            <td>${i++}</td>
+            <td>${i + 1}</td>
             <td>${book.id}</td>
             <td><img width="50px" src="${book.image}" alt=""></td>
             <td>${book.title}</td>
@@ -65,6 +63,48 @@ function readerDataAdmin() {
             </td>
         </tr>`
     }).join('');
+}
 
-    
+function readerUserAdmin() {
+    boxsTbodyAdmin[1].innerHTML = dataAdmin[1].map((user, i) => {
+        return `<tr>
+            <td>${i+1}</td>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.phone}</td>
+            <td>${user.email}</td>
+            <td>${user.address}</td>
+            <td>
+                <button>${user.role}</button>
+            </td>
+            <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+            </td>
+        </tr>`
+    }).join('');
+}
+
+function readerOrderAdmin() {
+    // boxsTbodyAdmin[2].innerHTML = dataAdmin[2].map((order, i) => {
+    //     return `<tr>
+    //         <td>${i++}</td>
+    //         <td>${order.id}</td>
+    //         <td>${order.user}</td>
+    //         <td>${order.product.map(({id, quantity}) => {
+    //             return 
+    //         })}
+    //             sp1[sl] x giá <br>
+    //             sp2[sl] x giá
+    //         </td>
+    //         <td>${}100.000</td>
+    //         <td>${}20.000</td>
+    //         <td>${}80.000</td>
+    //         <td>Chờ xử lý</td>
+    //         <td>
+    //             <button>Xác Nhận</button>
+    //             <button>Hủy</button>
+    //         </td>
+    //     </tr>`
+    // }).join('');
 }

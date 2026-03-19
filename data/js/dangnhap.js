@@ -20,7 +20,7 @@ loginForm.addEventListener("submit", function(e) {
             alert("Đăng nhập thành công!");
 
             // Lưu trạng thái đăng nhập
-            localStorage.setItem("indexUserCurr", userIndex);
+            localStorage.setItem("userCurr", users[userIndex].id);
 
             // Chuyển trang (ví dụ về trang chủ)
             window.location.href = "gioithieu.html";

@@ -33,6 +33,15 @@ getBooks((books) => {
 });
  */
 
+// lấy book qua id
+function getBook(id, callback) {
+    fetch(booksApi + '/' + id)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback)
+}
+
 // Thêm book
 function createBook(book, callback){
     var option = {
@@ -91,6 +100,15 @@ function getUsers(callback) {
         .then(callback)
 }
 
+// lấy user qua id
+function getUser(id, callback) {
+    fetch(usersApi + '/' + id)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback)
+}
+
 // Thêm user
 function createUser(user, callback){
     var option = {
@@ -143,6 +161,15 @@ let ordersApi = 'http://localhost:3000/orders';
 // lấy mảng orders
 function getOrders(callback) {
     fetch(ordersApi)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback)
+}
+
+// lấy order qua id
+function getOrder(id, callback) {
+    fetch(ordersApi + '/' + id)
         .then(function(response) {
             return response.json();
         })

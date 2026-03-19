@@ -1,12 +1,11 @@
 
-if(localStorage.getItem("indexUserCurr") === null) {
+if(localStorage.getItem("userCurr") === null) {
     document.querySelector('.not-found').classList.add('active');
 }else{
-    let loggedIn = Number(localStorage.getItem("indexUserCurr"));
+    let idUser = localStorage.getItem("userCurr");
     document.querySelector('main .user').classList.add('active');
     document.querySelector('main .order').classList.add('active');
-    getUsers((users) => {
-        let user = users[loggedIn];
+    getUser(idUser, (user) => {
         let boxUser = document.querySelector('main .user');
         boxUser.innerHTML = `<h4>Xin chào, ${user.name}!</h4>
             <form>
@@ -80,11 +79,11 @@ if(localStorage.getItem("indexUserCurr") === null) {
                 'address': formUser.address.value
             }
 
-            getUsers((users) => {
-                modifyUser.id = users[loggedIn].id;
-                modifyUser.role = users[loggedIn].role;
-                modifyUser.password = users[loggedIn].password;
-                modifyUser.order = users[loggedIn].order;
+            getUser(idUser, (user) => {
+                modifyUser.id = user.id;
+                modifyUser.role = user.role;
+                modifyUser.password = user.password;
+                modifyUser.order = user.order;
 
                 setUser(id, modifyUser, () => {
                     btnModifyUser.innerText = 'Sửa thông tin';
@@ -94,13 +93,12 @@ if(localStorage.getItem("indexUserCurr") === null) {
                     formUser.address.disabled = true;
                 })
             })
-
         }
     }
 
 }
 
 function logOutUser() {
-    localStorage.removeItem("indexUserCurr");
+    localStorage.removeItem("userCurr");
     window.location.href = "/gioithieu.html";
 }
