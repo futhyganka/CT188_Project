@@ -1,4 +1,3 @@
-
 if(localStorage.getItem("userCurr") === null) {
     document.querySelector('.not-found').classList.add('active');
 }else{
@@ -79,11 +78,11 @@ if(localStorage.getItem("userCurr") === null) {
                 'address': formUser.address.value
             }
 
-            getUser(idUser, (user) => {
-                modifyUser.id = user.id;
-                modifyUser.role = user.role;
-                modifyUser.password = user.password;
-                modifyUser.order = user.order;
+            // getUser(idUser, (user) => {
+                // modifyUser.id = user.id;
+                // modifyUser.role = user.role;
+                // modifyUser.password = user.password;
+                // modifyUser.order = user.order;
 
                 setUser(id, modifyUser, () => {
                     btnModifyUser.innerText = 'Sửa thông tin';
@@ -92,7 +91,7 @@ if(localStorage.getItem("userCurr") === null) {
                     formUser.email.disabled = true;
                     formUser.address.disabled = true;
                 })
-            })
+            // })
         }
     }
 

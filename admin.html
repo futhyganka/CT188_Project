@@ -61,17 +61,21 @@
                 <!-- Dropdowm -->
                 <div class="dropdown">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                        Tìm kiếm bằng id
+                        Tìm kiếm theo id
                     </button>
                     <ul class="dropdown-menu">
-                        <li><div class="dropdown-item">Tìm kiếm bằng id</div></li>
-                        <li><div class="dropdown-item">Tìm kiếm bằng tên</div></li>
+                        <!-- <li><div class="dropdown-item">Tìm kiếm theo id</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo tên</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo thể loại</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo tác giả</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo nxb</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo trạng thái</div></li> -->
                     </ul>
                 </div>
                 <!-- SEARCH -->
                 <div class="search-box">
-                    <input type="text" placeholder="Tìm kiếm">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm" class="search-input">
+                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
                 </div>
                 <!-- USER + CART -->
                 <div class="user-cart">
@@ -144,7 +148,7 @@
 
             <h5>Quản lý sản phẩm: </h5>
 
-            <button>Tất cả dữ liệu</button>
+            <button onclick="getAllBook()">Tất cả dữ liệu</button>
             <button>Thêm</button>
 
             <div class="data">
@@ -155,15 +159,18 @@
                             <th style="width: 68px;">ID SP</th>
                             <th style="width: 80px;">H/Ả SP</th>
                             <th style="width: auto;">Tên sản phẩm</th>
-                            <th style="width: 140px;">Thể loại</th>
+                            <th style="width: 110px;">Tác giả</th>
+                            <th style="width: 110px;">Thể loại</th>
+                            <th style="width: 110px;">NXB</th>
                             <th style="width: 110px;">Trạng thái</th>
-                            <th style="width: 100px;">Số lượng</th>
-                            <th style="width: 110px;">Thao tác</th>
+                            <th style="width: 90px;">Số lượng</th>
+                            <th style="width: 90px;">Giá bán</th>
+                            <th style="width: 100px;">Thao tác</th>
                         </tr>
                     </thead>
                     
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>B214</td>
                             <td><img width="50px" src="./data/img/img214.webp" alt=""></td>
@@ -175,7 +182,7 @@
                                 <button>Sửa</button>
                                 <button>Xóa</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -186,15 +193,15 @@
 
             <h5>Quản lý người dùng: </h5>
 
-            <button>Tất cả dữ liệu</button>
-            <button>Thêm</button>
+            <button onclick="getAllUser()">Tất cả dữ liệu</button>
+            <!-- <button>Thêm</button> -->
 
             <div class="data">
                 <table>
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>user ID</th>
+                            <th>User ID</th>
                             <th>Họ tên</th>
                             <th>Số điện thoại</th>
                             <th>Email</th>
@@ -205,7 +212,7 @@
                     </thead>
                     
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>Admin</td>
                             <td>Nguyễn Bánh Bèo</td>
@@ -219,7 +226,7 @@
                                 <button>Sửa</button>
                                 <button>Xóa</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -229,27 +236,27 @@
 
             <h5>Quản lý đơn hàng: </h5>
 
-            <button>Tất cả dữ liệu</button>
-            <button>Thêm</button>
+            <button onclick="getAllOrder()">Tất cả dữ liệu</button>
+            <!-- <button>Thêm</button> -->
 
             <div class="data">
                 <table>
                     <thead>
                         <tr>
-                            <th>STT</th>
-                            <th>Order ID</th>
-                            <th>User ID</th>
-                            <th>Sản phẩm</th>
-                            <th>Tổng tiền</th>
-                            <th>Giảm giá</th>
-                            <th>Thành tiền</th>
-                            <th>Trạng thái</th>
-                            <th>Thao tác</th>
+                            <th style="width:55px">STT</th>
+                            <th style="width:90px">Order ID</th>
+                            <th style="width:80px">User ID</th>
+                            <th style="width:auto">Sản phẩm</th>
+                            <th style="width:105px">Tổng tiền</th>
+                            <th style="width:100px">Giảm giá</th>
+                            <th style="width:105px">Thành tiền</th>
+                            <th style="width:100px">Trạng thái</th>
+                            <th style="width:120px">Thao tác</th>
                         </tr>
                     </thead>
                     
                     <tbody>
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>abcd</td>
                             <td>admin</td>
@@ -262,13 +269,13 @@
                             <td>80000</td>
                             <td>
                                 Chờ xử lý
-                                <!-- Đã duyệt/ Đã hủy/Đang giao hàng/Giao hành thành công -->
+                                Đã duyệt/ Đã hủy/Đang giao hàng/Giao hành thành công
                             </td>
                             <td>
                                 <button>Xác nhận</button>
                                 <button>Hủy</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -276,12 +283,6 @@
         </div>
         
     </main>
-
-    <div class="fixed">
-        <div class="add-product">
-
-        </div>
-    </div>
 
         <footer id="footer">
             <hr>
@@ -342,9 +343,66 @@
         <div class="btn-back-to-top">
             <i class="fa-solid fa-arrow-up"></i>
         </div>
+        
+        <!-- <div class="overlay"></div>
+
+        <div class="add-product">
+            <div class="box">
+                <table>
+                    <tr>
+                        <td>ID sản phẩm</td>
+                        <td><input type="text"></td>
+                        <td>Tên sản phẩm</td>
+                        <td><input type="text"></td>
+                        <td>Hình ảnh</td>
+                        <td><input type="file"></td>
+                    </tr>
+                    <tr>
+                        <td>Mô tả sản phẩm</td>
+                        <td><textarea></textarea></td>
+                        <td>Tác giả</td>
+                        <td><textarea></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Thể loại</td>
+                        <td><input type="text" colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Nhà xuất bản</td>
+                        <td><input type="text"></td>
+                        <td>Năm xuất bản</td>
+                        <td><input type="text"></td>
+                        <td>Kích thước</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Trọng lượng</td>
+                        <td><input type="text"></td>
+                        <td>Định dạng</td>
+                        <td><input type="text"></td>
+                        <td>Giá niêm yết</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Giảm giá(%)</td>
+                        <td><input type="text"></td>
+                        <td>Trạng thái</td>
+                        <td><input type="text"></td>
+                        <td>Số lượng</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td><button>Thêm</button></td>
+                    </tr>
+                </table>
+            </div> -->
+            
+        </div>
     </div>
 
     <!-- File js -->
+    <script src="./data/js/main.js"></script>
     <script src="./data/js/database.js"></script>
     <script src="./data/js/main.js"></script>
     <script src="./data/js/toTop.js"></script>
