@@ -73,10 +73,10 @@
                     </ul>
                 </div>
                 <!-- SEARCH -->
-                <div class="search-box">
-                    <input type="text" placeholder="Tìm kiếm" class="search-input">
-                    <i class="fa-solid fa-magnifying-glass search-btn"></i>
-                </div>
+                <form class="search-box">
+                        <input type="text" placeholder="Tìm kiếm" class="search-input">
+                        <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                </form>
                 <!-- USER + CART -->
                 <div class="user-cart">
                     <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
@@ -149,7 +149,7 @@
             <h5>Quản lý sản phẩm: </h5>
 
             <button onclick="getAllBook()">Tất cả dữ liệu</button>
-            <button>Thêm</button>
+            <button onclick="openBoxAddProduct()">Thêm</button>
 
             <div class="data">
                 <table>
@@ -344,59 +344,88 @@
             <i class="fa-solid fa-arrow-up"></i>
         </div>
         
-        <!-- <div class="overlay"></div>
+        <div class="overlay" onclick="closeBoxAddProduct()"></div>
 
         <div class="add-product">
             <div class="box">
-                <table>
-                    <tr>
-                        <td>ID sản phẩm</td>
-                        <td><input type="text"></td>
-                        <td>Tên sản phẩm</td>
-                        <td><input type="text"></td>
-                        <td>Hình ảnh</td>
-                        <td><input type="file"></td>
-                    </tr>
-                    <tr>
-                        <td>Mô tả sản phẩm</td>
-                        <td><textarea></textarea></td>
-                        <td>Tác giả</td>
-                        <td><textarea></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Thể loại</td>
-                        <td><input type="text" colspan="5"></td>
-                    </tr>
-                    <tr>
-                        <td>Nhà xuất bản</td>
-                        <td><input type="text"></td>
-                        <td>Năm xuất bản</td>
-                        <td><input type="text"></td>
-                        <td>Kích thước</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>Trọng lượng</td>
-                        <td><input type="text"></td>
-                        <td>Định dạng</td>
-                        <td><input type="text"></td>
-                        <td>Giá niêm yết</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>Giảm giá(%)</td>
-                        <td><input type="text"></td>
-                        <td>Trạng thái</td>
-                        <td><input type="text"></td>
-                        <td>Số lượng</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5"></td>
-                        <td><button>Thêm</button></td>
-                    </tr>
-                </table>
-            </div> -->
+                <form>
+                    <h2>Thêm sản phẩm</h2>
+                    <table>
+                        <tr>
+                            <td style="width:130px;">ID sản phẩm</td>
+                            <td style="width:188px;"><input type="text" name="id"></td>
+                            <td style="width:130px;">Tên sản phẩm</td>
+                            <td style="width:188px;"><input type="text" name="title"></td>
+                            <td style="width:130px;">Hình ảnh</td>
+                            <td style="width:188px;"><input type="file" name="img"></td>
+                        </tr>
+                        <tr>
+                            <td>Mô tả sản phẩm</td>
+                            <td colspan="3"><textarea style="width:518px" name="dcr"></textarea></td>
+                            <td>Tác giả</td>
+                            <td><textarea style="width:188px" name="ath"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Thể loại</td>
+                            <td colspan="5">
+                                <span class="topic">
+                                    <select name="topic">
+                                        <option value="none">Select</option>
+                                        <option value="lichsu">Lịch sử</option>
+                                        <option value="vhvn">Văn học Việt Nam</option>
+                                        <option value="vhnn">Văn học nước ngoài</option>
+                                        <option value="khoahoc">Khoa học</option>
+                                        <option value="kynang">Kỹ năng</option>
+                                        <option value="truyentranh">Truyện tranh</option>
+                                    </select>
+                                </span>
+                                <span class="add" onclick="addBoxTopic()"><i class="fa-solid fa-plus"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nhà xuất bản</td>
+                            <td><input type="text" name="nxb"></td>
+                            <td>Năm xuất bản</td>
+                            <td><input type="number" name="date"></td>
+                            <td>Kích thước</td>
+                            <td><input type="text" name="size"></td>
+                        </tr>
+                        <tr>
+                            <td>Trọng lượng</td>
+                            <td><input type="text" name="weight"></td>
+                            <td>Định dạng</td>
+                            <td>
+                                <select name="format">
+                                    <option value="Bìa mềm">Bìa mềm</option>
+                                    <option value="Bìa cứng">Bìa cứng</option>
+                                </select>
+                            </td>
+                            <td>Giá niêm yết</td>
+                            <td><input type="number" name="price"></td>
+                        </tr>
+                        <tr>
+                            <td>Giảm giá(%)</td>
+                            <td><input type="number" name="dis"></td>
+                            <td>Trạng thái</td>
+                            <td>
+                                <select name="status" onchange="defaultQuantity()">
+                                    <option value="Có hàng">Có hàng</option>
+                                    <option value="Hết hàng">Hết hàng</option>
+                                    <option value="Đặt trước">Đặt trước</option>
+                                </select>
+                            </td>
+                            <td>Số lượng</td>
+                            <td><input type="number" name="sl"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <button type="button" onclick="handleCreateBook()" class="btn-add">Thêm sản phẩm</button>
+                                <button type="button" onclick="deteleDataForm()" class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
             
         </div>
     </div>

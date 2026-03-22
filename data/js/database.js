@@ -239,7 +239,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "170 gram",
       "format": "Bìa mềm",
-      "price": 200000,
+      "price": 20000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -259,7 +259,7 @@ let database = {
       "size": "13 x 20 cm",
       "weight": "135 gram",
       "format": "Bìa cứng",
-      "price": 1000000,
+      "price": 100000,
       "quantity": 300,
       "status": "Đặt trước",
       "discount": 10
@@ -279,7 +279,7 @@ let database = {
       "size": "14 x 20cm",
       "weight": "100 gram",
       "format": "Bìa mềm",
-      "price": 550000,
+      "price": 55000,
       "quantity": 400,
       "status": "Có hàng",
       "discount": 10
@@ -299,7 +299,7 @@ let database = {
       "size": "14.5 x 20.5 cm",
       "weight": "185 gram",
       "format": "Bìa mềm",
-      "price": 300000,
+      "price": 30000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -319,7 +319,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "210 gram",
       "format": "Bìa mềm",
-      "price": 750000,
+      "price": 75000,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -339,7 +339,7 @@ let database = {
       "size": "14 x 20 cm",
       "weight": "190 gram",
       "format": "Bìa mềm",
-      "price": 850000,
+      "price": 85000,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -359,7 +359,7 @@ let database = {
       "size": " 14,5 x 20,5cm",
       "weight": "322 gram",
       "format": "Bìa mềm",
-      "price": 1100000,
+      "price": 110000,
       "quantity": 400,
       "status": "Đặt trước",
       "discount": 10
@@ -379,7 +379,7 @@ let database = {
       "size": " 16 × 24 cm",
       "weight": "",
       "format": "Bìa cứng",
-      "price": 2800000,
+      "price": 280000,
       "quantity": 300,
       "status": "Hết hàng",
       "discount": 10
@@ -399,7 +399,7 @@ let database = {
       "size": "16 x 24 cm",
       "weight": "",
       "format": "Bìa cứng",
-      "price": 1680000,
+      "price": 168000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -419,7 +419,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "165 gram",
       "format": "Bìa mềm",
-      "price": 360000,
+      "price": 36000,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -439,7 +439,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "90 gram",
       "format": "Bìa mềm",
-      "price": 180000,
+      "price": 18000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -459,7 +459,7 @@ let database = {
       "size": "14.5x20.5 cm",
       "weight": "330 gram",
       "format": "Bìa mềm",
-      "price": 630000,
+      "price": 63000,
       "quantity": 400,
       "status": "Đặt trước",
       "discount": 10
@@ -479,7 +479,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "150 gram",
       "format": "Bìa mềm",
-      "price": 324000,
+      "price": 32400,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -499,7 +499,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "",
       "format": "Bìa mềm",
-      "price": 900000,
+      "price": 90000,
       "quantity": 400,
       "status": "Có hàng",
       "discount": 10
@@ -519,7 +519,7 @@ let database = {
       "size": "20,5 x 18,5 cm",
       "weight": "80 gram",
       "format": "Bìa mềm",
-      "price": 252000,
+      "price": 25200,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -539,7 +539,7 @@ let database = {
       "size": "19 x 26 cm",
       "weight": "120 gram",
       "format": "Bìa mềm",
-      "price": 315000,
+      "price": 31500,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -559,7 +559,7 @@ let database = {
       "size": "17 x 24 cm",
       "weight": "",
       "format": "",
-      "price": 2050000,
+      "price": 205000,
       "quantity": 200,
       "status": "Đặt trước",
       "discount": 10
@@ -579,7 +579,7 @@ let database = {
       "size": "13,5x20,5 cm",
       "weight": "350 gram",
       "format": "Bìa mềm",
-      "price": 720000,
+      "price": 72000,
       "quantity": 400,
       "status": "Có hàng",
       "discount": 10
@@ -599,7 +599,7 @@ let database = {
       "size": "10 x 15 cm",
       "weight": "90 gram",
       "format": "Bìa mềm",
-      "price": 270000,
+      "price": 27000,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -619,7 +619,7 @@ let database = {
       "size": "13.5x20.5 cm",
       "weight": "135 gram",
       "format": "Bìa mềm",
-      "price": 288000,
+      "price": 28800,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -639,7 +639,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "285 gram",
       "format": "Bìa mềm",
-      "price": 730000,
+      "price": 73000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -659,7 +659,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "206 gram",
       "format": "Bìa mềm",
-      "price": 540000,
+      "price": 54000,
       "quantity": 120,
       "status": "Có hàng",
       "discount": 10
@@ -679,7 +679,7 @@ let database = {
       "size": "13 x 20 cm",
       "weight": "298 gram",
       "format": "Bìa mềm",
-      "price": 783000,
+      "price": 78300,
       "quantity": 50,
       "status": "Có hàng",
       "discount": 10
@@ -699,7 +699,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "470 gram",
       "format": "Bìa mềm",
-      "price": 500000,
+      "price": 50000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -719,7 +719,7 @@ let database = {
       "size": "14.5x20.5 cm",
       "weight": "185 gram",
       "format": "Bìa mềm",
-      "price": 300000,
+      "price": 30000,
       "quantity": 230,
       "status": "Có hàng",
       "discount": 10
@@ -739,7 +739,7 @@ let database = {
       "size": "13.5 x 20.5 cm",
       "weight": "230 gra",
       "format": "Bìa mềm",
-      "price": 550000,
+      "price": 55000,
       "quantity": 50,
       "status": "Đặt trước",
       "discount": 10
@@ -759,7 +759,7 @@ let database = {
       "size": "13x19 cm",
       "weight": "200 gram",
       "format": "Bìa mềm",
-      "price": 450000,
+      "price": 45000,
       "quantity": 450,
       "status": "Có hàng",
       "discount": 10
@@ -779,7 +779,7 @@ let database = {
       "size": "24x32 cm",
       "weight": "1250 gram ",
       "format": "Bìa cứng",
-      "price": 3600000,
+      "price": 360000,
       "quantity": 100,
       "status": "Đặt trước",
       "discount": 10
@@ -799,7 +799,7 @@ let database = {
       "size": "16x24 cm",
       "weight": " 750 gram ",
       "format": "Bìa cứng",
-      "price": 2250000,
+      "price": 225000,
       "quantity": 320,
       "status": "Có hàng",
       "discount": 10
@@ -819,7 +819,7 @@ let database = {
       "size": "20.5 x 14.5 cm",
       "weight": "240 gram",
       "format": "Bìa mềm",
-      "price": 1085600,
+      "price": 108560,
       "quantity": 340,
       "status": "Có hàng",
       "discount": 10
@@ -839,7 +839,7 @@ let database = {
       "size": "14,5x20,5 cm",
       "weight": " 450 gram",
       "format": "Bìa mềm",
-      "price": 792000,
+      "price": 79200,
       "quantity": 400,
       "status": "Có hàng",
       "discount": 10
@@ -859,7 +859,7 @@ let database = {
       "size": "13,5x20,5 cm",
       "weight": "330 gram",
       "format": "Bìa cứng",
-      "price": 1080000,
+      "price": 108000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -879,7 +879,7 @@ let database = {
       "size": "16,5x20,5 cm",
       "weight": " 395 gram",
       "format": "Bìa cứng",
-      "price": 1350000,
+      "price": 135000,
       "quantity": 250,
       "status": "Có hàng",
       "discount": 10
@@ -899,7 +899,7 @@ let database = {
       "size": "13x19 cm",
       "weight": "160 gram ",
       "format": "Bìa mềm",
-      "price": 450000,
+      "price": 45000,
       "quantity": 230,
       "status": "Đặt trước",
       "discount": 10
@@ -919,7 +919,7 @@ let database = {
       "size": "16,5x20,5 cm",
       "weight": " 395 gram",
       "format": "Bìa cứng",
-      "price": 1350000,
+      "price": 135000,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -939,7 +939,7 @@ let database = {
       "size": "13,5x20,5 cm",
       "weight": " 390 gram",
       "format": "Bìa cứng",
-      "price": 1080000,
+      "price": 108000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -959,7 +959,7 @@ let database = {
       "size": "21x21 cm",
       "weight": "110 gram",
       "format": "Bìa mềm",
-      "price": 360000,
+      "price": 36000,
       "quantity": 100,
       "status": "Có hàng",
       "discount": 10
@@ -979,7 +979,7 @@ let database = {
       "size": "13x20 cm",
       "weight": "100 gram",
       "format": "Bìa mềm",
-      "price": 160000,
+      "price": 16000,
       "quantity": 340,
       "status": "Có hàng",
       "discount": 10
@@ -999,7 +999,7 @@ let database = {
       "size": "14x22,5 cm",
       "weight": "315 gram",
       "format": "Bìa mềm",
-      "price": 550000,
+      "price": 55000,
       "quantity": 80,
       "status": "Đặt trước",
       "discount": 10
@@ -1019,7 +1019,7 @@ let database = {
       "size": "13.5x20.5 cm",
       "weight": "150 gram",
       "format": "Bìa cứng",
-      "price": 360000,
+      "price": 36000,
       "quantity": 100,
       "status": "Có hàng",
       "discount": 10
@@ -1039,7 +1039,7 @@ let database = {
       "size": "13x19 cm",
       "weight": "389 gram",
       "format": "Bìa cứng",
-      "price": 800000,
+      "price": 80000,
       "quantity": 1000,
       "status": "Có hàng",
       "discount": 10
@@ -1059,7 +1059,7 @@ let database = {
       "size": "16x24 cm",
       "weight": "375 gram",
       "format": "Bìa mềm",
-      "price": 7765000,
+      "price": 776500,
       "quantity": 900,
       "status": "Có hàng",
       "discount": 10
@@ -1079,7 +1079,7 @@ let database = {
       "size": "14.5 x 20.5 cm",
       "weight": "750gram",
       "format": "Bìa mềm",
-      "price": 690000,
+      "price": 69000,
       "quantity": 990,
       "status": "Có hàng",
       "discount": 10
@@ -1099,7 +1099,7 @@ let database = {
       "size": " 13 x 20.5 cm",
       "weight": "678gram",
       "format": "Bìa cứng",
-      "price": 800000,
+      "price": 80000,
       "quantity": 670,
       "status": "Có hàng",
       "discount": 10
@@ -1119,7 +1119,7 @@ let database = {
       "size": "14x22.5 cm",
       "weight": "500 gr",
       "format": "Bìa mềm",
-      "price": 890000,
+      "price": 89000,
       "quantity": 780,
       "status": "Có hàng",
       "discount": 10
@@ -1139,7 +1139,7 @@ let database = {
       "size": "23,5x23,5cm",
       "weight": "395 gram",
       "format": "Bìa mềm",
-      "price": 790000,
+      "price": 79000,
       "quantity": 560,
       "status": "Có hàng",
       "discount": 10
@@ -1159,7 +1159,7 @@ let database = {
       "size": "13x19 cm",
       "weight": "425 gram",
       "format": "Bìa mềm",
-      "price": 900000,
+      "price": 90000,
       "quantity": 900,
       "status": "Có hàng",
       "discount": 10
@@ -1179,7 +1179,7 @@ let database = {
       "size": "13x20cm",
       "weight": " 320 gram",
       "format": "Bìa mềm",
-      "price": 1300000,
+      "price": 130000,
       "quantity": 0,
       "status": "Đặt trước",
       "discount": 10
@@ -1199,7 +1199,7 @@ let database = {
       "size": "13x20cm",
       "weight": "354 gram",
       "format": "Bìa mềm",
-      "price": 1750000,
+      "price": 175000,
       "quantity": 50,
       "status": "Có hàng",
       "discount": 10
@@ -1219,7 +1219,7 @@ let database = {
       "size": "13x20cm",
       "weight": "266 gram",
       "format": "Bìa cứng",
-      "price": 690000,
+      "price": 69000,
       "quantity": 780,
       "status": "Có hàng",
       "discount": 10
@@ -1239,7 +1239,7 @@ let database = {
       "size": "13x20cm",
       "weight": "457 gram",
       "format": "Bìa mềm",
-      "price": 1750000,
+      "price": 175000,
       "quantity": 450,
       "status": "Có hàng",
       "discount": 10
@@ -1259,7 +1259,7 @@ let database = {
       "size": "13x20cm",
       "weight": "500 gram",
       "format": "Bìa cứng",
-      "price": 1650000,
+      "price": 165000,
       "quantity": 120,
       "status": "Có hàng",
       "discount": 10
@@ -1279,7 +1279,7 @@ let database = {
       "size": "14,5 x 20,5cm",
       "weight": "569 gram",
       "format": "Bìa mềm",
-      "price": 2000000,
+      "price": 200000,
       "quantity": 20,
       "status": "Đặt trước",
       "discount": 10
@@ -1299,7 +1299,7 @@ let database = {
       "size": "14.5x20.5 cm",
       "weight": "6 gram",
       "format": "Bìa mềm",
-      "price": 720000,
+      "price": 72000,
       "quantity": 50,
       "status": "Có hàng",
       "discount": 10
@@ -1319,7 +1319,7 @@ let database = {
       "size": "16x24 cm",
       "weight": "395 gram",
       "format": "Bìa mềm",
-      "price": 880000,
+      "price": 88000,
       "quantity": 560,
       "status": "Có hàng",
       "discount": 10
@@ -1339,7 +1339,7 @@ let database = {
       "size": "3.5 x 20.5 cm",
       "weight": "654 gram",
       "format": "Bìa mềm",
-      "price": 970000,
+      "price": 97000,
       "quantity": 450,
       "status": "Có hàng",
       "discount": 10
@@ -1359,7 +1359,7 @@ let database = {
       "size": "13x20cm",
       "weight": "370 gram",
       "format": "Bìa cứng",
-      "price": 780000,
+      "price": 78000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1379,7 +1379,7 @@ let database = {
       "size": "13 x 20 cm",
       "weight": "300 gram",
       "format": "Bìa cứng",
-      "price": 890000,
+      "price": 89000,
       "quantity": 450,
       "status": "Có hàng",
       "discount": 10
@@ -1399,7 +1399,7 @@ let database = {
       "size": "14.5 x 20.5 cm",
       "weight": "634 gram",
       "format": "Bìa mềm",
-      "price": 850000,
+      "price": 85000,
       "quantity": 890,
       "status": "Có hàng",
       "discount": 10
@@ -1419,7 +1419,7 @@ let database = {
       "size": "14x20cm",
       "weight": "324 gram",
       "format": "Bìa cứng",
-      "price": 879000,
+      "price": 87900,
       "quantity": 420,
       "status": "Có hàng",
       "discount": 10
@@ -1439,7 +1439,7 @@ let database = {
       "size": "14.5 x 21 cm",
       "weight": "360 gram",
       "format": "Bìa mềm",
-      "price": 1155000,
+      "price": 115500,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -1459,7 +1459,7 @@ let database = {
       "size": "14 x 20,5 cm",
       "weight": "400 gram",
       "format": "Bìa mềm",
-      "price": 1435000,
+      "price": 143500,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -1479,7 +1479,7 @@ let database = {
       "size": "14,5 x 22 cm",
       "weight": "280 gram",
       "format": "Bìa mềm",
-      "price": 1655000,
+      "price": 165500,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1499,7 +1499,7 @@ let database = {
       "size": "14,5 x 20,5 cm",
       "weight": "410 gram",
       "format": "Bìa mềm",
-      "price": 910000,
+      "price": 91000,
       "quantity": 0,
       "status": "Đặt trước",
       "discount": 10
@@ -1519,7 +1519,7 @@ let database = {
       "size": "14 x 20,5 cm",
       "weight": "190 gram",
       "format": "Bìa cứng",
-      "price": 740000,
+      "price": 74000,
       "quantity": 0,
       "status": "Đặt trước",
       "discount": 10
@@ -1539,7 +1539,7 @@ let database = {
       "size": "15,5 x 23 cm",
       "weight": "900 gram",
       "format": "Bìa mềm",
-      "price": 2550000,
+      "price": 255000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1559,7 +1559,7 @@ let database = {
       "size": "14 x 20,5 cm",
       "weight": "350 gram",
       "format": "Bìa cứng",
-      "price": 1080000,
+      "price": 108000,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -1579,7 +1579,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "180 gram",
       "format": "Bìa cứng",
-      "price": 535000,
+      "price": 53500,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -1599,7 +1599,7 @@ let database = {
       "size": "15 x 20,5 cm",
       "weight": "290 gram",
       "format": "Bìa mềm",
-      "price": 865000,
+      "price": 86500,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -1619,7 +1619,7 @@ let database = {
       "size": "13 x 20 cm",
       "weight": "214 gram",
       "format": "Bìa cứng",
-      "price": 1040000,
+      "price": 104000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1639,7 +1639,7 @@ let database = {
       "size": "14,5 x 20,5 cm",
       "weight": "430 gram",
       "format": "Bìa cứng",
-      "price": 1540000,
+      "price": 154000,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -1659,7 +1659,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "320 gram",
       "format": "Bìa mềm",
-      "price": 1195000,
+      "price": 119500,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -1679,7 +1679,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "110 gram",
       "format": "Bìa mềm",
-      "price": 375000,
+      "price": 37500,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1699,7 +1699,7 @@ let database = {
       "size": "13 x 19 cm",
       "weight": "150 gram",
       "format": "Bìa cứng",
-      "price": 660000,
+      "price": 66000,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -1719,7 +1719,7 @@ let database = {
       "size": "10,5 x 23,5cm",
       "weight": "390 gram",
       "format": "Bìa mềm",
-      "price": 1580000,
+      "price": 158000,
       "quantity": 700,
       "status": "Có hàng",
       "discount": 10
@@ -1739,7 +1739,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "510 gram",
       "format": "Bìa cứng",
-      "price": 1700000,
+      "price": 170000,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -1759,7 +1759,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "220 gram",
       "format": "Bìa mềm",
-      "price": 1035000,
+      "price": 103500,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -1779,7 +1779,7 @@ let database = {
       "size": "14,5 x 20,5 cm",
       "weight": "270 gram",
       "format": "Bìa cứng",
-      "price": 785000,
+      "price": 78500,
       "quantity": 500,
       "status": "Có hàng",
       "discount": 10
@@ -1799,7 +1799,7 @@ let database = {
       "size": "15,5 x 23 cm",
       "weight": "489 gram",
       "format": "Bìa mềm",
-      "price": 1485000,
+      "price": 148500,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -1819,7 +1819,7 @@ let database = {
       "size": "13 x 20,5 cm",
       "weight": "200 gram",
       "format": "Bìa mềm",
-      "price": 595000,
+      "price": 59500,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -1850,7 +1850,7 @@ let database = {
       "size": "18 x 13 cm",
       "weight": "140 gram",
       "format": "Bìa mềm",
-      "price": 350000,
+      "price": 35000,
       "quantity": 850,
       "status": "Có hàng",
       "discount": 10
@@ -1877,7 +1877,7 @@ let database = {
       "size": "18 x 13 cm",
       "weight": "180 gram",
       "format": "Bìa mềm",
-      "price": 350000,
+      "price": 35000,
       "quantity": 1210,
       "status": "Có hàng",
       "discount": 10
@@ -1905,7 +1905,7 @@ let database = {
       "size": "18 x 13 cm",
       "weight": "170 gram",
       "format": "Bìa mềm",
-      "price": 300000,
+      "price": 30000,
       "quantity": 540,
       "status": "Có hàng",
       "discount": 10
@@ -1932,7 +1932,7 @@ let database = {
       "size": "19 x 13 cm",
       "weight": "168 gram",
       "format": "Bìa mềm",
-      "price": 650000,
+      "price": 65000,
       "quantity": 110,
       "status": "Có hàng",
       "discount": 10
@@ -1962,7 +1962,7 @@ let database = {
       "size": "18 x 13 cm",
       "weight": "180 gram",
       "format": "Bìa mềm",
-      "price": 680000,
+      "price": 68000,
       "quantity": 660,
       "status": "Có hàng",
       "discount": 10
@@ -1985,7 +1985,7 @@ let database = {
       "size": "21 x 21 cm",
       "weight": "120 gram",
       "format": "Bìa mềm",
-      "price": 450000,
+      "price": 45000,
       "quantity": 300,
       "status": "Có hàng",
       "discount": 10
@@ -2012,7 +2012,7 @@ let database = {
       "size": "20.5 x 14.5 cm",
       "weight": "200 gram",
       "format": "Bìa mềm",
-      "price": 300000,
+      "price": 30000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -2040,7 +2040,7 @@ let database = {
       "size": "14,5 x 16 cm",
       "weight": "225 gram",
       "format": "Bìa mềm",
-      "price": 900000,
+      "price": 90000,
       "quantity": 0,
       "status": "Đặt trước",
       "discount": 10
@@ -2072,7 +2072,7 @@ let database = {
       "size": "27 x 22 cm",
       "weight": "240 gram",
       "format": "Bìa mềm",
-      "price": 800000,
+      "price": 80000,
       "quantity": 30,
       "status": "Có hàng",
       "discount": 10
@@ -2095,7 +2095,7 @@ let database = {
       "size": "18 x 13 cm",
       "weight": "185 gram",
       "format": "Bìa mềm",
-      "price": 380000,
+      "price": 38000,
       "quantity": 600,
       "status": "Có hàng",
       "discount": 10
@@ -2122,7 +2122,7 @@ let database = {
       "size": "20.5 x 14.5 cm",
       "weight": "350 gram",
       "format": "Bìa mềm",
-      "price": 1250000,
+      "price": 125000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -2145,7 +2145,7 @@ let database = {
       "size": "20.5 x 14.5 cm",
       "weight": "180 gram",
       "format": "Bìa mềm",
-      "price": 1290000,
+      "price": 129000,
       "quantity": 0,
       "status": "Đặt trước",
       "discount": 10
@@ -2177,7 +2177,7 @@ let database = {
       "size": "19 x 13 cm",
       "weight": "190 gram",
       "format": "Bìa mềm",
-      "price": 1350000,
+      "price": 135000,
       "quantity": 200,
       "status": "Có hàng",
       "discount": 10
@@ -2204,7 +2204,7 @@ let database = {
       "size": "20.5 x 14.5 cm",
       "weight": "340 gram",
       "format": "Bìa cứng",
-      "price": 1450000,
+      "price": 145000,
       "quantity": 40,
       "status": "Có hàng",
       "discount": 10
@@ -2235,7 +2235,7 @@ let database = {
       "size": "15 x 15 cm",
       "weight": "160 gram",
       "format": "Bìa mềm",
-      "price": 1090000,
+      "price": 109000,
       "quantity": 650,
       "status": "Có hàng",
       "discount": 10
@@ -2268,7 +2268,7 @@ let database = {
       "size": "18.5 x 13 cm",
       "weight": "180 gram",
       "format": "Bìa mềm",
-      "price": 990000,
+      "price": 99000,
       "quantity": 260,
       "status": "Có hàng",
       "discount": 10
@@ -2295,7 +2295,7 @@ let database = {
       "size": "19 x 13 cm",
       "weight": "200 gram",
       "format": "Bìa mềm",
-      "price": 990000,
+      "price": 99000,
       "quantity": 430,
       "status": "Có hàng",
       "discount": 10
@@ -2322,7 +2322,7 @@ let database = {
       "size": "18.5 x 13 cm",
       "weight": "170 gram",
       "format": "Bìa mềm",
-      "price": 990000,
+      "price": 99000,
       "quantity": 240,
       "status": "Có hàng",
       "discount": 10
@@ -2331,7 +2331,7 @@ let database = {
       "id": "B419",
       "title": "Quan Trọng Là Phải Đẹp Trai",
       "image": "./data/img/img419.webp",
-      "description": "uan Trọng Là Phải Đẹp Trai cho thấy một góc nhìn vô cùng hài hước của Thăng Fly. Và theo tôi, đó là sự độc đáo mang tính tích cực. Khi gặp khó khăn trong cuộc sống, khi trục trặc trong chuyện tình cảm, khi công việc không suôn sẻ , nếu là một người chúng ta sẽ tìm lý do gì đó, một ai đó để đổ lỗi, để giải tỏa. Nhưng đối với Thăng, cách giải thích của anh chỉ: “Đơn giản… vì bạn không đẹp trai!”. Một lý do khiến người đọc không biết làm gì khác ngoài bật cười.<br><br>Cuốn sách này tập hợp những câu chuyện tưởng chừng như vô thưởng vô phạt, những kỷ niệm tếu táo thời sinh viên, những trò đùa nhắng nhít, những mối tình e ngại không dám nói… mà bạn chắc chắn sẽ cảm thấy bản thân mình trong đó",
+      "description": "Quan Trọng Là Phải Đẹp Trai cho thấy một góc nhìn vô cùng hài hước của Thăng Fly. Và theo tôi, đó là sự độc đáo mang tính tích cực. Khi gặp khó khăn trong cuộc sống, khi trục trặc trong chuyện tình cảm, khi công việc không suôn sẻ , nếu là một người chúng ta sẽ tìm lý do gì đó, một ai đó để đổ lỗi, để giải tỏa. Nhưng đối với Thăng, cách giải thích của anh chỉ: “Đơn giản… vì bạn không đẹp trai!”. Một lý do khiến người đọc không biết làm gì khác ngoài bật cười.<br><br>Cuốn sách này tập hợp những câu chuyện tưởng chừng như vô thưởng vô phạt, những kỷ niệm tếu táo thời sinh viên, những trò đùa nhắng nhít, những mối tình e ngại không dám nói… mà bạn chắc chắn sẽ cảm thấy bản thân mình trong đó",
       "topic": [
         "truyentranh"
       ],
@@ -2344,7 +2344,7 @@ let database = {
       "size": "19 x 13 cm",
       "weight": "120 gram",
       "format": "Bìa mềm",
-      "price": 850000,
+      "price": 85000,
       "quantity": 60,
       "status": "Có hàng",
       "discount": 10
@@ -2371,7 +2371,7 @@ let database = {
       "size": "18 x 11 cm",
       "weight": "150 gram",
       "format": "Bìa mềm",
-      "price": 150000,
+      "price": 15000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -2391,7 +2391,7 @@ let database = {
       "size": "21x29.7 cm",
       "weight": "370 gram",
       "format": "Bìa mềm",
-      "price": 600000,
+      "price": 60000,
       "quantity": 360,
       "status": "Có hàng",
       "discount": 10
@@ -2411,7 +2411,7 @@ let database = {
       "size": "14.5x20.5 cm",
       "weight": "230 gram",
       "format": "Bìa mềm",
-      "price": 400000,
+      "price": 40000,
       "quantity": 180,
       "status": "Có hàng",
       "discount": 10
@@ -2431,7 +2431,7 @@ let database = {
       "size": "21x20 cm",
       "weight": "75 gram",
       "format": "Bìa mềm",
-      "price": 75000,
+      "price": 7500,
       "quantity": 1200,
       "status": "Có hàng",
       "discount": 10
@@ -2451,7 +2451,7 @@ let database = {
       "size": "13x20 cm",
       "weight": "245 gram",
       "format": "Bìa mềm",
-      "price": 620000,
+      "price": 62000,
       "quantity": 520,
       "status": "Có hàng",
       "discount": 10
@@ -2471,7 +2471,7 @@ let database = {
       "size": "18x21 cm",
       "weight": "470 gram",
       "format": "Bìa mềm",
-      "price": 1560000,
+      "price": 156000,
       "quantity": 210,
       "status": "Đặt trước",
       "discount": 10
@@ -2491,7 +2491,7 @@ let database = {
       "size": "18x21 cm",
       "weight": "470 gram",
       "format": "Bìa mềm",
-      "price": 1560000,
+      "price": 156000,
       "quantity": 200,
       "status": "Đặt trước",
       "discount": 10
@@ -2511,7 +2511,7 @@ let database = {
       "size": "16x22 cm",
       "weight": "210 gram",
       "format": "Bìa mềm",
-      "price": 550000,
+      "price": 55000,
       "quantity": 120,
       "status": "Có hàng",
       "discount": 10
@@ -2531,7 +2531,7 @@ let database = {
       "size": "15x22 cm",
       "weight": "245 gram",
       "format": "Bìa mềm",
-      "price": 950000,
+      "price": 95000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -2551,7 +2551,7 @@ let database = {
       "size": "24.5x31 cm",
       "weight": "400 gram",
       "format": "Bìa mềm",
-      "price": 1150000,
+      "price": 115000,
       "quantity": 100,
       "status": "Đặt trước",
       "discount": 10
@@ -2571,7 +2571,7 @@ let database = {
       "size": "16x24 cm",
       "weight": "150 gram",
       "format": "Bìa mềm",
-      "price": 580000,
+      "price": 58000,
       "quantity": 540,
       "status": "Có hàng",
       "discount": 10
@@ -2591,7 +2591,7 @@ let database = {
       "size": "14x22.5 cm",
       "weight": "510 gram",
       "format": "Bìa mềm",
-      "price": 1250000,
+      "price": 125000,
       "quantity": 830,
       "status": "Có hàng",
       "discount": 10
@@ -2611,7 +2611,7 @@ let database = {
       "size": "14x22.5 cm",
       "weight": "475 gram",
       "format": "Bìa mềm",
-      "price": 1250000,
+      "price": 125000,
       "quantity": 830,
       "status": "Có hàng",
       "discount": 10
@@ -2631,7 +2631,7 @@ let database = {
       "size": "24.5x30.5 cm",
       "weight": "500 gram",
       "format": "Bìa mềm",
-      "price": 1360000,
+      "price": 136000,
       "quantity": 1000,
       "status": "Có hàng",
       "discount": 10
@@ -2651,7 +2651,7 @@ let database = {
       "size": "16x24 cm",
       "weight": "480 gram",
       "format": "Bìa mềm",
-      "price": 1400000,
+      "price": 140000,
       "quantity": 540,
       "status": "Có hàng",
       "discount": 10
@@ -2671,7 +2671,7 @@ let database = {
       "size": "16x22 cm",
       "weight": "170 gram",
       "format": "Bìa mềm",
-      "price": 600000,
+      "price": 60000,
       "quantity": 210,
       "status": "Đặt trước",
       "discount": 10
@@ -2691,7 +2691,7 @@ let database = {
       "size": "20x24 cm",
       "weight": "565 gram",
       "format": "Bìa mềm",
-      "price": 1450000,
+      "price": 145000,
       "quantity": 340,
       "status": "Có hàng",
       "discount": 10
@@ -2711,7 +2711,7 @@ let database = {
       "size": "20x24 cm",
       "weight": "490 gram",
       "format": "Bìa cứng",
-      "price": 1450000,
+      "price": 145000,
       "quantity": 1230,
       "status": "Có hàng",
       "discount": 10
@@ -2731,7 +2731,7 @@ let database = {
       "size": "22x22 cm",
       "weight": "80 gram",
       "format": "Bìa mềm",
-      "price": 450000,
+      "price": 45000,
       "quantity": 1110,
       "status": "Có hàng",
       "discount": 10
@@ -2751,7 +2751,7 @@ let database = {
       "size": "14.5x20.5 cm",
       "weight": "200 gram",
       "format": "Bìa mềm",
-      "price": 800000,
+      "price": 80000,
       "quantity": 0,
       "status": "Hết hàng",
       "discount": 10
@@ -2771,7 +2771,7 @@ let database = {
       "size": "20x24 cm",
       "weight": "550 gram",
       "format": "Bìa cứng",
-      "price": 1450000,
+      "price": 145000,
       "quantity": 1200,
       "status": "Có hàng",
       "discount": 10
@@ -2804,6 +2804,74 @@ let database = {
   "orders": [
     {
       "id": "123456",
+      "user": "ABC",
+      "date": "10-10-10",
+      "product": [
+        {
+          "id": "B318",
+          "quantity": 3
+        },
+        {
+          "id": "B420",
+          "quantity": 1
+        }
+      ],
+      "discount": 2,
+      "status": "Chờ xử lý"
+    },
+    {
+      "id": "1234567",
+      "user": "ABC",
+      "date": "10-10-10",
+      "product": [
+        {
+          "id": "B318",
+          "quantity": 3
+        },
+        {
+          "id": "B420",
+          "quantity": 1
+        }
+      ],
+      "discount": 2,
+      "status": "Chờ xử lý"
+    },
+    {
+      "id": "1234576",
+      "user": "ABC",
+      "date": "10-10-10",
+      "product": [
+        {
+          "id": "B318",
+          "quantity": 3
+        },
+        {
+          "id": "B420",
+          "quantity": 1
+        }
+      ],
+      "discount": 2,
+      "status": "Chờ xử lý"
+    },
+    {
+      "id": "1237456",
+      "user": "ABC",
+      "date": "10-10-10",
+      "product": [
+        {
+          "id": "B318",
+          "quantity": 3
+        },
+        {
+          "id": "B420",
+          "quantity": 1
+        }
+      ],
+      "discount": 2,
+      "status": "Chờ xử lý"
+    },
+    {
+      "id": "1273456",
       "user": "ABC",
       "date": "10-10-10",
       "product": [

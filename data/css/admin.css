@@ -8,7 +8,8 @@
 
 #header .hd-home .mainbar .dropdown .dropdown-toggle {
     width: 240px;
-    background-color: var(--main-color);
+    background-color: var(--dark-color);
+    border: none;
     padding: 12px;
 }
 
@@ -102,18 +103,53 @@ main table td {
     inset: 0;
     background: rgba(0, 0, 0, 0.7); /* nền đen mờ */
     z-index: 1;
+    display: none;
 }
 
 #fixed .add-product {
     position: fixed;
     top: 150px;
-    left: 200px;
-    right: 200px;
+    left: 00px;
+    right: 00px;
     bottom: 100px;
     background-color: #fff;
     z-index: 1000;
+    display: none;
+    overflow: hidden;
 }
 
 #fixed .add-product .box {
-    margin: 32px;
+    margin: 48px 64px;
+}
+
+#fixed .add-product .box h2 {
+    margin: 20px 0;
+}
+
+#fixed .add-product .box table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+#fixed .add-product .box td {
+    padding: 4px;
+}
+
+#fixed .add-product .box .add:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.67);
+    display: inline-block;
+}
+
+#fixed .add-product .box select {
+    width: 188px;
+}
+
+#fixed .add-product .box button {
+    float: right;
+    margin-left: 4px;
+}
+
+#fixed div.active {
+    display: block;
 }

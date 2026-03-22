@@ -20,8 +20,22 @@ let searchData = [
 ]
 startAdminPage();
 
+document.querySelector('form.search-box').onsubmit = function(e) {
+    e.preventDefault();
+}
+
+document.querySelector('.add-product form').onsubmit = function(e) {
+    e.preventDefault();
+}
+
 searchBtnAdmin.addEventListener('click', () => {
     evtSearch();
+})
+
+searchInputAdmin.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13) {
+        evtSearch();
+    }
 })
 
 // Chuyển 3 trang
@@ -89,7 +103,7 @@ function evtSearch() {
                     let data = book[searchData[indexDataAdmin][indexSearchAdmin]];
                     // console.log(data);
                     if(typeof data === 'object') {
-                        if(indexSearchAdmin === 2) data = data.map(t => type[t]).join(',');
+                        if(indexSearchAdmin === 2) data = data.map(t => topic[t]).join(',');
                         else data = data.join(',');
                     }
                     return data.toLowerCase().search(dataSearch.toLowerCase()) !== -1;
@@ -162,14 +176,14 @@ function readerBookAdmin() {
             <td><img width="50px" src="${book.image}" alt=""></td>
             <td>${book.title}</td>
             <td>${book.author.join(',<br>')}</td>
-            <td>${book.topic.map(b => type[b]).join(',<br>')}</td>
+            <td>${book.topic.map(b => topic[b]).join(',<br>')}</td>
             <td>${book.publish}</td>
             <td>${book.status}</td>
             <td>${book.quantity}</td>
             <td>${(book.price * (100 - book.discount) / 100).toLocaleString('vi-VN')}đ</td>
             <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
+                <button onclick="handlePatchBook('${book.id}')">Sửa</button>
+                <button onclick="handleDeleteBook('${book.id}')">Xóa</button>
             </td>
         </tr>`
     }).join('');
@@ -185,11 +199,10 @@ function readerUserAdmin() {
             <td>${user.email}</td>
             <td>${user.address}</td>
             <td>
-                <button>${user.role}</button>
+                <button onclick="changeRole('${user.id}')">${user.role === 'admin'? 'admin':'user'}</button>
             </td>
             <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
+                <button onclick="handleDeleteUser('${user.id}')">Xóa</button>
             </td>
         </tr>`
     }).join('');
@@ -239,16 +252,387 @@ async function readerOrderAdmin() {
                 <td>${order.status}</td>
                 <td>
                     ${order.status === 'Chờ xử lý'
-                        ? `<button>Xác nhận</button>
-                        <button>Hủy</button>`: 
+                        ? `<button onclick="confirmOrder('${order.id}')">Xác nhận</button>
+                        <button onclick="cancelOrder('${order.id}')">Hủy</button>`: 
                         order.status === 'Đã duyệt'
-                        ? `<button>Giao hàng</button>`:
+                        ? `<button onclick="deliveryOrder('${order.id}')">Giao hàng</button>`:
                         order.status === 'Đang giao hàng'
-                        ? `<button>Đã nhận</button>
-                        <button>Hoàn hàng</button>`:''
+                        ? `<button onclick="receiveOrder('${order.id}')">Đã nhận</button>
+                        <button onclick="cancelOrder('${order.id}')">Hoàn hàng</button>`:''
                     }
                 </td>
             </tr>`;
         })
     )).join('');
+}
+
+// Đóng mở hộp thêm sp
+function openBoxAddProduct() {
+    document.querySelector('.overlay').classList.add('active');
+    document.querySelector('.add-product').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBoxAddProduct() {
+    document.body.style.overflow = '';
+    document.querySelector('.overlay').classList.remove('active');
+    document.querySelector('.add-product').classList.remove('active');
+    document.querySelector('.add-product .box h2').innerText = "Thêm sản phẩm";
+    document.querySelector('.add-product .box .btn-add').innerText = "Thêm sản phẩm";
+    document.querySelector('.add-product .box .btn-delete').style.display = 'inline-block';
+    document.querySelector('.add-product .box .topic').innerHTML =
+    `<select name="topic">
+        <option value="none">Select</option>
+        <option value="lichsu">Lịch sử</option>
+        <option value="vhvn">Văn học Việt Nam</option>
+        <option value="vhnn">Văn học nước ngoài</option>
+        <option value="khoahoc">Khoa học</option>
+        <option value="kynang">Kỹ năng</option>
+        <option value="truyentranh">Truyện tranh</option>
+    </select>`
+    document.querySelector('.add-product .box .btn-add').onclick = handleCreateBook;
+    deteleDataForm();
+}
+
+// Thêm input thể loại
+function addBoxTopic() {
+    document.querySelector('.add-product .box .topic').innerHTML +=
+    `<select name="topic">
+        <option value="none">Select</option>
+        <option value="lichsu">Lịch sử</option>
+        <option value="vhvn">Văn học Việt Nam</option>
+        <option value="vhnn">Văn học nước ngoài</option>
+        <option value="khoahoc">Khoa học</option>
+        <option value="kynang">Kỹ năng</option>
+        <option value="truyentranh">Truyện tranh</option>
+    </select>`
+}
+
+function deteleDataForm() {
+    document.querySelector('.add-product .box form').reset();
+}
+
+// Thêm sách
+function handleCreateBook() {
+    let formCreate = document.querySelector('.add-product .box form');
+
+    let id = formCreate.id.value.trim();
+    let title = formCreate.title.value.trim();
+    let img = formCreate.img.files[0];
+
+    let description = formCreate.dcr.value.trim().replace(/\n/g, '<br>');
+    let author = formCreate.ath.value.trim().split('\n');
+
+    let topic = [];
+    if (formCreate.topic instanceof RadioNodeList) {
+        for (let i = 0; i < formCreate.topic.length; i++) {
+            if (formCreate.topic[i].checked && formCreate.topic[i].value !== 'none') {
+                topic.push(formCreate.topic[i].value);
+            }
+        }
+    } else if (formCreate.topic.value !== 'none') {
+        topic.push(formCreate.topic.value);
+    }
+
+    let nxb = formCreate.nxb.value.trim();
+    let date = formCreate.date.value.trim();
+    let size = formCreate.size.value.trim();
+    let weight = formCreate.weight.value.trim();
+    let format = formCreate.format.value.trim();
+    let price = formCreate.price.value.trim();
+    let discount = formCreate.dis.value.trim();
+    let status = formCreate.status.value.trim();
+    let quantity = formCreate.sl.value.trim();
+
+    // ktra lỗi
+    if (!id) return alert('Nhập ID sản phẩm');
+    if (!title) return alert('Nhập tên sản phẩm');
+
+    if (img && !['image/png', 'image/webp', 'image/jpeg'].includes(img.type)) {
+        return alert('File ảnh chỉ được .webp .png .jpg');
+    }
+
+    getBooks((books) => {
+        let exist = books.find((b) => b.id === id);
+        if (exist) {
+            alert('ID sản phẩm đã tồn tại');
+            return;
+        }
+
+        if (img) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                createNewBook(reader.result);
+            };
+            reader.readAsDataURL(img);
+        } else {
+            createNewBook("");
+        }
+    });
+
+    function createNewBook(imageBase64) {
+        let book = {
+            id,
+            title,
+            image: imageBase64,
+            description,
+            author,
+            topic,
+            publish: nxb,
+            date,
+            size,
+            weight,
+            format,
+            price,
+            discount,
+            status,
+            quantity
+        };
+
+        // console.log(book);
+
+        createBook(book, () => {
+            closeBoxAddProduct();
+        });
+    }
+}
+
+// Sửa book
+function handlePatchBook(id) {
+    openBoxAddProduct();
+    document.querySelector('.add-product .box h2').innerText = "Sửa sản phẩm " + id;
+    document.querySelector('.add-product .box .btn-add').innerText = "Sửa sản phẩm";
+    document.querySelector('.add-product .box .btn-delete').style.display = 'none';
+    let formPatch = document.querySelector('.add-product .box form');
+    
+    getBook(id, (book) => {
+        formPatch.id.value = book.id;
+        formPatch.title.value = book.title;
+        formPatch.dcr.value = book.description.replace(/<br>/g, '\n');
+        formPatch.ath.value = book.author.join('\n');
+        formPatch.topic.value = book.topic[0];
+        if(book.topic.length > 1) {
+            for(let i = 1; i < book.topic.length; i++) {
+                addBoxTopic();
+            }
+            for(let i = 0; i < book.topic.length; i++) {
+                formPatch.topic[i].value = book.topic[i];
+            }
+        }
+        
+        formPatch.nxb.value = book.publish;
+        formPatch.date.value = book.date;
+        formPatch.size.value = book.size;
+        formPatch.weight.value = book.weight;
+        formPatch.format.value = book.format;
+        formPatch.price.value = book.price;
+        formPatch.dis.value = book.discount;
+        formPatch.status.value = book.status;
+        formPatch.sl.value = book.quantity;
+
+        document.querySelector('.add-product .box .btn-add').onclick = function() {
+            let title = formPatch.title.value.trim();
+            let img = formPatch.img.files[0];
+            let description = formPatch.dcr.value.trim().replace(/\n/g, '<br>');
+            let author = formPatch.ath.value.split('\n').map((a) => a.trim());
+            let topic = [];
+            if(formPatch.topic instanceof RadioNodeList === true) {
+                for(let i = 0; i < formPatch.topic.length; i++) {
+                    if(formPatch.topic[i].value !== 'none') topic.push(formPatch.topic[i].value);
+                }
+            }else if(formPatch.topic.value !== 'none'){
+                topic.push(formPatch.topic.value);
+            }
+            let nxb = formPatch.nxb.value.trim();
+            let date = formPatch.date.value.trim();
+            let size = formPatch.size.value.trim();
+            let weight = formPatch.weight.value.trim();
+            let format = formPatch.format.value.trim();
+            let price = formPatch.price.value.trim();
+            let discount = formPatch.dis.value.trim();
+            let status = formPatch.status.value.trim();
+            let quantity = formPatch.sl.value.trim();
+
+            // Xử lý ngoại lệ
+            if(id !== formPatch.id.value.trim()) {
+                alert('ID sản phẩm không được sửa');
+                return;
+            }
+            if(title.length === 0) {
+                alert('Nhập tên sản phẩm');
+                return;
+            }
+            if(img && img.type !== 'image/png' && img.type !== 'image/webp' && img.type !== 'image/jpeg') {
+                alert('File ảnh chỉ được có đuôi .webp .png .jpg');
+                return;
+            }
+            if (img) {
+                const reader = new FileReader();
+
+                reader.onload = function () {
+                    updateBook(reader.result); // có ảnh mới
+                };
+
+                reader.readAsDataURL(img);
+            } else {
+                updateBook(book.image); // giữ ảnh cũ
+            }
+
+            function updateBook(imageBase64) {
+                let newBook = {
+                    title,
+                    description,
+                    author,
+                    topic,
+                    "publish": nxb,
+                    date,
+                    size,
+                    weight,
+                    format,
+                    price,
+                    discount,
+                    status,
+                    quantity,
+                    "image": imageBase64
+                };
+
+                setBook(id, newBook, (updatedBook) => {
+                    let i = 0;
+                    for (; i < dataAdmin[0].length; i++) {
+                        if (dataAdmin[0][i].id === id) break;
+                    }
+
+                    if (i !== dataAdmin[0].length) {
+                        dataAdmin[0][i] = updatedBook;
+                    }
+
+                    // console.log(dataAdmin[0][i]);
+                    readerBookAdmin();
+                    closeBoxAddProduct();
+                });
+            }
+        }
+    })
+};
+
+// Xóa sách
+function handleDeleteBook(id) {
+    let index = 0;
+    for(; index < dataAdmin[0].length; index++) {
+        if(dataAdmin[0][index].id === id) break;
+    }
+    if(index !== dataAdmin[0].length) {
+        deleteBook(id, (book) => {
+            dataAdmin[0].splice(index, 1);
+            readerBookAdmin();
+        })
+    }
+}
+
+// Đặt giá trị cho số lượng
+function defaultQuantity() {
+    let form = document.querySelector('.add-product .box form');
+    if(form.status.value === "Có hàng") {
+        form.sl.value = '';
+        form.sl.disabled = false;
+    }else {
+        form.sl.value = 0;
+        form.sl.disabled = true;
+    }
+}
+
+// thay đổi quyền
+function changeRole(id) {
+    getUser(id, (user) => {
+        let newRole = 'admin';
+        if(user.role === 'admin') {
+            newRole = 'user';
+        }
+        let change = {
+            'role': newRole
+        }
+        setUser(id, change, (newUser) => {
+            dataAdmin[1].find((u) => u.id === newUser.id).role = newRole;
+            readerUserAdmin();
+        })
+    })
+}
+
+// Xóa người dùng
+function handleDeleteUser(id) {
+    let index = 0;
+    for(; index < dataAdmin[1].length; index++) {
+        if(dataAdmin[1][index].id === id) break;
+    }
+    if(index !== dataAdmin[1].length) {
+        deleteUser(id, (user) => {
+            dataAdmin[1].splice(index, 1);
+            readerUserAdmin();
+        })
+    }
+}
+
+// xử lý đơn hàng
+function confirmOrder(id) {
+    let index = 0;
+    for(; index < dataAdmin[2].length; index++) {
+        if(dataAdmin[2][index].id === id) break;
+    }
+    if(index !== dataAdmin[2].length) {
+        let update = {
+            "status": "Đã duyệt"
+        }
+        setOrder(id, update, (order) => {
+            dataAdmin[2][index] = order;
+            readerOrderAdmin();
+        })
+    }
+}
+
+function cancelOrder(id) {
+    let index = 0;
+    for(; index < dataAdmin[2].length; index++) {
+        if(dataAdmin[2][index].id === id) break;
+    }
+    if(index !== dataAdmin[2].length) {
+        let update = {
+            "status": "Đã hủy"
+        }
+        setOrder(id, update, (order) => {
+            dataAdmin[2][index] = order;
+            readerOrderAdmin();
+        })
+    }
+}
+
+function deliveryOrder(id) {
+    let index = 0;
+    for(; index < dataAdmin[2].length; index++) {
+        if(dataAdmin[2][index].id === id) break;
+    }
+    if(index !== dataAdmin[2].length) {
+        let update = {
+            "status": "Đang giao hàng"
+        }
+        setOrder(id, update, (order) => {
+            dataAdmin[2][index] = order;
+            readerOrderAdmin();
+        })
+    }
+}
+
+function receiveOrder(id) {
+    let index = 0;
+    for(; index < dataAdmin[2].length; index++) {
+        if(dataAdmin[2][index].id === id) break;
+    }
+    if(index !== dataAdmin[2].length) {
+        let update = {
+            "status": "Giao hàng thành công"
+        }
+        setOrder(id, update, (order) => {
+            dataAdmin[2][index] = order;
+            readerOrderAdmin();
+        })
+    }
 }

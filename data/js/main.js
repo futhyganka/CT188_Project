@@ -1,4 +1,4 @@
-let type = {
+let topic = {
     'kynang': 'Kỹ năng',
     'vhvn': 'Văn học Việt Nam',
     'vhnn': 'Văn học nước ngoài',
