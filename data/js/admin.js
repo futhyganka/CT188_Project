@@ -568,6 +568,9 @@ function handleDeleteUser(id) {
         deleteUser(id, (user) => {
             dataAdmin[1].splice(index, 1);
             readerUserAdmin();
+            if(localStorage.getItem("userCurr") && localStorage.getItem("userCurr") === user.id) {
+                localStorage.removeItem("userCurr");
+            }
         })
     }
 }
