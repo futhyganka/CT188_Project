@@ -41,3 +41,17 @@ registerForm.addEventListener("submit", function(e) {
     })
 
 });
+function togglePassword(id, el) {
+    let input = document.getElementById(id);
+    let icons = el.querySelectorAll("i");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icons[0].style.display = "none";
+        icons[1].style.display = "inline";
+    } else {
+        input.type = "password";
+        icons[0].style.display = "inline";
+        icons[1].style.display = "none";
+    }
+}
