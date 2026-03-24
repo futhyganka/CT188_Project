@@ -109,8 +109,8 @@ main table td {
 #fixed .add-product {
     position: fixed;
     top: 150px;
-    left: 00px;
-    right: 00px;
+    left: 200px;
+    right: 200px;
     bottom: 100px;
     background-color: #fff;
     z-index: 1000;

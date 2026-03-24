@@ -232,8 +232,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Đắc Trung"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "13 x 19 cm",
@@ -252,8 +255,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "rất hay, ý nghĩa" },
+        { "star": 5, "info": "nó miêu tả cảnh đẹp và những con người đang cố gắng ở đó. bài này rất hay" }
+      ],
+      "author": [" Nguyễn Phúc An"],
       "publish": "NXB Tổng hợp thành phố Hồ Chí Minh",
       "date": "2026",
       "size": "13 x 20 cm",
@@ -272,8 +278,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Sản phẩm chất lượng, gói hàng cẩn thận, giá cũng rẻ hơn so với mấy shop khác" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Vũ Thị Thanh"],
       "publish": "NXB Trẻ",
       "date": "2025",
       "size": "14 x 20cm",
@@ -292,8 +301,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "rất hay, đáng mua, gói hàng cẩn thận, giá cả hợp lý" },
+        { "star": 5, "info": "hayyy" }
+      ],
+      "author": ["Nguyễn Quốc Tín","Nguyễn Huy Thắng"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "14.5 x 20.5 cm",
@@ -312,8 +324,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Rất đáng xem" },
+        { "star": 5, "info": "Một cuốn sách đáng đọc, mang lại nhiều giá trị." }
+      ],
+      "author": ["Hồ Chí Minh"],
       "publish": "NXB Trẻ",
       "date": "2025",
       "size": "13 x 20,5 cm",
@@ -332,8 +347,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "lên án gay gắt cái xã hội tư sản ,châm biếm xh rất hay" },
+        { "star": 5, "info": "Đọc một lần là muốn đọc lại." }
+      ],
+      "author": ["Tiến sĩ Nguyễn Văn Khoan"],
       "publish": "NXB Trẻ",
       "date": "2025",
       "size": "14 x 20 cm",
@@ -352,8 +370,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "Một tác phẩm chất lượng, đáng để trải nghiệm." },
+        { "star": 5, "info": "Rất thích cách tác giả truyền tải thông điệp." }
+      ],
+      "author": ["Nhóm Nhân văn trẻ"],
       "publish": "NXB Trẻ",
       "date": "2024",
       "size": " 14,5 x 20,5cm",
@@ -372,8 +393,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Cuốn sách khiến mình suy nghĩ rất nhiều." },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Phạm Khắc Hòe"],
       "publish": "NXB Hội Nhà văn",
       "date": "2025",
       "size": " 16 × 24 cm",
@@ -392,8 +416,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Phù hợp để đọc và làm quà tặng." }
+      ],
+      "author": [" PGS.TS. Phạm Minh Phúc"],
       "publish": "NXB Khoa học xã hội",
       "date": "",
       "size": "16 x 24 cm",
@@ -412,8 +439,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Tác phẩm phản ánh chân thực đời sống và con người Việt Nam." },
+        { "star": 5, "info": "Cuốn sách mang giá trị nhân văn sâu sắc" }
+      ],
+      "author": ["Xuân Sách"],
       "publish": "NXB Trẻ",
       "date": "",
       "size": "13 x 19 cm",
@@ -432,8 +462,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "ý nghĩa, Rất đáng xem" }
+      ],
+      "author": ["Tô Hoài"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "13 x 19 cm",
@@ -452,8 +485,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tình cảm, khiến mình nhớ đến quê hương nhớ nhà" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nguyễn Như Mai","Nguyễn Quốc Tín","Nguyễn Huy Thắng"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "14.5x20.5 cm",
@@ -472,8 +508,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Lê Vân"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "13 x 19 cm",
@@ -492,8 +531,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 2, "info": "cũng đc" },
+        { "star": 5, "info": "hay" }
+      ],
+      "author": [" Nguyễn Minh Hải"],
       "publish": "NXB Trẻ",
       "date": "",
       "size": "13 x 20,5 cm",
@@ -512,8 +554,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Hoài Anh","Nguyễn Đông Hải"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "20,5 x 18,5 cm",
@@ -532,8 +577,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "cốt truyện hay" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Vương Trọng","Lê Minh Hải"] ,
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "19 x 26 cm",
@@ -552,8 +600,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tác phẩm hay" },
+        { "star": 5, "info": "Nhớ vị tết nhớ vị nhà" }
+      ],
+      "author": ["lê thành khôi"],
       "publish": "NXB Thế giới",
       "date": "2024",
       "size": "17 x 24 cm",
@@ -572,8 +623,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Nguyễn Văn Thạc","Đặng Vương Hưng"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "13,5x20,5 cm",
@@ -592,8 +646,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Nguyễn Thị Thanh Thủy"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "10 x 15 cm",
@@ -612,8 +669,11 @@ let database = {
       "topic": [
         "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "ý nghĩa, lôi cuốn" },
+        { "star": 4, "info": "hayy" }
+      ],
+      "author": ["Đoàn Giỏi"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "13.5x20.5 cm",
@@ -632,8 +692,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nguyễn Du"],
       "publish": "NXB Thanh Hóa",
       "date": "2024",
       "size": "13 x 19 cm",
@@ -652,8 +715,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "rất hay, ý nghĩa" },
+        { "star": 5, "info": "nó miêu tả cảnh đẹp và những con người đang cố gắng ở đó. bài này rất hay" }
+      ],
+      "author": ["Nguyễn Thành Long"],
       "publish": "NXB Kim Đồng",
       "date": "2024",
       "size": "13 x 19 cm",
@@ -672,8 +738,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Sản phẩm chất lượng, gói hàng cẩn thận, giá cũng rẻ hơn so với mấy shop khác" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Vũ Trọng Phụng"],
       "publish": "NXB Văn học",
       "date": "2024",
       "size": "13 x 20 cm",
@@ -692,8 +761,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "rất hay, đáng mua, gói hàng cẩn thận, giá cả hợp lý" },
+        { "star": 5, "info": "hayyy" }
+      ],
+      "author": ["Tô Hoài"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "13 x 20,5 cm",
@@ -712,8 +784,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Rất đáng xem" },
+        { "star": 5, "info": "Một cuốn sách đáng đọc, mang lại nhiều giá trị." }
+      ],
+      "author": ["Nguyễn Quốc Tín", "Nguyễn Huy Thắng"],
       "publish": "NXB Kim Đồng",
       "date": "20",
       "size": "14.5x20.5 cm",
@@ -732,8 +807,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "lên án gay gắt cái xã hội tư sản ,châm biếm xh rất hay" },
+        { "star": 5, "info": "Đọc một lần là muốn đọc lại." }
+      ],
+      "author": ["Vũ Trọng Phụng"],
       "publish": "NXB Văn học",
       "date": "2024",
       "size": "13.5 x 20.5 cm",
@@ -752,8 +830,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "Một tác phẩm chất lượng, đáng để trải nghiệm." },
+        { "star": 5, "info": "Rất thích cách tác giả truyền tải thông điệp." }
+      ],
+      "author": ["Ngô Tất Tố"],
       "publish": "NXB Kim Đồng",
       "date": "2024",
       "size": "13x19 cm",
@@ -772,8 +853,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Cuốn sách khiến mình suy nghĩ rất nhiều." },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nguyễn Dữ"],
       "publish": "NXB Kim Đồng",
       "date": "2018",
       "size": "24x32 cm",
@@ -792,8 +876,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Phù hợp để đọc và làm quà tặng." }
+      ],
+      "author": ["Nguyễn Quang Sáng"],
       "publish": "NXB Kim Đồng",
       "date": "2022",
       "size": "16x24 cm",
@@ -812,8 +899,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Tác phẩm phản ánh chân thực đời sống và con người Việt Nam." },
+        { "star": 5, "info": "Cuốn sách mang giá trị nhân văn sâu sắc" }
+      ],
+      "author": ["Trần Thanh Cảnh"],
       "publish": "NXB Hội Nhà văn",
       "date": "2024",
       "size": "20.5 x 14.5 cm",
@@ -832,8 +922,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "ý nghĩa, Rất đáng xem" }
+      ],
+      "author": ["Võ Quảng"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "14,5x20,5 cm",
@@ -852,8 +945,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tình cảm, khiến mình nhớ đến quê hương nhớ nhà" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Phạm Thu Hà "],
       "publish": "NXB Kim Đồng",
       "date": "2023",
       "size": "13,5x20,5 cm",
@@ -872,8 +968,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": [" Cao Nguyệt Nguyên "],
       "publish": "NXB Kim Đồng",
       "date": "2023",
       "size": "16,5x20,5 cm",
@@ -892,8 +991,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 2, "info": "cũng đc" },
+        { "star": 5, "info": "hay" }
+      ],
+      "author": ["Võ Hồng "],
       "publish": "NXB Kim Đồng",
       "date": "2019",
       "size": "13x19 cm",
@@ -912,8 +1014,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Phát Dương "],
       "publish": "NXB Kim Đồng",
       "date": "2026",
       "size": "16,5x20,5 cm",
@@ -932,8 +1037,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "cốt truyện hay" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Nguyễn Hoàng Diệu Thủy "],
       "publish": "NXB Kim Đồng",
       "date": "2024",
       "size": "13,5x20,5 cm",
@@ -952,8 +1060,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tác phẩm hay" },
+        { "star": 5, "info": "Nhớ vị tết nhớ vị nhà" }
+      ],
+      "author": ["Thao Le "],
       "publish": "NXB Kim Đồng",
       "date": "2022",
       "size": "21x21 cm",
@@ -972,8 +1083,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Lê Văn Trường "],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "13x20 cm",
@@ -992,8 +1106,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": [" Hồ Anh Thái "],
       "publish": "NXB Kim Đồng",
       "date": "2022",
       "size": "14x22,5 cm",
@@ -1012,8 +1129,11 @@ let database = {
       "topic": [
         "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "ý nghĩa, lôi cuốn" },
+        { "star": 4, "info": "hayy" }
+      ],
+      "author": [" Nguyễn Luân "],
       "publish": "NXB Kim Đồng",
       "date": "2023",
       "size": "13.5x20.5 cm",
@@ -1032,8 +1152,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Hector Malot"],
       "publish": "NXB Kim Đồng",
       "date": "01/09/2024",
       "size": "13x19 cm",
@@ -1052,8 +1175,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "rất hay, ý nghĩa" },
+        { "star": 5, "info": "nó miêu tả cảnh đẹp và những con người đang cố gắng ở đó. bài này rất hay" }
+      ],
+      "author": ["Edmondo De Amicis"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x24 cm",
@@ -1072,8 +1198,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Sản phẩm chất lượng, gói hàng cẩn thận, giá cũng rẻ hơn so với mấy shop khác" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nhị Hy"],
       "publish": "NXB Văn học",
       "date": "2023",
       "size": "14.5 x 20.5 cm",
@@ -1092,8 +1221,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "rất hay, đáng mua, gói hàng cẩn thận, giá cả hợp lý" },
+        { "star": 5, "info": "hayyy" }
+      ],
+      "author": ["Ray Bradbury"],
       "publish": "NXB Văn học",
       "date": " 2021",
       "size": " 13 x 20.5 cm",
@@ -1112,8 +1244,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Rất đáng xem" },
+        { "star": 5, "info": "Một cuốn sách đáng đọc, mang lại nhiều giá trị." }
+      ],
+      "author": ["James Dashner"],
       "publish": "NXB Kim Đồng",
       "date": "2017",
       "size": "14x22.5 cm",
@@ -1132,8 +1267,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "lên án gay gắt cái xã hội tư sản ,châm biếm xh rất hay" },
+        { "star": 5, "info": "Đọc một lần là muốn đọc lại." }
+      ],
+      "author": [" Milos MacourekAdolf Born"],
       "publish": "NXB Kim Đồng",
       "date": "2018",
       "size": "23,5x23,5cm",
@@ -1152,8 +1290,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "Một tác phẩm chất lượng, đáng để trải nghiệm." },
+        { "star": 5, "info": "Rất thích cách tác giả truyền tải thông điệp." }
+      ],
+      "author": ["Hans Christian Andersen"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "13x19 cm",
@@ -1172,8 +1313,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Cuốn sách khiến mình suy nghĩ rất nhiều." },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": [" Agatha Christie"],
       "publish": "NXB Trẻ",
       "date": "2026",
       "size": "13x20cm",
@@ -1192,8 +1336,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Phù hợp để đọc và làm quà tặng." }
+      ],
+      "author": ["Miura Ayako"],
       "publish": "NXB Trẻ",
       "date": "2024",
       "size": "13x20cm",
@@ -1212,8 +1359,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Tác phẩm phản ánh chân thực đời sống và con người Việt Nam." },
+        { "star": 5, "info": "Cuốn sách mang giá trị nhân văn sâu sắc" }
+      ],
+      "author": ["inni Ingemundsen"],
       "publish": "NXB Trẻ",
       "date": "2024",
       "size": "13x20cm",
@@ -1232,8 +1382,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "ý nghĩa, Rất đáng xem" }
+      ],
+      "author": ["Laurie Zaleski"],
       "publish": "NXB Trẻ",
       "date": "2024",
       "size": "13x20cm",
@@ -1252,8 +1405,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tình cảm, khiến mình nhớ đến quê hương nhớ nhà" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["J.M.G LE CLE'ZIO"],
       "publish": "NXB Trẻ",
       "date": "2023",
       "size": "13x20cm",
@@ -1272,8 +1428,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Ann Patchett"],
       "publish": "NXB Văn học",
       "date": "2026",
       "size": "14,5 x 20,5cm",
@@ -1292,8 +1451,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 2, "info": "cũng đc" },
+        { "star": 5, "info": "hay" }
+      ],
+      "author": ["Mitch Albom"],
       "publish": "NXB Kim Đồng",
       "date": "2025",
       "size": "14.5x20.5 cm",
@@ -1312,8 +1474,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Quỳnh Liên"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x24 cm",
@@ -1332,8 +1497,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "cốt truyện hay" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Jean - Paul Sartre"],
       "publish": "NXB Văn học",
       "date": "2021",
       "size": "3.5 x 20.5 cm",
@@ -1352,8 +1520,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tác phẩm hay" },
+        { "star": 5, "info": "Nhớ vị tết nhớ vị nhà" }
+      ],
+      "author": [" R.J.Palacio"],
       "publish": "NXB Trẻ",
       "date": "2023",
       "size": "13x20cm",
@@ -1372,8 +1543,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["STEPHAN PASTIS"],
       "publish": "NXB Trẻ",
       "date": "2024",
       "size": "13 x 20 cm",
@@ -1392,8 +1566,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Lưu Tư Gia"],
       "publish": "NXB Văn học",
       "date": "2023",
       "size": "14.5 x 20.5 cm",
@@ -1412,8 +1589,11 @@ let database = {
       "topic": [
         "vhnn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "ý nghĩa, lôi cuốn" },
+        { "star": 4, "info": "hayy" }
+      ],
+      "author": ["John Grisham"],
       "publish": "NXB Trẻ",
       "date": "2023",
       "size": "14x20cm",
@@ -1432,8 +1612,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["M. Scott Peck"],
       "publish": "NXB Dân Trí",
       "date": "2024",
       "size": "14.5 x 21 cm",
@@ -1452,8 +1635,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "rất hay, ý nghĩa" },
+        { "star": 5, "info": "nó miêu tả cảnh đẹp và những con người đang cố gắng ở đó. bài này rất hay" }
+      ],
+      "author": ["Hae Min"],
       "publish": "NXB Thế giới",
       "date": "2025",
       "size": "14 x 20,5 cm",
@@ -1472,8 +1658,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Sản phẩm chất lượng, gói hàng cẩn thận, giá cũng rẻ hơn so với mấy shop khác" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Đinh Đức Hoàng"],
       "publish": "NXB Dân Trí",
       "date": "2026",
       "size": "14,5 x 22 cm",
@@ -1492,8 +1681,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "rất hay, đáng mua, gói hàng cẩn thận, giá cả hợp lý" },
+        { "star": 5, "info": "hayyy" }
+      ],
+      "author": ["Trác Nhã"],
       "publish": "NXB Văn học",
       "date": "2022",
       "size": "14,5 x 20,5 cm",
@@ -1512,8 +1704,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Rất đáng xem" },
+        { "star": 5, "info": "Một cuốn sách đáng đọc, mang lại nhiều giá trị." }
+      ],
+      "author": ["Patrick King"],
       "publish": "NXB Thế giới",
       "date": "2024",
       "size": "14 x 20,5 cm",
@@ -1532,8 +1727,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "lên án gay gắt cái xã hội tư sản ,châm biếm xh rất hay" },
+        { "star": 5, "info": "Đọc một lần là muốn đọc lại." }
+      ],
+      "author": ["Robert Greene"],
       "publish": "NXB Trẻ",
       "date": "2020",
       "size": "15,5 x 23 cm",
@@ -1552,8 +1750,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "Một tác phẩm chất lượng, đáng để trải nghiệm." },
+        { "star": 5, "info": "Rất thích cách tác giả truyền tải thông điệp." }
+      ],
+      "author": ["Lý Thượng Long"],
       "publish": "NXB Dân Trí",
       "date": "2023",
       "size": "14 x 20,5 cm",
@@ -1572,8 +1773,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Cuốn sách khiến mình suy nghĩ rất nhiều." },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["The School Of Life"],
       "publish": "NXB Dân Trí",
       "date": "2025",
       "size": "13 x 20,5 cm",
@@ -1592,8 +1796,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Phù hợp để đọc và làm quà tặng." }
+      ],
+      "author": ["Âm Hồng Tín", "Lý Vĩ"],
       "publish": "NXB Dân Trí",
       "date": "2024",
       "size": "15 x 20,5 cm",
@@ -1612,8 +1819,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Tác phẩm phản ánh chân thực đời sống và con người Việt Nam." },
+        { "star": 5, "info": "Cuốn sách mang giá trị nhân văn sâu sắc" }
+      ],
+      "author": ["Nguyễn Anh Dũng"],
       "publish": "NXB Dân Trí",
       "date": "2021",
       "size": "13 x 20 cm",
@@ -1632,8 +1842,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "ý nghĩa, Rất đáng xem" }
+      ],
+      "author": ["John Gray"],
       "publish": "NXB Hồng Đức",
       "date": "2019",
       "size": "14,5 x 20,5 cm",
@@ -1652,8 +1865,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tình cảm, khiến mình nhớ đến quê hương nhớ nhà" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Cal Newport"],
       "publish": "NXB Công Thương",
       "date": "2023",
       "size": "13 x 20,5 cm",
@@ -1672,8 +1888,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Thibaut Meurisse"],
       "publish": "NXB Dân Trí",
       "date": "2024",
       "size": "13 x 20,5 cm",
@@ -1692,8 +1911,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 2, "info": "cũng đc" },
+        { "star": 5, "info": "hay" }
+      ],
+      "author": ["Inamori Kazuo"],
       "publish": "NXB Công Thương",
       "date": "2022",
       "size": "13 x 19 cm",
@@ -1712,8 +1934,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Arthur C. Brooks"],
       "publish": "NXB Thế giới",
       "date": "2025",
       "size": "10,5 x 23,5cm",
@@ -1732,8 +1957,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "cốt truyện hay" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Robin Sharma"],
       "publish": "NXB Trẻ",
       "date": "2025",
       "size": "13 x 20,5 cm",
@@ -1752,8 +1980,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tác phẩm hay" },
+        { "star": 5, "info": "Nhớ vị tết nhớ vị nhà" }
+      ],
+      "author": ["Nguyễn Anh Dũng"],
       "publish": "NXB Dân Trí",
       "date": "2023",
       "size": "13 x 20,5 cm",
@@ -1772,8 +2003,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Yesel Yoon"],
       "publish": "NXB Dân Trí",
       "date": "2025",
       "size": "14,5 x 20,5 cm",
@@ -1792,8 +2026,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Phan Văn Trường"],
       "publish": "NXB Trẻ",
       "date": "2019",
       "size": "15,5 x 23 cm",
@@ -1812,8 +2049,11 @@ let database = {
       "topic": [
         "kynang"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "ý nghĩa, lôi cuốn" },
+        { "star": 4, "info": "hayy" }
+      ],
+      "author": ["Darius Foroux"],
       "publish": "NXB Dân Trí",
       "date": "2024",
       "size": "13 x 20,5 cm",
@@ -2384,8 +2624,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Câu lạc bộ Trẻ em"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "21x29.7 cm",
@@ -2404,8 +2647,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "rất hay, ý nghĩa" },
+        { "star": 5, "info": "nó miêu tả cảnh đẹp và những con người đang cố gắng ở đó. bài này rất hay" }
+      ],
+      "author": ["Nguyễn Thanh Hà", "Nguyễn Đỗ Khả Tú"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "14.5x20.5 cm",
@@ -2424,8 +2670,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Sản phẩm chất lượng, gói hàng cẩn thận, giá cũng rẻ hơn so với mấy shop khác" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Chia-Fen Her", "Shu-Hua Huang", "Trương Nghĩa Văn"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "21x20 cm",
@@ -2444,8 +2693,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "rất hay, đáng mua, gói hàng cẩn thận, giá cả hợp lý" },
+        { "star": 5, "info": "hayyy" }
+      ],
+      "author": ["Daniel Smith"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "13x20 cm",
@@ -2464,8 +2716,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 5, "info": "Rất đáng xem" },
+        { "star": 5, "info": "Một cuốn sách đáng đọc, mang lại nhiều giá trị." }
+      ],
+      "author": ["Liu YuchenXia Fan"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "18x21 cm",
@@ -2484,8 +2739,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "lên án gay gắt cái xã hội tư sản ,châm biếm xh rất hay" },
+        { "star": 5, "info": "Đọc một lần là muốn đọc lại." }
+      ],
+      "author": ["Liu YuchenXia Fan"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "18x21 cm",
@@ -2502,10 +2760,14 @@ let database = {
       "image": "./data/img/img507.webp",
       "description": "Những bí ẩn về loài mãng xà dưới đáy biển hay hồ nước sâu kì dị phải chăng chỉ là những ảo ảnh phủ bụi thời gian? Trước những vấn đề bị bóng tối của sự hoài nghi bao trùm, khoa học nên có cách tiếp cận như thế nào? Mong muốn của đội ngũ biên soạn cuốn sách này là thắp lên ngọn lửa khám phá bên trong mỗi độc giả, để họ theo đuổi đến tận cùng sự thật, phân tích những hiện tượng kì bí với thái độ cẩn trọng và góc nhìn khoa học. Những bí ẩn chưa ai lí giải được luôn chứa đựng sức lôi cuốn mạnh mẽ, kích thích các giác quan và khơi gợi ham muốn tư duy, khám phá của mỗi người.",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "Một tác phẩm chất lượng, đáng để trải nghiệm." },
+        { "star": 5, "info": "Rất thích cách tác giả truyền tải thông điệp." }
+      ],
+      "author": ["Nhiều tác giả"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x22 cm",
@@ -2524,8 +2786,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Cuốn sách khiến mình suy nghĩ rất nhiều." },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nhựt Nguyễn"],
       "publish": "NXB Kim Đồng",
       "date": "2019",
       "size": "15x22 cm",
@@ -2542,10 +2807,14 @@ let database = {
       "image": "./data/img/img509.webp",
       "description": "Các nhà cầm quân vĩ đại trong lịch sử lao vào trận chiến cùng với những đội quân đáng sợ nhất! Cho dù phóng tên từ lưng ngựa như quân Hung huyền thoại hay mua kiếm như các nhà sư Thiếu Lâm tao nhã, những nhà cầm quân này có thể vừa khôn ngoan vừa vô cùng tàn bạo.<br>Những trận chiến nổi tiếng, các tướng lĩnh dũng cảm và những vũ khí tinh xảo trở nên sống động qua hình ảnh minh họa của Joe Lillington, giúp chúng ta theo dõi quá trình phát triển của các chiến binh từ Thời kì Đồ Đá cho đến trước Thập tự chinh.",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Phù hợp để đọc và làm quà tặng." }
+      ],
+      "author": ["Iris Volant", "Avalon Nuovo"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "24.5x31 cm",
@@ -2562,10 +2831,15 @@ let database = {
       "image": "./data/img/img510.webp",
       "description": "ốn “Sử ký giáo khoa thư” thuộc bộ Việt Nam tiểu học tùng thư– bộ sách giáo khoa chữ Quốc ngữ đầu tiên được biên soạn vào đầu thế kỉ XX. Sách tóm lược những sự kiện quan trọng của lịch sử Việt Nam từ thời lập nước đến những năm 1920, với lối viết ngắn gọn, dễ hiểu dành cho học sinh. Việc tái bản cuốn sách nhằm giới thiệu đến bạn đọc ngày nay một giá trị quý trong kho tàng văn hóa và lịch sử giáo dục Việt Nam.\"",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "lichsu",
+        "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Tác phẩm phản ánh chân thực đời sống và con người Việt Nam." },
+        { "star": 5, "info": "Cuốn sách mang giá trị nhân văn sâu sắc" }
+      ],
+      "author": ["Nguyễn Văn Ngọc", "Trần Trọng Kim", "Đặng Đình Phúc", "Đỗ Thận"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x24 cm",
@@ -2582,10 +2856,14 @@ let database = {
       "image": "./data/img/img511.webp",
       "description": "cuốn sách là hành trình suy ngẫm của nhà văn hóa hữu ngọc khi nhìn lại cuộc đời mình ở tuổi một trăm. thông qua việc giới thiệu hơn 180 danh nhân đông – tây thuộc nhiều lĩnh vực như tôn giáo, triết học, khoa học, văn học và chính trị, tác giả khám phá những tư tưởng lớn của nhân loại. mỗi nhân vật được trình bày qua cuộc đời và những danh ngôn tiêu biểu, tạo nên một bức tranh văn hóa rộng lớn về thế giới và con người. cuốn sách giống như một cuộc du hành tri thức, giúp người đọc suy ngẫm về ý nghĩa cuộc đời và giá trị của nhân loại qua các thời đại.",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "ý nghĩa, Rất đáng xem" }
+      ],
+      "author": ["Hữu Ngọc"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "14x22.5 cm",
@@ -2602,10 +2880,14 @@ let database = {
       "image": "./data/img/img512.webp",
       "description": "Cuốn sách là hành trình suy ngẫm của nhà văn hóa hữu ngọc khi nhìn lại cuộc đời và xã hội ở tuổi một trăm. Tác phẩm giới thiệu hơn 180 danh nhân đông – tây thuộc nhiều lĩnh vực như tôn giáo, triết học, khoa học, văn học, nghệ thuật và chính trị. Mỗi nhân vật được trình bày qua cuộc đời và những danh ngôn tiêu biểu, giúp người đọc tiếp cận các tư tưởng lớn của nhân loại và suy ngẫm về ý nghĩa cuộc sống, con người qua nhiều thời đại.",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "lichsu"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tình cảm, khiến mình nhớ đến quê hương nhớ nhà" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Hữu Ngọc"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "14x22.5 cm",
@@ -2624,8 +2906,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Sangma FrancisLisk Feng"],
       "publish": "NXB Kim Đồng",
       "date": "2020",
       "size": "24.5x30.5 cm",
@@ -2642,10 +2927,14 @@ let database = {
       "image": "./data/img/img514.webp",
       "description": "Quốc văn giáo khoa thư được xem là bộ sách giáo khoa tiếng việt đầu tiên của việt nam, ra đời vào đầu thế kỉ 20 do các học giả trần trọng kim, nguyễn văn ngọc, đặng đình phúc và đỗ thận biên soạn. bộ sách gồm ba quyển dành cho các lớp đầu bậc tiểu học, với các bài học tập đọc kết hợp kiến thức về luân lí, lịch sử, địa lí, tự nhiên và vệ sinh. với ngôn ngữ giản dị, dễ hiểu và hình minh họa sinh động, bộ sách đã để lại nhiều giá trị giáo dục và trở thành ký ức đẹp của nhiều thế hệ học sinh.",
       "topic": [
-        "khoahoc"
+        "khoahoc",
+        "vhvn"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 2, "info": "cũng đc" },
+        { "star": 5, "info": "hay" }
+      ],
+      "author": ["Nguyễn Văn Ngọc", "Trần Trọng Kim", "Đặng Đình Phúc", "Đỗ Thận"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x24 cm",
@@ -2664,8 +2953,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Gertrude DordorDaphné Collignon"],
       "publish": "NXB Kim Đồng",
       "date": "2021",
       "size": "16x22 cm",
@@ -2684,8 +2976,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "cốt truyện hay" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["Nhiều tác giả"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "20x24 cm",
@@ -2704,8 +2999,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "tác phẩm hay" },
+        { "star": 5, "info": "Nhớ vị tết nhớ vị nhà" }
+      ],
+      "author": ["Henry Eynard"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "20x24 cm",
@@ -2724,8 +3022,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "Hấp dẫn" },
+        { "star": 5, "info": "Rất đáng xem" }
+      ],
+      "author": ["June Tien"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "22x22 cm",
@@ -2744,8 +3045,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 4, "info": "nội dung lôi cuốn, ngôn ngữ gần gũi" },
+        { "star": 5, "info": "mang tính nhân văn, giáo dục cao" }
+      ],
+      "author": ["Trịnh Xuân Thuận"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "14.5x20.5 cm",
@@ -2764,8 +3068,11 @@ let database = {
       "topic": [
         "khoahoc"
       ],
-      "review": [],
-      "author": [],
+      "review": [
+        { "star": 3, "info": "ý nghĩa, lôi cuốn" },
+        { "star": 4, "info": "hayy" }
+      ],
+      "author": ["Philippe Simon", "Marie-Laure Bouet"],
       "publish": "NXB Kim Đồng",
       "date": "",
       "size": "20x24 cm",
