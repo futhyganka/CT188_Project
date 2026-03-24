@@ -1,85 +1,93 @@
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let phone = document.getElementById("phone");
-let message = document.getElementById("message");
+const form = document.getElementById("contactForm");
 
-name.oninput = () => validateName();
-email.oninput = () => validateEmail();
-phone.oninput = () => validatePhone();
-message.oninput = () => validateMessage();
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const messageInput = document.getElementById("message");
+
+nameInput.addEventListener("input", validateName);
+emailInput.addEventListener("input", validateEmail);
+phoneInput.addEventListener("input", validatePhone);
+messageInput.addEventListener("input", validateMessage);
 
 function validateName() {
-    if (name.value.trim() === "") {
-        setError(name, "nameErr", "Không được để trống");
+    if (nameInput.value.trim() === "") {
+        setError(nameInput, "nameErr", "Không được để trống (Nhập họ tên đầy đủ)");
         return false;
     }
-    clearError(name, "nameErr");
+    clearError(nameInput, "nameErr");
     return true;
 }
 
 function validateEmail() {
-    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (email.value.trim() === "") {
-        setError(email, "emailErr", "Không được để trống");
+    if (emailInput.value.trim() === "") {
+        setError(emailInput, "emailErr", "Không được để trống (abc@gmail.com)");
         return false;
     }
-    if (!regex.test(email.value)) {
-        setError(email, "emailErr", "Email không hợp lệ");
+    if (!regex.test(emailInput.value)) {
+        setError(emailInput, "emailErr", "Email không hợp lệ (abc@gmail.com)");
         return false;
     }
-    clearError(email, "emailErr");
+    clearError(emailInput, "emailErr");
     return true;
 }
 
 function validatePhone() {
-    let regex = /^[0-9]{9,11}$/;
+    const regex = /^[0-9]{9,11}$/;
 
-    if (phone.value.trim() === "") {
-        setError(phone, "phoneErr", "Không được để trống");
+    if (phoneInput.value.trim() === "") {
+        setError(phoneInput, "phoneErr", "Không được để trống (9-11 số)");
         return false;
     }
-    if (!regex.test(phone.value)) {
-        setError(phone, "phoneErr", "SĐT không hợp lệ");
+    if (!regex.test(phoneInput.value)) {
+        setError(phoneInput, "phoneErr", "SĐT không hợp lệ (chỉ nhập số)");
         return false;
     }
-    clearError(phone, "phoneErr");
+    clearError(phoneInput, "phoneErr");
     return true;
 }
 
 function validateMessage() {
-    if (message.value.trim() === "") {
-        setError(message, "messageErr", "Không được để trống");
+    if (messageInput.value.trim() === "") {
+        setError(messageInput, "messageErr", "Không được để trống");
         return false;
     }
-    clearError(message, "messageErr");
+    clearError(messageInput, "messageErr");
     return true;
 }
 
-document.getElementById("contactForm").onsubmit = function(e) {
+form.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    let isValid =
-        validateName() &
-        validateEmail() &
-        validatePhone() &
+    const isValid =
+        validateName() &&
+        validateEmail() &&
+        validatePhone() &&
         validateMessage();
 
     if (isValid) {
         document.getElementById("status").innerText = "Gửi thành công!";
-        this.reset();
-        document.querySelectorAll(".error-text").forEach(e => e.innerText = "");
-    }
-};
 
-function setError(input, id, msg) {
+        form.reset();
+
+        document.querySelectorAll(".contact-page input, .contact-page textarea")
+            .forEach(el => el.classList.remove("valid"));
+
+        document.querySelectorAll(".error-text")
+            .forEach(el => el.innerText = "");
+    }
+});
+
+function setError(input, errorId, message) {
     input.classList.add("error");
     input.classList.remove("valid");
-    document.getElementById(id).innerText = msg;
+    document.getElementById(errorId).innerText = message;
 }
 
-function clearError(input, id) {
+function clearError(input, errorId) {
     input.classList.remove("error");
-    input.classList.add("valid"); 
-    document.getElementById(id).innerText = "";
+    input.classList.add("valid");
+    document.getElementById(errorId).innerText = "";
 }

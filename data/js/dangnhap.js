@@ -45,3 +45,53 @@ function togglePassword(id, el) {
         icons[1].style.display = "none";
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const forgotLink = document.querySelector("#forgot-link");
+    const forgotBox = document.querySelector("#forgot-box");
+    const forgotBtn = document.querySelector("#forgot-btn");
+    const forgotEmail = document.querySelector("#forgot-email");
+    const newPasswordBox = document.querySelector("#new-password-box");
+    const newPasswordInput = document.querySelector("#new-password");
+
+    // Toggle hiển thị box quên mật khẩu
+    forgotLink.addEventListener("click", function(e){
+        e.preventDefault();
+        forgotBox.style.display = forgotBox.style.display === "none" ? "block" : "none";
+    });
+
+    // Tạo mật khẩu tạm thời (demo client-side)
+    function generatePassword(length = 10){
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+        let pwd = "";
+        for(let i=0;i<length;i++){
+            pwd += chars.charAt(Math.floor(Math.random()*chars.length));
+        }
+        return pwd;
+    }
+
+    // Xử lý nút gửi yêu cầu
+    forgotBtn.addEventListener("click", function(){
+        const email = forgotEmail.value.trim();
+        if(!email){
+            alert("Vui lòng nhập email!");
+            return;
+        }
+        // Demo: hiển thị mật khẩu mới
+        const newPwd = generatePassword();
+        newPasswordInput.value = newPwd;
+        newPasswordBox.style.display = "block";
+    });
+});
+
+// Toggle show/hide mật khẩu
+function togglePassword(id, el){
+    const input = document.getElementById(id);
+    if(input.type === "password"){
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+    el.querySelectorAll("i").forEach(icon => icon.style.display = icon.style.display === "none" ? "inline" : "none");
+}

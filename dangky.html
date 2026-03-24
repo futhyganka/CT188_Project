@@ -153,74 +153,60 @@
         <hr>
     </header>
 
-    <main>
-
+ <main>
     <section class="project-auth auth-section">
-
         <div class="auth-app">
             <div class="auth-box">
-
                 <h2 class="auth-title">Đăng ký</h2>
 
                 <form class="auth-form register-form">
 
                     <input class="auth-input" type="text" placeholder="Tên đăng nhập" required>
+                    <div class="error-text"></div>
 
                     <input class="auth-input" type="text" placeholder="Họ và tên" required>
+                    <div class="error-text"></div>
 
-                    <input class="auth-input" type="email" placeholder="Email" required>
+                    <input class="auth-input" type="email" placeholder="Email (vd: abc@gmail.com)" required>
+                    <div class="error-text"></div>
 
-                    <input class="auth-input" type="tel"
-                        placeholder="Số điện thoại"
-                        pattern="[0-9]{10}"
-                        required>
+                    <input class="auth-input" type="tel" placeholder="SĐT (9-11 số)" required>
+                    <div class="error-text"></div>
 
-                    <input class="auth-input" type="text"
-                        placeholder="Địa chỉ nhà"
-                        required>
+                    <input class="auth-input" type="text" placeholder="Địa chỉ nhà" required>
+                    <div class="error-text"></div>
 
-                            <div class="password-wrapper">
-                                <input id="password" class="auth-input" type="password" placeholder="Mật khẩu" required>
-                                <span class="toggle-password" onclick="togglePassword('password', this)">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <i class="fa-solid fa-eye-slash"></i>
-                                </span>
-                            </div>
-                
-                            <div class="password-wrapper">
-                                <input id="password" class="auth-input" type="password" placeholder="Mật khẩu" required>
-                                <span class="toggle-password" onclick="togglePassword('password', this)">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <i class="fa-solid fa-eye-slash"></i>
-                                </span>
-                            </div>
-                            <div>
-                                <ul class="password-rules">
-                                    <li id="rule-length">Tối thiểu 6 ký tự</li>
-                                    <li id="rule-upper">Ít nhất 1 chữ in hoa</li>
-                                    <li id="rule-lower">Ít nhất 1 chữ thường</li>
-                                    <li id="rule-number">Ít nhất 1 số</li>
-                                    <li id="rule-special">Ít nhất 1 ký tự đặc biệt</li>
-                                </ul>
-                            </div>
+                    <div class="password-wrapper">
+                        <input id="password" class="auth-input" type="password" placeholder="Mật khẩu (≥6 ký tự)" required>
+                        <span class="toggle-password" onclick="togglePassword('password', this)">
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div class="error-text"></div>
+
+                    <div class="password-wrapper">
+                        <input id="confirmPassword" class="auth-input" type="password" placeholder="Nhập lại mật khẩu" required>
+                        <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+                            <i class="fa-solid fa-eye"></i>
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div class="error-text"></div>
 
                     <button type="submit" class="auth-btn auth-btn-register">
                         Tạo tài khoản
                     </button>
 
                     <div class="auth-switch">
-                        Đã có tài khoản?
-                        <a href="dangnhap.html">Đăng nhập</a>
+                        Đã có tài khoản? <a href="dangnhap.html">Đăng nhập</a>
                     </div>
 
                 </form>
-
             </div>
         </div>
-
     </section>
-        
-    </main>
+</main>
     
     <footer id="footer">
         <hr>
