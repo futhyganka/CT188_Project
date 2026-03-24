@@ -208,3 +208,24 @@ main {
         margin-top:20px;
     }
 }
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* ẩn icon gạch ban đầu */
+.toggle-password i:last-child {
+    display: none;
+}

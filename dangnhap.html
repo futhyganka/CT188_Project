@@ -162,13 +162,14 @@
             <h2 class="auth-title">Đăng nhập</h2>
 
             <form class="auth-form login-form">
-                <input class="auth-input" type="text" placeholder="Họ và tên đăng nhập" required>
-                <input class="auth-input" type="email" placeholder="Email" required>
+                <input class="auth-input" type="text" placeholder="Tên đăng nhập hoặc mật khẩu" required>
+                <!-- <input class="auth-input" type="email" placeholder="Email" required> -->
                 <div class="password-wrapper">
-                    <input class="auth-input" type="password" placeholder="Mật khẩu" required>
-                        <span class="toggle-password" onclick="togglePassword()">
-                            <i class="fa-solid fa-eye"></i><i class="fa-solid fa-eye-slash"></i>
-                        </span>
+                    <input id="password" class="auth-input" type="password" placeholder="Mật khẩu" required>
+                    <span class="toggle-password" onclick="togglePassword('password', this)">
+                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </span>
                 </div>
 
                 <div class="auth-forgot">
@@ -277,5 +278,6 @@
     <!-- File js -->
     <script src="./data/js/database.js"></script>
     <script src="./data/js/toTop.js"></script>
+    <script src="./data/js/dangnhap.js"></script>
 </body>
 </html>

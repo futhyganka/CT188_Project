@@ -24,9 +24,14 @@ main .not-found .content {
     text-align: center;
 }
 
+main .active {
+    display: block !important;
+}
+
 main .user {
     flex: 1;
     border-right: solid 1px #ccc;
+    display: none;
 }
 
 main .user .info table {
@@ -42,7 +47,8 @@ main .user .info tr td:nth-child(2) {
     padding-right: 12px;
 }
 
-main .user .info tr td input {
+main .user .info tr td input,
+main .user .info tr td textarea {
     width: 100%;
 }
 
@@ -50,7 +56,8 @@ main .user .info td {
     padding: 4px;
 }
 
-main .user .modify {
+main .user .modify,
+main .user .log-out {
     padding: 6px 24px;
     color: #fff;
     font-size: 16px;
@@ -61,13 +68,25 @@ main .user .modify {
     margin-top: 4px;
 }
 
-main .user .modify:hover {
+main .user .modify:hover,
+main .user .log-out:hover {
     background-color: var(--grey-color);
+}
+
+main .user .to-adminpage {
+    color: var(--main-color);
+    float: right;
+    padding-right: 16px;
+}
+
+main .user .to-adminpage:hover {
+    color: var(--dark-color);
 }
 
 main .order {
     flex: 2;
     padding-left: 16px;
+    display: none;
 }
 
 main .order .nav-item {

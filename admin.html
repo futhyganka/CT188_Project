@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="./data/css/header.css">
         <link rel="stylesheet" href="./data/css/footer.css">
         <link rel="stylesheet" href="./data/css/nuttruot.css">
-        <link rel="stylesheet" href="./data/css/nguoidung.css">
+        <link rel="stylesheet" href="./data/css/admin.css">
         
         <!-- icon -->
         <link rel="icon" href="./data/img/logo.png">
@@ -58,11 +58,25 @@
                         <img src="data/img/logo.png" alt="Fivehasha">
                     </a>
                 </div>
-                <!-- SEARCH -->
-                <div class="search-box">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- Dropdowm -->
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        Tìm kiếm theo id
+                    </button>
+                    <ul class="dropdown-menu">
+                        <!-- <li><div class="dropdown-item">Tìm kiếm theo id</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo tên</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo thể loại</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo tác giả</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo nxb</div></li>
+                        <li><div class="dropdown-item">Tìm kiếm theo trạng thái</div></li> -->
+                    </ul>
                 </div>
+                <!-- SEARCH -->
+                <form class="search-box">
+                        <input type="text" placeholder="Tìm kiếm" class="search-input">
+                        <i class="fa-solid fa-magnifying-glass search-btn"></i>
+                </form>
                 <!-- USER + CART -->
                 <div class="user-cart">
                     <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
@@ -109,36 +123,18 @@
             </div>
         </div>
 
-<!-- bootstrap navbar -->
+        <!-- bootstrap navbar -->
         <nav class="navbar navbar-expand-sm navigation">
             <div class="container-fluid">
                 <ul class="navbar-nav menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="./gioithieu.html">Trang chủ</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
-                        <ul class="dropdown-menu submenu">
-                            <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
-                            <li><a class="dropdown-item" href="#">Lịch sử</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học nước ngoài</a></li>
-                            <li><a class="dropdown-item" href="#">Kỹ năng</a></li>
-                            <li><a class="dropdown-item" href="#">Khoa học</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
-                        </ul>
+                        <div class="nav-link active">Sản phẩm</div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./gioithieunxb.html">Giới thiệu</a>
+                        <div class="nav-link">User</div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./tintuc.html">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./flashsale.html">Flash Sale</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./lienhe.html">Liên hệ</a>
+                        <div class="nav-link">Đơn hàng</div>
                     </li>
                 </ul>
             </div>
@@ -148,7 +144,143 @@
 
     <main>
 
+        <div class="product active">
+
+            <h5>Quản lý sản phẩm: </h5>
+
+            <button onclick="getAllBook()">Tất cả dữ liệu</button>
+            <button onclick="openBoxAddProduct()">Thêm</button>
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 68px;">STT</th>
+                            <th style="width: 68px;">ID SP</th>
+                            <th style="width: 80px;">H/Ả SP</th>
+                            <th style="width: auto;">Tên sản phẩm</th>
+                            <th style="width: 110px;">Tác giả</th>
+                            <th style="width: 110px;">Thể loại</th>
+                            <th style="width: 110px;">NXB</th>
+                            <th style="width: 110px;">Trạng thái</th>
+                            <th style="width: 90px;">Số lượng</th>
+                            <th style="width: 90px;">Giá bán</th>
+                            <th style="width: 100px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>B214</td>
+                            <td><img width="50px" src="./data/img/img214.webp" alt=""></td>
+                            <td>Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người cứu sinh Người lạ trên bè cứu sinh Người lạ trên bè cứu sinh Người lạ</td>
+                            <td>VH nước ngoài<br>Lịch sử</td>
+                            <td>Có hàng</td>
+                            <td>50</td>
+                            <td>
+                                <button>Sửa</button>
+                                <button>Xóa</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
         
+        </div>
+
+        <div class="user">
+
+            <h5>Quản lý người dùng: </h5>
+
+            <button onclick="getAllUser()">Tất cả dữ liệu</button>
+            <!-- <button>Thêm</button> -->
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>User ID</th>
+                            <th>Họ tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Quyền</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Admin</td>
+                            <td>Nguyễn Bánh Bèo</td>
+                            <td>01233456789</td>
+                            <td>ab@gmail.com</td>
+                            <td>Cần Thơ</td>
+                            <td>
+                                <button>admin</button>
+                            </td>
+                            <td>
+                                <button>Sửa</button>
+                                <button>Xóa</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="order">
+
+            <h5>Quản lý đơn hàng: </h5>
+
+            <button onclick="getAllOrder()">Tất cả dữ liệu</button>
+            <!-- <button>Thêm</button> -->
+
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:55px">STT</th>
+                            <th style="width:90px">Order ID</th>
+                            <th style="width:80px">User ID</th>
+                            <th style="width:auto">Sản phẩm</th>
+                            <th style="width:105px">Tổng tiền</th>
+                            <th style="width:100px">Giảm giá</th>
+                            <th style="width:105px">Thành tiền</th>
+                            <th style="width:100px">Trạng thái</th>
+                            <th style="width:120px">Thao tác</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>abcd</td>
+                            <td>admin</td>
+                            <td>
+                                sp1[sl] x giá <br>
+                                sp2[sl] x giá
+                            </td>
+                            <td>100000</td>
+                            <td>20000</td>
+                            <td>80000</td>
+                            <td>
+                                Chờ xử lý
+                                Đã duyệt/ Đã hủy/Đang giao hàng/Giao hành thành công
+                            </td>
+                            <td>
+                                <button>Xác nhận</button>
+                                <button>Hủy</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        
+        </div>
         
     </main>
 
@@ -211,10 +343,98 @@
         <div class="btn-back-to-top">
             <i class="fa-solid fa-arrow-up"></i>
         </div>
+        
+        <div class="overlay" onclick="closeBoxAddProduct()"></div>
+
+        <div class="add-product">
+            <div class="box">
+                <form>
+                    <h2>Thêm sản phẩm</h2>
+                    <table>
+                        <tr>
+                            <td style="width:130px;">ID sản phẩm</td>
+                            <td style="width:188px;"><input type="text" name="id"></td>
+                            <td style="width:130px;">Tên sản phẩm</td>
+                            <td style="width:188px;"><input type="text" name="title"></td>
+                            <td style="width:130px;">Hình ảnh</td>
+                            <td style="width:188px;"><input type="file" name="img"></td>
+                        </tr>
+                        <tr>
+                            <td>Mô tả sản phẩm</td>
+                            <td colspan="3"><textarea style="width:518px" name="dcr"></textarea></td>
+                            <td>Tác giả</td>
+                            <td><textarea style="width:188px" name="ath"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Thể loại</td>
+                            <td colspan="5">
+                                <span class="topic">
+                                    <select name="topic">
+                                        <option value="none">Select</option>
+                                        <option value="lichsu">Lịch sử</option>
+                                        <option value="vhvn">Văn học Việt Nam</option>
+                                        <option value="vhnn">Văn học nước ngoài</option>
+                                        <option value="khoahoc">Khoa học</option>
+                                        <option value="kynang">Kỹ năng</option>
+                                        <option value="truyentranh">Truyện tranh</option>
+                                    </select>
+                                </span>
+                                <span class="add" onclick="addBoxTopic()"><i class="fa-solid fa-plus"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nhà xuất bản</td>
+                            <td><input type="text" name="nxb"></td>
+                            <td>Năm xuất bản</td>
+                            <td><input type="number" name="date"></td>
+                            <td>Kích thước</td>
+                            <td><input type="text" name="size"></td>
+                        </tr>
+                        <tr>
+                            <td>Trọng lượng</td>
+                            <td><input type="text" name="weight"></td>
+                            <td>Định dạng</td>
+                            <td>
+                                <select name="format">
+                                    <option value="Bìa mềm">Bìa mềm</option>
+                                    <option value="Bìa cứng">Bìa cứng</option>
+                                </select>
+                            </td>
+                            <td>Giá niêm yết</td>
+                            <td><input type="number" name="price"></td>
+                        </tr>
+                        <tr>
+                            <td>Giảm giá(%)</td>
+                            <td><input type="number" name="dis"></td>
+                            <td>Trạng thái</td>
+                            <td>
+                                <select name="status" onchange="defaultQuantity()">
+                                    <option value="Có hàng">Có hàng</option>
+                                    <option value="Hết hàng">Hết hàng</option>
+                                    <option value="Đặt trước">Đặt trước</option>
+                                </select>
+                            </td>
+                            <td>Số lượng</td>
+                            <td><input type="number" name="sl"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <button type="button" onclick="handleCreateBook()" class="btn-add">Thêm sản phẩm</button>
+                                <button type="button" onclick="deteleDataForm()" class="btn-delete">Xóa</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+        </div>
     </div>
 
     <!-- File js -->
+    <script src="./data/js/main.js"></script>
     <script src="./data/js/database.js"></script>
+    <script src="./data/js/main.js"></script>
     <script src="./data/js/toTop.js"></script>
+    <script src="./data/js/admin.js"></script>
     </body>
 </html>
