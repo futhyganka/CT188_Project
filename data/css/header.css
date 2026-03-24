@@ -219,7 +219,7 @@
     top: calc(100% + 25px); /* Khoảng cách từ icon xuống */
     right: -10px;
     width: 350px;
-    background: var(--sub-color);
+    background: var(--light-color);
     border: 1px solid #ddd;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -309,7 +309,7 @@
 
 /* Tổng tiền và nút bấm */
 .cart-footer {
-    padding: 15px;
+    padding: 10px 15px;
     border-top: 1px solid #ddd;
 }
 
@@ -328,6 +328,7 @@
 }
 
 .actions {
+    margin-top: 0;
     display: flex;
     gap: 10px;
 }
@@ -386,7 +387,8 @@
     text-decoration: none;
     color: #333;
     font-weight: 600;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-family:
+        Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
 #header .navigation .menu a:hover,
@@ -425,12 +427,11 @@
 
 /* Background */
 
-#header .background-header{
+#header .background-header {
     position: relative;
-
 }
 
-#header .background-header h1{
+#header .background-header h1 {
     position: absolute;
     top: 40%;
     margin-top: 0;
@@ -439,16 +440,17 @@
     left: 50px;
     font-size: 32px !important;
     font-weight: 700;
-    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+    font-family:
+        Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif !important;
 }
 
-#header .background-header .img{
+#header .background-header .img {
     width: 100%;
     aspect-ratio: 4 / 1;
     overflow: hidden;
 }
 
-#header .background-header .img img{
+#header .background-header .img img {
     width: 100%;
     filter: brightness(60%);
 }
