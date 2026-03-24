@@ -1,0 +1,165 @@
+
+body {
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HERO ===== */
+.about-hero {
+    color: #333;
+    
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+.logo-circle {
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+.logo-circle img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.logo-circle img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;   
+    object-fit: cover;
+    
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.about-hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== STORY ===== */
+.about-story {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.about-story p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* ===== VALUES ===== */
+.about-values {
+    padding: 60px 0;
+    background: #f7f7f7;
+}
+
+.about-values h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* GRID */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* ITEM */
+.value-item {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.value-item h3 {
+    color: #d51c24;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 14px;
+}
+
+/* ===== MISSION ===== */
+.about-mission {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.about-mission h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-mission p {
+    margin-bottom: 10px;
+}
+/* ===== VALUE ITEM EFFECT ===== */
+.value-item {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+
+    opacity: 0.7;
+    transform: translateY(10px);
+
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+.value-item:hover {
+    opacity: 1;
+    transform: translateY(-8px); /* bay lên */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+/*MAP*/
+.map {
+    margin-top: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .values-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .values-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

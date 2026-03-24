@@ -204,9 +204,13 @@
 
                 <ul class="meta">
                     <li>Tác giả: <span class="author"></span></li>
+                    
                     <li>Kích thước: <span class="size"></span></li>
-                    <li>Số trang: <span class="pages"></span></li>
+                    <li>Trọng lượng: <span class="weight"></span></li>
                     <li>Loại bìa: <span class="type"></span></li>
+                    <li>Năm xuất bản: <span class="date"></span></li>
+                    <li>Nhà xuất bản: <span class="publish"></span></li>
+
                 </ul>
 
                 <div class="quantity">
@@ -217,11 +221,6 @@
 
                 <button class="btn add">Thêm vào giỏ hàng</button>
                 <button class="btn buy">Mua ngay</button>
-
-            <div class="quantity">
-                <button class="minus">-</button>
-                <input  class="qty" value="1">
-                <button class="plus">+</button>
 
             </div>
         </section>
@@ -238,10 +237,16 @@
             <div class="rating"></div>
         </section>
         <!-- SAME TOPIC -->
-        <section class="topic-same">
-            <h2>Sách cùng thể loại</h2>
-            <div class="related"></div>
-        </section>
+   <div class="related-wrapper">
+<div class="related-wrapper">
+    <button class="nav-btn left" onclick="scrollLeft(this)">←</button>
+
+    <div class="related">
+        <!-- items -->
+    </div>
+
+    <button class="nav-btn right" onclick="scrollRight(this)">→</button>
+</div>
     </main>
 
     <!-- FOOTER -->
@@ -306,9 +311,10 @@
     </div>
 
     <!-- File js -->
-    <script src="./data/js/database.js"></script>
-    <script src="./data/js/toTop.js"></script>
+    <script src="data/js/database.js"></script>
     <script src="data/js/item.js"></script>
+    <script src="data/js/toTop.js"></script>
+    
 
 </body>
 </html>
