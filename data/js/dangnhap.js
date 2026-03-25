@@ -82,3 +82,80 @@ loginForm.addEventListener("submit", function(e) {
 
     window.location.href = "./gioithieu.html";
 });
+
+
+
+
+document.getElementById("forgot-link").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    document.getElementById("forgot-box").style.display = "block";
+});
+
+
+document.getElementById("forgot-btn").addEventListener("click", function() {
+    let email = document.getElementById("forgot-email").value.trim();
+    let newPasswordBox = document.getElementById("new-password-box");
+    let errorMsg = document.getElementById("error-msg");
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (!email) {
+        errorMsg.innerText = "Vui lòng nhập email!";
+        return;
+    }
+
+    let user = users.find(u => u.email === email);
+
+    if (!user) {
+        errorMsg.innerText = "Không tìm thấy tài khoản!";
+        return;
+    }
+
+    newPasswordBox.style.display = "block";
+
+    let newPassword = document.getElementById("new-password").value;
+
+    if (!newPassword) return;
+
+    if (newPassword.length < 6) {
+        errorMsg.innerText = "Mật khẩu phải từ 6 ký tự!";
+        return;
+    }
+
+    user.password = newPassword;
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    errorMsg.innerText = "Đổi mật khẩu thành công!";
+});
+document.getElementById("reset-btn").addEventListener("click", function() {
+    let email = document.getElementById("forgot-email").value.trim();
+    let newPassword = document.getElementById("new-password").value;
+    let errorMsg = document.getElementById("error-msg");
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let user = users.find(u => u.email === email);
+
+    if (!user) {
+        errorMsg.innerText = "Không tìm thấy tài khoản!";
+        return;
+    }
+
+    if (!newPassword) {
+        errorMsg.innerText = "Vui lòng nhập mật khẩu mới!";
+        return;
+    }
+
+    if (newPassword.length < 6) {
+        errorMsg.innerText = "Mật khẩu phải từ 6 ký tự!";
+        return;
+    }
+
+    user.password = newPassword;
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    errorMsg.innerText = "Đổi mật khẩu thành công!";
+});

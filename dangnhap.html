@@ -218,7 +218,17 @@
                     </button>
 
                     <div id="new-password-box" style="display:none;">
-                        <input id="new-password" type="text" readonly>
+                        <div class="password-wrapper">
+                            <input id="new-password" class="auth-input" type="password" placeholder="Mật khẩu mới">
+
+                            <span class="toggle-password" onclick="togglePassword('new-password', this)">
+                                <i class="fa-solid fa-eye"></i>
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </span>
+                        </div>
+                            <button type="button" id="reset-btn" class="auth-btn">
+                                    Gửi mật khẩu mới
+    </button>
                     </div>
 
                     <div id="error-msg" style="color:#d51c24; margin-top:5px;"></div>
