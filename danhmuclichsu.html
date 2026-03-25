@@ -200,7 +200,7 @@
                                 <i class="fa-solid fa-chevron-up" id="type-icon"></i>
                             </div>
                             <ul id="sidebar-menu" class="sidebar-menu-list">
-                                <li class="filter-item filter-item--check-box">
+                                <!-- <li class="filter-item filter-item--check-box">
                                     <label for="filter-giai-ma">
                                         <input type="checkbox" id="filter-giai-ma" onchange="toggleFilter(this)"
                                             data-text="Giải mã bản thân" value="giai-ma-ban-than">
@@ -222,33 +222,34 @@
                                             data-text="Đồ dùng" value="do-dung">
                                         <i class="fa-regular fa-circle"></i> Đồ dùng
                                     </label>
-                                </li>
+                                </li> -->
 
-                                <li class="filter-item filter-item--check-box">
-                                    <label for="filter-ngoai-van">
-                                        <input type="checkbox" id="filter-ngoai-van" onchange="toggleFilter(this)"
-                                            data-text="Sách ngoại văn" value="sach-ngoai-van">
-                                        <i class="fa-regular fa-circle"></i> Sách ngoại văn
-                                    </label>
-                                </li>
-
-                                <li class="filter-item filter-item--check-box">
+                                <!-- <li class="filter-item filter-item--check-box">
                                     <label for="filter-doan-doi">
                                         <input type="checkbox" id="filter-doan-doi" onchange="toggleFilter(this)"
                                             data-text="Sách công cụ Đoàn - Đội" value="doan-doi">
                                         <i class="fa-regular fa-circle"></i> Sách công cụ Đoàn - Đội
                                     </label>
-                                </li>
+                                </li> -->
 
-                                <li class="filter-item filter-item--check-box">
+                                <!-- <li class="filter-item filter-item--check-box">
                                     <label for="filter-tap-chi">
                                         <input type="checkbox" id="filter-tap-chi" onchange="toggleFilter(this)"
                                             data-text="Tạp chí" value="tap-chi">
                                         <i class="fa-regular fa-circle"></i> Tạp chí
                                     </label>
+                                </li> -->
+                                <li class="filter-item filter-item--check-box">
+                                    <label for="filter-ngoai-van">
+                                        <input type="checkbox" id="filter-ngoai-van" onchange="toggleFilter(this)"
+                                            data-text="Sách văn học Việt Nam" value="vhvn" checked>
+                                        <i class="fa-regular fa-circle"></i> Sách văn học Việt Nam
+                                    </label>
                                 </li>
 
-                                <li class="filter-item filter-item--check-box">
+
+
+                                <!-- <li class="filter-item filter-item--check-box">
                                     <label for="filter-khac">
                                         <input type="checkbox" id="filter-khac" onchange="toggleFilter(this)"
                                             data-text="Khác" value="khac">
@@ -259,31 +260,15 @@
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-van-hoc-nn">
                                         <input type="checkbox" id="filter-van-hoc-nn" onchange="toggleFilter(this)"
-                                            data-text="Văn học nước ngoài" value="van-hoc-nuoc-ngoai">
+                                            data-text="Văn học nước ngoài" value="vhnn">
                                         <i class="fa-regular fa-circle"></i> Văn học nước ngoài
-                                    </label>
-                                </li>
-
-                                <li class="filter-item filter-item--check-box">
-                                    <label for="filter-manga">
-                                        <input type="checkbox" id="filter-manga" onchange="toggleFilter(this)"
-                                            data-text="Manga-comic" value="manga-comic">
-                                        <i class="fa-regular fa-circle"></i> Manga-comic
-                                    </label>
-                                </li>
-
-                                <li class="filter-item filter-item--check-box">
-                                    <label for="filter-lich-su">
-                                        <input type="checkbox" id="filter-lich-su" onchange="toggleFilter(this)"
-                                            data-text="Lịch sử-truyền thống" value="lich-su-truyen-thong">
-                                        <i class="fa-regular fa-circle"></i> Lịch sử-truyền thống
                                     </label>
                                 </li>
 
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-kien-thuc">
                                         <input type="checkbox" id="filter-kien-thuc" onchange="toggleFilter(this)"
-                                            data-text="Kiến thức - khoa học" value="kien-thuc-khoa-hoc">
+                                            data-text="Kiến thức - khoa học" value="khoahoc">
                                         <i class="fa-regular fa-circle"></i> Kiến thức - khoa học
                                     </label>
                                 </li>
@@ -291,18 +276,18 @@
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-wings">
                                         <input type="checkbox" id="filter-wings" onchange="toggleFilter(this)"
-                                            data-text="Wings books" value="wings-books">
-                                        <i class="fa-regular fa-circle"></i> Wings books
+                                            data-text="Lịch sử" value="lichsu">
+                                        <i class="fa-regular fa-circle"></i> Lịch sử
                                     </label>
                                 </li>
 
                                 <li class="filter-item filter-item--check-box">
                                     <label for="filter-truyen-tranh">
                                         <input type="checkbox" id="filter-truyen-tranh" onchange="toggleFilter(this)"
-                                            data-text="Truyện tranh" value="truyen-tranh">
+                                            data-text="Truyện tranh" value="truyentranh">
                                         <i class="fa-regular fa-circle"></i> Truyện tranh
                                     </label>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </aside>
@@ -317,56 +302,80 @@
                                 <li class="filter-item">
                                     <label for="filter-nxb-kim-dong">
                                         <input type="checkbox" id="filter-nxb-kim-dong" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Kim Đồng">
-                                        <i class="fa-regular fa-circle"></i> Nhà Xuất Bản Kim Đồng
+                                            data-group="NXB" value="NXB Kim Đồng">
+                                        <i class="fa-regular fa-circle"></i> NXB Kim Đồng
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-tagger">
                                         <input type="checkbox" id="filter-tagger" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Tagger">
-                                        <i class="fa-regular fa-circle"></i> Tagger
+                                            data-group="NXB" value="NXB Hội Nhà Văn">
+                                        <i class="fa-regular fa-circle"></i> NXB Hội Nhà Văn
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-nhieu-tac-gia">
                                         <input type="checkbox" id="filter-nhieu-tac-gia" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Nhiều tác giả">
-                                        <i class="fa-regular fa-circle"></i> Nhiều tác giả
+                                            data-group="NXB" value="NXB Trẻ">
+                                        <i class="fa-regular fa-circle"></i> NXB Trẻ
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-kosaku">
                                         <input type="checkbox" id="filter-kosaku" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Kosaku Anakubo">
-                                        <i class="fa-regular fa-circle"></i> Kosaku Anakubo
+                                            data-group="NXB" value="NXB Khoa học xã hội">
+                                        <i class="fa-regular fa-circle"></i> NXB Khoa học xã hội
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-naoki">
                                         <input type="checkbox" id="filter-naoki" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Naoki Urasawa">
-                                        <i class="fa-regular fa-circle"></i> Naoki Urasawa
+                                            data-group="NXB" value="NXB Thanh Hóa">
+                                        <i class="fa-regular fa-circle"></i> NXB Thanh Hóa
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-fujiko">
                                         <input type="checkbox" id="filter-fujiko" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Fujiko F. Fujio">
-                                        <i class="fa-regular fa-circle"></i> Fujiko F. Fujio
+                                            data-group="NXB" value="NXB Văn Học">
+                                        <i class="fa-regular fa-circle"></i> NXB Văn Học
                                     </label>
                                 </li>
 
                                 <li class="filter-item">
                                     <label for="filter-nxb-khac">
                                         <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
-                                            data-group="NXB" value="Khác">
-                                        <i class="fa-regular fa-circle"></i> Khác
+                                            data-group="NXB" value="NXB Dân Trí">
+                                        <i class="fa-regular fa-circle"></i> NXB Dân Trí
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-nxb-khac">
+                                        <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="NXB Công Thương">
+                                        <i class="fa-regular fa-circle"></i> NXB Công Thương
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-nxb-khac">
+                                        <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="NXB Phụ Nữ Việt Nam">
+                                        <i class="fa-regular fa-circle"></i> NXB Phụ Nữ Việt Nam
+                                    </label>
+                                </li>
+
+                                <li class="filter-item">
+                                    <label for="filter-nxb-khac">
+                                        <input type="checkbox" id="filter-nxb-khac" onchange="toggleFilter(this)"
+                                            data-group="NXB" value="NXB Lao Động">
+                                        <i class="fa-regular fa-circle"></i> NXB Lao Động
                                     </label>
                                 </li>
                             </ul>
