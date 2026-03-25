@@ -15,7 +15,6 @@ function togglePassword(id, el) {
     }
 }
 
-
 function showError(input, msg) {
     const errorDiv = input.nextElementSibling;
     input.classList.add("error");
@@ -30,22 +29,16 @@ function clearError(input) {
     if (errorDiv) errorDiv.innerText = "";
 }
 
-// Lấy user từ localStorage
-function getUsers() {
-    return JSON.parse(localStorage.getItem("users")) || [];
-}
-
 loginForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const inputs = loginForm.querySelectorAll(".auth-input");
 
-    let inputLogin = inputs[0].value.trim(); // email hoặc username
+    let inputLogin = inputs[0].value.trim();
     let password = inputs[1].value;
 
     let isValid = true;
 
-    // ===== Validate =====
     if (!inputLogin) {
         showError(inputs[0], "Vui lòng nhập email hoặc tên đăng nhập");
         isValid = false;
@@ -62,15 +55,14 @@ loginForm.addEventListener("submit", function(e) {
 
     if (!isValid) return;
 
-    // ===== Xử lý login =====
-    const users = getUsers();
+    // 👉 LẤY USER TỪ REGISTER
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
     if (users.length === 0) {
         alert("Chưa có tài khoản nào!");
         return;
     }
 
-    // tìm theo email hoặc username (id)
     const user = users.find(u => 
         (u.email === inputLogin || u.id === inputLogin) 
         && u.password === password
@@ -81,14 +73,12 @@ loginForm.addEventListener("submit", function(e) {
         return;
     }
 
-    // ===== Thành công =====
     clearError(inputs[1]);
 
-    // lưu trạng thái đăng nhập
+    // 👉 Lưu user đang đăng nhập
     localStorage.setItem("currentUser", JSON.stringify(user));
 
     alert("Đăng nhập thành công!");
 
-    // chuyển trang (tùy bạn sửa)
-    window.location.href = "CT188_Project/nguoidung.html";
+    window.location.href = "./gioithieu.html";
 });

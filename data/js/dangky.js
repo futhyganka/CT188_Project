@@ -34,10 +34,30 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+// 👉 Lưu user vào localStorage
+function createUser(user) {
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // kiểm tra trùng
+    const exists = users.find(u => 
+        u.email === user.email || u.id === user.id
+    );
+
+    if (exists) {
+        alert("Tài khoản đã tồn tại!");
+        return false;
+    }
+
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    return true;
+}
+
 registerForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const inputs = registerForm.querySelectorAll(".auth-input"); 
+    const inputs = registerForm.querySelectorAll(".auth-input");
 
     let idUser = inputs[0].value.trim();
     let name = inputs[1].value.trim();
@@ -47,11 +67,11 @@ registerForm.addEventListener("submit", function(e) {
     let password = inputs[5].value;
     let confirmPassword = inputs[6].value;
 
-    let isValid = true; 
+    let isValid = true;
 
     if (!idUser) { showError(inputs[0], "Tên đăng nhập không được để trống"); isValid = false; } else { clearError(inputs[0]); }
     if (!name) { showError(inputs[1], "Họ và tên không được để trống"); isValid = false; } else { clearError(inputs[1]); }
-    
+
     if (!email) { showError(inputs[2], "Email không được để trống"); isValid = false; }
     else if (!validateEmail(email)) { showError(inputs[2], "Email không hợp lệ"); isValid = false; }
     else { clearError(inputs[2]); }
@@ -70,22 +90,22 @@ registerForm.addEventListener("submit", function(e) {
     else if (password !== confirmPassword) { showError(inputs[6], "Mật khẩu không khớp"); isValid = false; }
     else { clearError(inputs[6]); }
 
-    if (isValid) {
-        let user = {
-            "id": idUser,
-            "role": "user",
-            "name": name,
-            "phone": phone,
-            "email": email,
-            "password": password,
-            "address": address,
-            "order": []
-        }
+    if (!isValid) return;
 
-        createUser(user, (users) => {
-            alert("Đăng ký thành công!");
-            registerForm.reset();
-            window.location.href = "dangnhap.html";
-        })
+    let user = {
+        id: idUser,
+        role: "user",
+        name,
+        phone,
+        email,
+        password,
+        address,
+        order: []
+    };
+
+    if (createUser(user)) {
+        alert("Đăng ký thành công!");
+        registerForm.reset();
+        window.location.href = "dangnhap.html";
     }
 });
