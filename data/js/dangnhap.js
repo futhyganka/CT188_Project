@@ -1,87 +1,94 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // --- Biến chung ---
-    const loginForm = document.querySelector(".login-form");
-    const forgotLink = document.querySelector("#forgot-link");
-    const forgotBox = document.querySelector("#forgot-box");
-    const forgotBtn = document.querySelector("#forgot-btn");
-    const forgotEmail = document.querySelector("#forgot-email");
-    const newPasswordBox = document.querySelector("#new-password-box");
-    const newPasswordInput = document.querySelector("#new-password");
-    const errorDiv = document.querySelector("#error-msg");
+const loginForm = document.querySelector(".login-form");
 
-    // --- Toggle show/hide mật khẩu ---
-    function togglePassword(id, el) {
-        const input = document.getElementById(id);
-        const icons = el.querySelectorAll("i");
-        if (input.type === "password") {
-            input.type = "text";
-            icons[0].style.display = "none";
-            icons[1].style.display = "inline";
-        } else {
-            input.type = "password";
-            icons[0].style.display = "inline";
-            icons[1].style.display = "none";
-        }
+function togglePassword(id, el) {
+    let input = document.getElementById(id);
+    let icons = el.querySelectorAll("i");
+
+    if (input.type === "password") {
+        input.type = "text";
+        icons[0].style.display = "none";
+        icons[1].style.display = "inline";
+    } else {
+        input.type = "password";
+        icons[0].style.display = "inline";
+        icons[1].style.display = "none";
+    }
+}
+
+
+function showError(input, msg) {
+    const errorDiv = input.nextElementSibling;
+    input.classList.add("error");
+    input.classList.remove("valid");
+    if (errorDiv) errorDiv.innerText = msg;
+}
+
+function clearError(input) {
+    const errorDiv = input.nextElementSibling;
+    input.classList.remove("error");
+    input.classList.add("valid");
+    if (errorDiv) errorDiv.innerText = "";
+}
+
+// Lấy user từ localStorage
+function getUsers() {
+    return JSON.parse(localStorage.getItem("users")) || [];
+}
+
+loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const inputs = loginForm.querySelectorAll(".auth-input");
+
+    let inputLogin = inputs[0].value.trim(); // email hoặc username
+    let password = inputs[1].value;
+
+    let isValid = true;
+
+    // ===== Validate =====
+    if (!inputLogin) {
+        showError(inputs[0], "Vui lòng nhập email hoặc tên đăng nhập");
+        isValid = false;
+    } else {
+        clearError(inputs[0]);
     }
 
-    // --- Đăng nhập ---
-    loginForm.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const inputs = loginForm.querySelectorAll(".auth-input");
-        let id = inputs[0].value.trim();
-        let password = inputs[1].value;
+    if (!password) {
+        showError(inputs[1], "Vui lòng nhập mật khẩu");
+        isValid = false;
+    } else {
+        clearError(inputs[1]);
+    }
 
-        getUsers((users) => {
-            let userIndex = -1;
-            users.forEach((user, i) => {
-                if ((id === user.email || user.id === id) && user.password === password) {
-                    userIndex = i;
-                }
-            });
-            if (userIndex !== -1) {
-                alert("Đăng nhập thành công!");
-                localStorage.setItem("userCurr", users[userIndex].id);
-                window.location.href = "gioithieu.html";
-            } else {
-                alert("Sai thông tin đăng nhập!");
-            }
-        });
-    });
+    if (!isValid) return;
 
-    // --- Hiển thị/ẩn box quên mật khẩu ---
-    forgotLink.addEventListener("click", function(e) {
-        e.preventDefault();
-        forgotBox.style.display = forgotBox.style.display === "none" ? "block" : "none";
-    });
+    // ===== Xử lý login =====
+    const users = getUsers();
 
-    // --- Quên mật khẩu: gửi request tới PHP ---
-    forgotBtn.addEventListener("click", function() {
-        const email = forgotEmail.value.trim();
-        if (!email) {
-            errorDiv.textContent = "Vui lòng nhập email!";
-            newPasswordBox.style.display = "none";
-            return;
-        }
+    if (users.length === 0) {
+        alert("Chưa có tài khoản nào!");
+        return;
+    }
 
-        fetch("forgot.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: "email=" + encodeURIComponent(email)
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                errorDiv.textContent = "";
-                newPasswordInput.value = data.message;
-                newPasswordBox.style.display = "block";
-            } else {
-                errorDiv.textContent = data.message;
-                newPasswordBox.style.display = "none";
-            }
-        })
-        .catch(err => {
-            errorDiv.textContent = "Lỗi server!";
-            newPasswordBox.style.display = "none";
-        });
-    });
+    // tìm theo email hoặc username (id)
+    const user = users.find(u => 
+        (u.email === inputLogin || u.id === inputLogin) 
+        && u.password === password
+    );
+
+    if (!user) {
+        showError(inputs[1], "Sai tài khoản hoặc mật khẩu");
+        return;
+    }
+
+    // ===== Thành công =====
+    clearError(inputs[1]);
+
+    // lưu trạng thái đăng nhập
+    localStorage.setItem("currentUser", JSON.stringify(user));
+
+    alert("Đăng nhập thành công!");
+
+    // chuyển trang (tùy bạn sửa)
+    window.location.href = "CT188_Project/nguoidung.html";
 });

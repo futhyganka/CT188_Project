@@ -1,4 +1,4 @@
-/* OVERLAY */
+
 .contact-page .overlay {
     background: rgba(0,0,0,0.5);
     height: 100%;
@@ -8,7 +8,6 @@
     color: white;
 }
 
-/* CONTAINER */
 .contact-page .container {
     width: 90%;
     margin: 30px auto;
@@ -18,13 +17,11 @@
     margin-bottom: 20px;
 }
 
-/* LAYOUT */
 .contact-page .content {
     display: flex;
     gap: 40px;
 }
 
-/* LEFT */
 .contact-page .left {
     width: 50%;
 }
@@ -37,31 +34,26 @@
     margin: 8px 0;
 }
 
-/* ICON */
 .contact-page .icon {
     color: #d51c24;
     margin-right: 8px;
 }
 
-/* RIGHT */
 .contact-page .right {
     width: 50%;
 }
 
-/* FORM */
 .contact-page form {
     background: white;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* LABEL */
 .contact-page label {
     display: block;
     margin-top: 15px;
 }
 
-/* INPUT */
 .contact-page input,
 .contact-page textarea {
     width: 100%;
@@ -72,23 +64,19 @@
     outline: none;
 }
 
-/* placeholder (gợi ý trong ô) */
 .contact-page ::placeholder {
     color: #999;
     font-style: italic;
 }
 
-/* lỗi */
 .contact-page .error {
     border: 2px solid #d51c24 !important;
 }
 
-/* đúng */
 .contact-page .valid {
     border: 2px solid green;
 }
 
-/* BUTTON */
 .contact-page button {
     width: 100%;
     margin-top: 20px;
@@ -105,13 +93,11 @@
     background: #a9171d;
 }
 
-/* SUCCESS */
 .contact-page #status {
     margin-top: 10px;
     color: green;
 }
 
-/* CONTACT ITEM */
 .contact-page .contact-item {
     display: flex;
     align-items: flex-start;
@@ -119,14 +105,12 @@
     margin: 6px 0;
 }
 
-/* icon chỉnh lại (tránh bị trùng) */
 .contact-page .contact-item .icon {
     color: #d51c24;
     font-size: 16px;
     margin-top: 3px;
 }
 
-/* lỗi chữ */
 .contact-page .error-text {
     color: #d51c24;
     font-size: 13px;
