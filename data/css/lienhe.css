@@ -1,16 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial;
-    background: #f5f5f5;
-}
-
-
-.overlay {
+.contact-page .overlay {
     background: rgba(0,0,0,0.5);
     height: 100%;
     display: flex;
@@ -19,80 +8,76 @@ body {
     color: white;
 }
 
-/* CONTAINER */
-.container {
+.contact-page .container {
     width: 90%;
     margin: 30px auto;
 }
 
-h1 {
+.contact-page h1 {
     margin-bottom: 20px;
 }
 
-/* LAYOUT */
-.content {
+.contact-page .content {
     display: flex;
     gap: 40px;
 }
 
-/* LEFT */
-.left {
+.contact-page .left {
     width: 50%;
 }
 
-.left h3 {
+.contact-page .left h3 {
     margin-top: 20px;
 }
 
-.left p {
+.contact-page .left p {
     margin: 8px 0;
 }
 
-/* ICON */
-.icon {
+.contact-page .icon {
     color: #d51c24;
     margin-right: 8px;
 }
 
-/* RIGHT */
-.right {
+.contact-page .right {
     width: 50%;
 }
 
-/* FORM */
-form {
+.contact-page form {
     background: white;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* LABEL */
-label {
+.contact-page label {
     display: block;
     margin-top: 15px;
 }
 
-/* INPUT mặc định */
-input, textarea {
+.contact-page input,
+.contact-page textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid black;   /* 👈 viền đen */
+    border: 2px solid black;
     border-radius: 10px;
     margin-top: 5px;
     outline: none;
 }
 
-/* khi lỗi */
-.error {
+.contact-page ::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.contact-page .error {
     border: 2px solid #d51c24 !important;
 }
 
-/* khi đúng (optional đẹp hơn) */
-.valid {
-    border: 2px solid black;
+.contact-page .valid {
+    border: 2px solid green;
 }
-/* BUTTON */
-button {
+
+.contact-page button {
     width: 100%;
     margin-top: 20px;
     padding: 15px;
@@ -104,24 +89,29 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #b72222;
+.contact-page button:hover {
+    background: #a9171d;
 }
 
-/* SUCCESS */
-#status {
+.contact-page #status {
     margin-top: 10px;
     color: green;
 }
-.contact-item {
+
+.contact-page .contact-item {
     display: flex;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 8px;
     margin: 6px 0;
 }
 
-.icon {
-    color: red;
+.contact-page .contact-item .icon {
+    color: #d51c24;
     font-size: 16px;
-    margin-top: 3px; 
+    margin-top: 3px;
+}
+
+.contact-page .error-text {
+    color: #d51c24;
+    font-size: 13px;
 }

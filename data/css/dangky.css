@@ -168,3 +168,16 @@ main {
 .toggle-password i:last-child {
     display: none;
 }
+.error-text {
+    color: #d51c24;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.auth-input.error {
+    border: 2px solid #d51c24;
+}
+
+.auth-input.valid {
+    border: 2px solid green;
+}
