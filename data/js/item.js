@@ -114,7 +114,7 @@ function renderRelatedBooks(books) {
         return;
     }
 
-    container.innerHTML = books.slice(0, 8).map(book => {
+    container.innerHTML = books.slice(0, 6).map(book => {
 
         const discount = book.discount || 0;
         const newPrice = book.price * (100 - discount) / 100;
