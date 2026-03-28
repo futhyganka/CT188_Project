@@ -35,7 +35,7 @@
 }
 
 .contact-page .icon {
-    color: #d51c24;
+    color: var(--main-color);
     margin-right: 8px;
 }
 
@@ -58,7 +58,7 @@
 .contact-page textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid black;
+    border: 1px solid var(--grey-color);
     border-radius: 10px;
     margin-top: 5px;
     outline: none;
@@ -69,19 +69,19 @@
     font-style: italic;
 }
 
-.contact-page .error {
-    border: 2px solid #d51c24 !important;
+.contact-page .container .content .right .error {
+    border: 2px solid var(--main-color);
 }
 
 .contact-page .valid {
-    border: 2px solid green;
+    border: 1px solid var(--grey-color);
 }
 
 .contact-page button {
     width: 100%;
     margin-top: 20px;
     padding: 15px;
-    background: #d51c24;
+    background: var(--main-color);
     color: white;
     border: none;
     border-radius: 30px;
@@ -90,7 +90,7 @@
 }
 
 .contact-page button:hover {
-    background: #a9171d;
+    background: var(--dark-color);
 }
 
 .contact-page #status {
@@ -106,12 +106,12 @@
 }
 
 .contact-page .contact-item .icon {
-    color: #d51c24;
+    color: var(--main-color);
     font-size: 16px;
     margin-top: 3px;
 }
 
 .contact-page .error-text {
-    color: #d51c24;
+    color: var(--main-color);
     font-size: 13px;
 }

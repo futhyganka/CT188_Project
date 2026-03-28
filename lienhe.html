@@ -66,9 +66,14 @@
                 </div>
                 <!-- USER + CART -->
                 <div class="user-cart">
-                    <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
-                    <a href="./dangky.html"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+                    <div class="user">
+                        <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                        <a href="./dangky.html"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+                    </div>
 
+                    <div class="user">
+                        <a href="./nguoidung.html" class="link-user"><i class="fa-solid fa-user"></i></a>
+                    </div>
                     <!-- <a href="#" class="icon">
                         <i class="fa-regular fa-heart"></i>
                         <span class="badge">0</span>
@@ -120,13 +125,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
                         <ul class="dropdown-menu submenu">
-                            <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
-                            <li><a class="dropdown-item" href="#">Lịch sử</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học nước ngoài</a></li>
-                            <li><a class="dropdown-item" href="#">Kỹ năng</a></li>
-                            <li><a class="dropdown-item" href="#">Khoa học</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="./danhmuctong.html">Tất cả sản phẩm</a></li>
+                            <li><a class="dropdown-item" href="./danhmuclichsu.html">Lịch sử</a></li>
+                            <li><a class="dropdown-item" href="./danhmucvhvn.html">Văn học Việt Nam</a></li>
+                            <li><a class="dropdown-item" href="./danhmucvnnn.html">Văn học nước ngoài</a></li>
+                            <li><a class="dropdown-item" href="./danhmuckynang.html">Kỹ năng</a></li>
+                            <li><a class="dropdown-item" href="./danhmuckhoahoc.html">Khoa học</a></li>
+                            <li><a class="dropdown-item" href="./danhmuctruyentranh.html">Truyện tranh</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -176,6 +181,16 @@
                     <i class="bi bi-envelope-fill icon"></i>
                     <span>Email: cskhFivehasha@fivehasha.com.vn</span>
                 </p>
+                <div class="map">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=10.0314861,105.7726617&z=17&output=embed"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
             </div>
 
             <div class="right">
@@ -183,19 +198,19 @@
 
                 <form id="contactForm">
 
-                    <label>Họ và tên*</label>
+                    <label>Họ và tên</label>
                     <input type="text" id="name" placeholder="Nhập họ tên của bạn">
                     <div id="nameErr" class="error-text"></div>
 
-                    <label>Email*</label>
+                    <label>Email</label>
                     <input type="text" id="email" placeholder="Ví dụ: abc@gmail.com">
                     <div id="emailErr" class="error-text"></div>
 
-                    <label>Điện thoại*</label>
+                    <label>Điện thoại</label>
                     <input type="text" id="phone" placeholder="Nhập 9-11 chữ số">
                     <div id="phoneErr" class="error-text"></div>
 
-                    <label>Nội dung*</label>
+                    <label>Nội dung</label>
                     <textarea id="message" placeholder="Nhập nội dung cần liên hệ"></textarea>
                     <div id="messageErr" class="error-text"></div>
 
@@ -207,16 +222,7 @@
 
         </div>
     </div>
-    <div class="map">
-    <iframe 
-        src="https://maps.google.com/maps?q=10.0314861,105.7726617&z=17&output=embed"
-        width="100%" 
-        height="400" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-</div>
+    
 </main>
 
         <footer id="footer">
@@ -282,6 +288,7 @@
 
     <!-- File js -->
     <script src="./data/js/database.js"></script>
+    <script src="./data/js/boxUser.js"></script>
     <script src="./data/js/toTop.js"></script>
     <script src="./data/js/lienhe.js"></script>
 

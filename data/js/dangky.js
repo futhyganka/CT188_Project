@@ -1,4 +1,4 @@
-// ---------------- Hàm băm mật khẩu bằng SHA-256 ----------------
+// Hàm băm mật khẩu bằng SHA-256
 async function hashPassword(password) {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
@@ -7,70 +7,176 @@ async function hashPassword(password) {
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
-// ---------------- Lấy users từ localStorage ----------------
-function getUsers() {
-    return JSON.parse(localStorage.getItem("users")) || [];
+// Đăng ký
+const registerForm = document.querySelector(".register-form");
+const inputs = registerForm.querySelectorAll(".auth-input");
+const errors = registerForm.querySelectorAll(".error-text");
+let isError = true;
+let passReg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[?!@#$%^&*-]).{8,}$/g;
+let emailReg = /^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,4}$/g;
+
+for(let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('input', (e) => {
+        isError = false;
+        if(i === 0) { //id không được có dấu cách, length từ 6 kí tự
+            errors[i].innerText = "";
+            if(inputs[i].value.length < 6) {
+                errors[i].innerText += "Tên đăng nhập phải ít nhất 6 kí tự\n"
+            }
+            if(inputs[i].value.search(" ") !== -1) {
+                errors[i].innerText += "Tên đăng nhập không được có dấu cách\n"
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 1) { //tên không được trống
+            errors[i].innerText = "";
+            if(inputs[i].value.length === 0) {
+                errors[i].innerText += "Họ tên không được để trống\n"
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 2) { // email
+            errors[i].innerText = "";
+            if(!emailReg.test(inputs[i].value)) {
+                errors[i].innerText += "Email chưa đúng định dạng email\n"
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 3) { // phone
+            errors[i].innerText = "";
+            if(/[^0-9]/.test(inputs[i].value)) {
+                errors[i].innerText += "Số điện thoại không được chứa ký tự khác số\n"
+            }
+            if(inputs[i].value.length < 9) {
+                errors[i].innerText += "Số điện thoại phải ít nhất 9 ký tự"
+            }
+            if(inputs[i].value.length > 11) {
+                errors[i].innerText += "Số điện thoại không quá 11 ký tự"
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 4) { // địa chỉ
+            errors[i].innerText = "";
+            if(inputs[i].value.length < 8) {
+                errors[i].innerText += "Vui lòng nhập rõ địa chỉ\n"
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 5) { // pass
+            errors[i].innerText = "";
+            if(!passReg.test(inputs[i].value)) {
+                if(inputs[i].value.length < 8) {
+                    errors[i].innerText += "Mật khẩu phải chứa ít nhất 8 ký tự\n"
+                }
+                if(!/[A-Z]/.test(inputs[i].value)) {
+                    errors[i].innerText += "Mật khẩu phải chứa ít nhất 1 ký tự viết hoa\n"
+                }
+                if(!/[a-z]/.test(inputs[i].value)) {
+                    errors[i].innerText += "Mật khẩu phải chứa ít nhất 1 ký tự viết thường\n"
+                }
+                if(!/[0-9]/.test(inputs[i].value)) {
+                    errors[i].innerText += "Mật khẩu phải chứa ít nhất 1 ký tự số\n"
+                }
+                if(!/[?!@#$%^&*-]/.test(inputs[i].value)) {
+                    errors[i].innerText += "Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt (?!@#$%^&*-)\n"
+                }
+                if(/[^A-Za-z0-9?!@#$%^&*-]/.test(inputs[i].value)) {
+                    errors[i].innerText += "Mật khẩu không được chứa bất kì ký tự nào khác nhóm trên\n"
+                }
+            }
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }else if(i === 6) {
+            errors[i].innerText = "";
+            if(errors[5].innerText === "" && inputs[5].value.length > 0) {
+                if(inputs[i].value !== inputs[5].value) {
+                    errors[i].innerText += "Mật khẩu chưa khớp\n"
+                }
+            }else {
+                errors[i].innerText += "Mật khẩu chưa hoàn thành\n"
+            }
+            
+            if(errors[i].innerText !== "") {
+                inputs[i].classList.add('error');
+            }else {
+                inputs[i].classList.remove('error');
+            }
+        }
+        
+    })
 }
 
-// ---------------- Đăng ký ----------------
-const registerForm = document.querySelector(".register-form");
+
 registerForm.addEventListener("submit", async function(e) {
     e.preventDefault();
-
-    const inputs = registerForm.querySelectorAll(".auth-input");
+    // kiểm tra form
+    if(isError || Array.from(errors).some((e) => e.innerText.length !== 0)) {
+        console.log("return");
+        return;
+    }
+    
     let idUser = inputs[0].value.trim();
     let name = inputs[1].value.trim();
     let email = inputs[2].value.trim();
     let phone = inputs[3].value.trim();
     let address = inputs[4].value.trim();
     let password = inputs[5].value;
-    let confirmPassword = inputs[6].value;
+    // let confirmPassword = inputs[6].value;
 
-    if (password !== confirmPassword) {
-        alert("Mật khẩu không khớp!");
-        return;
-    }
+    const hashedPassword = await hashPassword(password);
 
-    // 🔹 Ràng buộc mật khẩu
-    if (password.length < 6 
-        || !/[a-z]/.test(password) 
-        || !/[A-Z]/.test(password)
-        || !/[0-9]/.test(password) 
-        || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-        alert("Mật khẩu chưa đúng định dạng! (6 ký tự, chữ hoa, chữ thường, số, ký tự đặc biệt)");
-        return;
-    }
+    getUsers((users) => {
 
-    let users = getUsers();
+        // Kiểm tra email hoặc ID tồn tại chưa
+        if (users.some(u => u.id === idUser)) {
+            alert("Tên đăng nhập đã tồn tại!");
+            return;
+        }
+        if (users.some(u => u.email === email)) {
+            alert("Email đã tồn tại!");
+            return;
+        }
 
-    // Kiểm tra email hoặc ID tồn tại chưa
-    if (users.some(u => u.email === email || u.id === idUser)) {
-        alert("Email hoặc ID đã tồn tại!");
-        return;
-    }
+        let user = {
+            'id': idUser,
+            'role': "user",
+            'name': name,
+            'phone': phone,
+            'email': email,
+            'password': hashedPassword,
+            'address': address,
+            'order': [],
+            'discount': []
+        };
 
-    const hashedPassword = await hashPassword(password); // 🔹 băm mật khẩu trước lưu
+        createUser(user, (u) => {
+            alert("Đăng ký thành công!");
+            registerForm.reset();
+            window.location.href = "/dangnhap.html";
+        });
 
-    let user = {
-        id: idUser,
-        role: "user",
-        name: name,
-        phone: phone,
-        email: email,
-        password: hashedPassword,
-        address: address,
-        order: []
-    };
+    });
+});     
 
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Đăng ký thành công!");
-    registerForm.reset();
-    window.location.href = "dangnhap.html";
-});
-
-// ---------------- Toggle password ----------------
+// Ấn hiện pass
 function togglePassword(id, el) {
     let input = document.getElementById(id);
     let icons = el.querySelectorAll("i");

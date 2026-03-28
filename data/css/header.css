@@ -167,9 +167,22 @@
 }
 
 /* Sửa lại selector hover để không ảnh hưởng đến bảng giỏ hàng bên trong */
-.user-cart > a:hover,
+.user-cart .user > a:hover,
 .cart-btn:hover {
     color: var(--main-color);
+}
+
+.user-cart .user {
+    display: none;
+}
+
+.user-cart .user.active {
+    display: flex;
+}
+
+.user-cart .user .link-user {
+    font-size: 20px;
+    padding: 12px 12px;
 }
 
 .user-cart a {
@@ -179,6 +192,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    padding-right: 12px;
 }
 
 .icon {

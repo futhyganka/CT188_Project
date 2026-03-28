@@ -47,7 +47,7 @@ main {
 }
 
 .project-auth .auth-input:focus{
-    border-color:#d51c24;
+    border-color:var(--grey-color);
     outline:none;
 }
 
@@ -55,7 +55,7 @@ main {
     padding:12px;
     border:none;
     border-radius:8px;
-    background:#d51c24;
+    background:var(--main-color);
     color:#fff;
     font-weight:bold;
     cursor:pointer;
@@ -63,15 +63,15 @@ main {
 }
 
 .project-auth .auth-btn:hover{
-    background:#a9171d;
+    background:var(--dark-color);
 }
 
 .project-auth .auth-btn-register{
-    background:#d51c24;
+    background:var(--main-color);
 }
 
 .project-auth .auth-btn-register:hover{
-    background:#a9171d;
+    background:var(--dark-color);
 }
 
 .project-auth .auth-switch{
@@ -88,7 +88,7 @@ main {
 }
 
 .project-auth .auth-switch a:hover{
-    color:#d51c24;
+    color:var(--main-color);
 }
 
 .project-auth .auth-divider{
@@ -136,7 +136,7 @@ main {
 }
 
 .project-auth .auth-google{
-    background:#d51c24;
+    background:var(--main-color);
 }
 
 .project-auth .auth-facebook:hover{
@@ -144,7 +144,7 @@ main {
 }
 
 .project-auth .auth-google:hover{
-    background:#a9171d;
+    background:var(--dark-color);
 }
 
 .project-auth .auth-forgot{
@@ -160,7 +160,7 @@ main {
 }
 
 .project-auth .auth-forgot a:hover{
-    color:#d51c24;
+    color:var(--main-color);
     text-decoration:underline;
 }
 
@@ -187,7 +187,7 @@ main {
 .toggle-password{
     position:absolute;
     right:12px;
-    top:35%;
+    top:40%;
     transform:translateY(-50%);
     cursor:pointer;
     font-size:16px;
@@ -215,20 +215,13 @@ main {
     padding-right: 40px;
 }
 
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
-
 .toggle-password i:last-child {
     display: none;
 }
 
-/* Box mật khẩu mới */
-#new-password-box {
+/* Box mật khẩu mới với xác nhận mật khẩu */
+#new-password-box,
+#confirm-box {
     background: #fff7f7;    
     padding: 10px;
     border-radius: 8px;
@@ -236,15 +229,17 @@ main {
 }
 
 /* Label mật khẩu mới */
-#new-password-box label {
+#new-password-box label,
+#confirm-box label {
     display: block;
     margin-bottom: 5px;
-    color: #d51c24;
+    color: var(--main-color);
     font-weight: 600;
 }
 
 /* Input mật khẩu mới */
-#new-password-box input {
+#new-password-box input,
+#confirm-box input {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;

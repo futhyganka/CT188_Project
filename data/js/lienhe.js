@@ -20,7 +20,7 @@ function validateName() {
 }
 
 function validateEmail() {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex = /^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,4}$/g;
 
     if (emailInput.value.trim() === "") {
         setError(emailInput, "emailErr", "Không được để trống (abc@gmail.com)");

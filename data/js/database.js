@@ -3098,7 +3098,7 @@ let database = {
       "name": "Nguyễn Bánh Bèo",
       "phone": "0123456789",
       "email": "ab@gmail.com",
-      "password": "Tuilama@12",
+      "password": "13c7545a1e1eae6bf1621b6dcd53368bcd1ac94da8180102410ec3057f1caaf1",
       "address": "Cần Thơ",
       "order": [
         "id1",

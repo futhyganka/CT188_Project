@@ -65,9 +65,14 @@
                 </div>
                 <!-- USER + CART -->
                 <div class="user-cart">
-                    <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
-                    <a href="./dangky.html"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+                    <div class="user">
+                        <a href="./dangnhap.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+                        <a href="./dangky.html"><i class="fa-regular fa-pen-to-square"></i> Đăng ký</a>
+                    </div>
 
+                    <div class="user">
+                        <a href="./nguoidung.html" class="link-user"><i class="fa-solid fa-user"></i></a>
+                    </div>
                     <!-- <a href="#" class="icon">
                         <i class="fa-regular fa-heart"></i>
                         <span class="badge">0</span>
@@ -119,13 +124,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Sản phẩm</a>
                         <ul class="dropdown-menu submenu">
-                            <li><a class="dropdown-item" href="#">Tất cả sản phẩm</a></li>
-                            <li><a class="dropdown-item" href="#">Lịch sử</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="#">Văn học nước ngoài</a></li>
-                            <li><a class="dropdown-item" href="#">Kỹ năng</a></li>
-                            <li><a class="dropdown-item" href="#">Khoa học</a></li>
-                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="./danhmuctong.html">Tất cả sản phẩm</a></li>
+                            <li><a class="dropdown-item" href="./danhmuclichsu.html">Lịch sử</a></li>
+                            <li><a class="dropdown-item" href="./danhmucvhvn.html">Văn học Việt Nam</a></li>
+                            <li><a class="dropdown-item" href="./danhmucvnnn.html">Văn học nước ngoài</a></li>
+                            <li><a class="dropdown-item" href="./danhmuckynang.html">Kỹ năng</a></li>
+                            <li><a class="dropdown-item" href="./danhmuckhoahoc.html">Khoa học</a></li>
+                            <li><a class="dropdown-item" href="./danhmuctruyentranh.html">Truyện tranh</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -161,35 +166,35 @@
 
                 <form class="auth-form register-form">
 
-                    <input class="auth-input" type="text" placeholder="Tên đăng nhập" required>
+                    <input class="auth-input" type="text" placeholder="Tên đăng nhập">
                     <div class="error-text"></div>
 
-                    <input class="auth-input" type="text" placeholder="Họ và tên" required>
+                    <input class="auth-input" type="text" placeholder="Họ và tên">
                     <div class="error-text"></div>
 
-                    <input class="auth-input" type="email" placeholder="Email (vd: abc@gmail.com)" required>
+                    <input class="auth-input" type="email" placeholder="Email">
                     <div class="error-text"></div>
 
-                    <input class="auth-input" type="tel" placeholder="SĐT (9-11 số)" required>
+                    <input class="auth-input" type="tel" placeholder="Số điện thoại">
                     <div class="error-text"></div>
 
-                    <input class="auth-input" type="text" placeholder="Địa chỉ nhà" required>
+                    <input class="auth-input" type="text" placeholder="Địa chỉ nhà">
                     <div class="error-text"></div>
 
                     <div class="password-wrapper">
-                        <input id="password" class="auth-input" type="password" placeholder="Mật khẩu (≥6 ký tự)" required>
+                        <input id="password" class="auth-input" type="password" placeholder="Mật khẩu">
                         <span class="toggle-password" onclick="togglePassword('password', this)">
-                            <i class="fa-solid fa-eye"></i>
                             <i class="fa-solid fa-eye-slash"></i>
+                            <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
                     <div class="error-text"></div>
 
                     <div class="password-wrapper">
-                        <input id="confirmPassword" class="auth-input" type="password" placeholder="Nhập lại mật khẩu" required>
+                        <input id="confirmPassword" class="auth-input" type="password" placeholder="Xác nhận mật khẩu">
                         <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
-                            <i class="fa-solid fa-eye"></i>
                             <i class="fa-solid fa-eye-slash"></i>
+                            <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
                     <div class="error-text"></div>
@@ -270,6 +275,7 @@
 
     <!-- File js -->
     <script src="./data/js/database.js"></script>
+    <script src="./data/js/boxUser.js"></script>
     <script src="./data/js/toTop.js"></script>
     <script src="./data/js/dangky.js"></script>
 </body>
