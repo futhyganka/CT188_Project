@@ -11,7 +11,7 @@ function goToCheckout() {
     }
 
     // đã đăng nhập → qua trang thanh toán
-    window.location.href = "thanhtoan.html";
+    window.location.href = "./thanhtoan.html";
 }
 
 

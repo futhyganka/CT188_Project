@@ -13,7 +13,7 @@ const book = database.books.find(b => b.id === id);
 
 if (!book) {
     alert("Sản phẩm không tồn tại!");
-    window.location.href = "index.html";
+    window.location.href = "./gioithieu.html";
 }
 
 // render

@@ -46,7 +46,7 @@ function renderList(books, container, limit) {
         const discount = book.discount || 0;
         const finalPrice = book.price * (1 - discount / 100);
         return `
-            <div class="item" onclick="window.location.href='item.html?id=${book.id}'">
+            <div class="item" onclick="window.location.href='./item.html?id=${book.id}'">
                 <form>
                     <div class="box-item">
                         <div class="img"><img src="${book.image}" alt=""></div>

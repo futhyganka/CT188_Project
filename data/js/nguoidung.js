@@ -99,5 +99,5 @@ if(localStorage.getItem("userCurr") === null) {
 
 function logOutUser() {
     localStorage.removeItem("userCurr");
-    window.location.href = "/gioithieu.html";
+    window.location.href = "./gioithieu.html";
 }

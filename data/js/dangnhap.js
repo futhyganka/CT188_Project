@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", async function(e) {
                 localStorage.setItem("userCurr", users[userIndex].id);
 
                 // Chuyển trang (ví dụ về trang chủ)
-                window.location.href = "gioithieu.html";
+                window.location.href = "./gioithieu.html";
             
             }
 

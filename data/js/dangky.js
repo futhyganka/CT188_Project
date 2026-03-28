@@ -170,7 +170,7 @@ registerForm.addEventListener("submit", async function(e) {
         createUser(user, (u) => {
             alert("Đăng ký thành công!");
             registerForm.reset();
-            window.location.href = "/dangnhap.html";
+            window.location.href = "./dangnhap.html";
         });
 
     });

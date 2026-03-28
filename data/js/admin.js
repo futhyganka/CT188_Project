@@ -1,7 +1,7 @@
 // Không cho truy cập trực tiếp qua link
-// if (document.referrer.search("/nguoidung.html") === -1 && document.referrer.search("/admin.html") === -1) {
-//     window.location.href = "/gioithieu.html";
-// }
+if (document.referrer.search("/nguoidung.html") === -1 && document.referrer.search("/admin.html") === -1) {
+    window.location.href = "./gioithieu.html";
+}
 
 let navbarsAdmin = document.querySelectorAll('.navbar .nav-link');
 let boxsAdmin = document.querySelectorAll('main > div');
