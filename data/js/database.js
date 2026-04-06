@@ -2947,7 +2947,7 @@ let database = {
       "size": "16x24 cm",
       "weight": "480 gram",
       "format": "Bìa mềm",
-      "price": 140000,
+      "price": 14000,
       "quantity": 540,
       "status": "Có hàng",
       "discount": 10
@@ -3098,7 +3098,7 @@ let database = {
       "name": "Nguyễn Bánh Bèo",
       "phone": "0123456789",
       "email": "ab@gmail.com",
-      "password": "13c7545a1e1eae6bf1621b6dcd53368bcd1ac94da8180102410ec3057f1caaf1",
+      "password": "2532a24ffc75a821be237f3afcd5db9aba6bcbf0dd026940fa1dda757a8f3fed",
       "address": "Cần Thơ",
       "order": [
         "id1",
@@ -3131,7 +3131,8 @@ let database = {
         }
       ],
       "discount": 2,
-      "status": "Chờ xử lý"
+      "status": "Chờ xử lý",
+      "ship" : 14000
     },
     {
       "id": "1234567",
@@ -3148,7 +3149,8 @@ let database = {
         }
       ],
       "discount": 2,
-      "status": "Chờ xử lý"
+      "status": "Chờ xử lý",
+      "ship" : 14000
     },
     {
       "id": "1234576",
@@ -3165,7 +3167,8 @@ let database = {
         }
       ],
       "discount": 2,
-      "status": "Chờ xử lý"
+      "status": "Chờ xử lý",
+      "ship" : 14000
     },
     {
       "id": "1237456",
@@ -3182,7 +3185,8 @@ let database = {
         }
       ],
       "discount": 2,
-      "status": "Chờ xử lý"
+      "status": "Chờ xử lý",
+      "ship" : 14000
     },
     {
       "id": "1273456",
@@ -3199,7 +3203,8 @@ let database = {
         }
       ],
       "discount": 2,
-      "status": "Chờ xử lý"
+      "status": "Chờ xử lý",
+      "ship" : 14000
     }
   ]
 }

@@ -45,7 +45,7 @@ if(localStorage.getItem("userCurr") === null) {
             e.preventDefault();
         }
         if(user.role === 'admin') {
-            boxUser.innerHTML += '<a class="to-adminpage" href="admin.html">Đến trang admin</a>'
+            boxUser.innerHTML += '<a class="to-adminpage" href="./admin.html">Đến trang admin</a>'
         }
     })
 
@@ -61,21 +61,31 @@ if(localStorage.getItem("userCurr") === null) {
             formUser.email.disabled = false;
             formUser.address.disabled = false;
         }else {
-            if(formUser.name.value.length <= 6) {
-                alert('Tên người dùng phải ít nhất 6 ký tự');
+            if(formUser.name.value.trim().length === 0) {
+                alert('Tên người dùng không được để trống');
                 isEditingUser = !isEditingUser;
                 return;
             }
-            if(formUser.phone.value.length != 10) {
+            if(formUser.phone.value.length < 9 || formUser.phone.value.length > 11) {
                 alert('Số điện thoại không hợp lệ');
                 isEditingUser = !isEditingUser;
                 return;
             }
+            if(!/^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,4}$/g.test(formUser.email.value.trim())) {
+                alert('Email không hợp lệ');
+                isEditingUser = !isEditingUser;
+                return;
+            }
+            if(formUser.address.value.trim().length < 12) {
+                alert('Vui lòng nhập rõ địa chỉ');
+                isEditingUser = !isEditingUser;
+                return;
+            }
             let modifyUser = {
-                'name': formUser.name.value,
+                'name': formUser.name.value.trim(),
                 'phone': formUser.phone.value,
-                'email': formUser.email.value,
-                'address': formUser.address.value
+                'email': formUser.email.value.trim(),
+                'address': formUser.address.value.trim()
             }
 
             // getUser(idUser, (user) => {
@@ -86,6 +96,9 @@ if(localStorage.getItem("userCurr") === null) {
 
                 setUser(id, modifyUser, () => {
                     btnModifyUser.innerText = 'Sửa thông tin';
+                    formUser.name.value = formUser.name.value.trim();
+                    formUser.email.value = formUser.email.value.trim();
+                    formUser.address.value = formUser.address.value.trim();
                     formUser.name.disabled = true;
                     formUser.phone.disabled = true;
                     formUser.email.disabled = true;
