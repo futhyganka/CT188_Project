@@ -3099,7 +3099,7 @@ let database = {
       "phone": "0123456789",
       "email": "ab@gmail.com",
       "password": "2532a24ffc75a821be237f3afcd5db9aba6bcbf0dd026940fa1dda757a8f3fed",
-      "address": "Cần Thơ",
+      "address": "Ninh Kiều, Cần Thơ",
       "order": [
         "id1",
         "id2"

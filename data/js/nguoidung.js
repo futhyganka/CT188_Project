@@ -81,6 +81,20 @@ if(localStorage.getItem("userCurr") === null) {
                 isEditingUser = !isEditingUser;
                 return;
             }
+
+            let isErrorEmail = false;
+            getUsers((users) => {
+                let user = users.find((u) => u.email === formUser.email.value.trim());
+                if(user && user.id != id) {
+                    isErrorEmail = true;
+                }
+            })
+            if(isErrorEmail) {
+                alert('Email đã tồn tại');
+                isEditingUser = !isEditingUser;
+                return;
+            }
+
             let modifyUser = {
                 'name': formUser.name.value.trim(),
                 'phone': formUser.phone.value,
