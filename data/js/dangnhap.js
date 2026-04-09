@@ -7,6 +7,11 @@ async function hashPassword(password) {
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+// nếu đã đăng nhập thì chuyển về trang giới thiệu
+if(localStorage.getItem('userCurr')) {
+    window.location.href = "./gioithieu.html";
+}
+
 // đăng nhập
 const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", async function(e) {
@@ -170,8 +175,26 @@ resetBtn.onclick = async function () {
     }
 
     if (!(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[?!@#$%^&*-]).{8,}$/.test(password))) {
-        errorMsg.innerText = "Mật khẩu chưa đúng định dạng! (8 ký tự, chữ hoa, chữ thường, số, ký tự đặc biệt(?!@#$%^&*-))";
+        errorMsg.innerText = "";
         errorMsg.style.color = "#d51c24";
+        if(password.length < 8) {
+            errorMsg.innerText += "Mật khẩu phải chứa ít nhất 8 ký tự\n"
+        }
+        if(!/[A-Z]/.test(password)) {
+            errorMsg.innerText += "Mật khẩu phải chứa ít nhất 1 ký tự viết hoa\n"
+        }
+        if(!/[a-z]/.test(password)) {
+            errorMsg.innerText += "Mật khẩu phải chứa ít nhất 1 ký tự viết thường\n"
+        }
+        if(!/[0-9]/.test(password)) {
+            errorMsg.innerText += "Mật khẩu phải chứa ít nhất 1 ký tự số\n"
+        }
+        if(!/[?!@#$%^&*-]/.test(password)) {
+            errorMsg.innerText += "Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt (?!@#$%^&*-)\n"
+        }
+        if(/[^A-Za-z0-9?!@#$%^&*-]/.test(password)) {
+            errorMsg.innerText += "Mật khẩu không được chứa bất kì ký tự nào khác nhóm trên\n"
+        }
         return;
     }
 

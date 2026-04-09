@@ -7,6 +7,11 @@ async function hashPassword(password) {
     return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+// nếu đã đăng nhập thì chuyển về trang giới thiệu
+if(localStorage.getItem('userCurr')) {
+    window.location.href = "./gioithieu.html";
+}
+
 // Đăng ký
 const registerForm = document.querySelector(".register-form");
 const inputs = registerForm.querySelectorAll(".auth-input");
@@ -69,7 +74,7 @@ for(let i = 0; i < inputs.length; i++) {
             }
         }else if(i === 4) { // địa chỉ
             errors[i].innerText = "";
-            if(inputs[i].value.length < 8) {
+            if(inputs[i].value.length < 12) {
                 errors[i].innerText += "Vui lòng nhập rõ địa chỉ\n"
             }
             if(errors[i].innerText !== "") {

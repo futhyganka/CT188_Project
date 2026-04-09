@@ -239,7 +239,7 @@ async function readerOrderAdmin() {
             let price = products.reduce((sum, p) => sum + p.total, 0);
             let discount = Number(order.discount);
             let discountMoney = price * discount / 100;
-            let final = price - discountMoney;
+            let final = price - discountMoney + order.ship;
 
             return `<tr>
                 <td>${i+1}</td>
@@ -248,6 +248,7 @@ async function readerOrderAdmin() {
                 <td>${productHTML}</td>
                 <td>${price.toLocaleString('vi-VN')}đ</td>
                 <td>${discountMoney.toLocaleString('vi-VN')}đ</td>
+                <td>${order.ship.toLocaleString('vi-VN')}đ</td>
                 <td>${final.toLocaleString('vi-VN')}đ</td>
                 <td>${order.status}</td>
                 <td>

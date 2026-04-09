@@ -83,13 +83,14 @@ function goToPage(page) {
     // 2. Chạy lại hàm filter theo đúng trang người dùng vừa click
     doSearch(page);
 }
+
 // Khởi tạo biến toàn cục
 let allBooks = [];
 let filteredBooks = [];
 let currentPage = 1;
 const productsPerPage = 20;
 
-// Khi trang vừa load xong, lấy dữ liệu và hiển thị ngay
+// Khi trang vừa load xong, lấy dữ liệu và thiết lập sự kiện
 document.addEventListener('DOMContentLoaded', () => {
     // getBooks đã được định nghĩa trong file database.js của bạn
     getBooks((books) => {
@@ -97,13 +98,35 @@ document.addEventListener('DOMContentLoaded', () => {
         filteredBooks = [...allBooks];
         doSearch(1); // Load sản phẩm trang 1
     });
+
+    // --- SỰ KIỆN CHO THANH TÌM KIẾM ---
+    const searchInput = document.querySelector('.search-box input');
+    const searchIcon = document.querySelector('.search-box i');
+
+    if(searchInput && searchIcon) {
+        // Lọc khi nhấn phím Enter
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); 
+                doSearch(1); 
+            }
+        });
+
+        // Lọc khi click vào icon kính lúp
+        searchIcon.addEventListener('click', function() {
+            doSearch(1);
+        });
+        
+        // Cải thiện UX UX: pointer cho icon kính lúp
+        searchIcon.style.cursor = "pointer";
+    }
 });
 
-// Hàm chính xử lý Lọc, Sắp xếp và Render
+// Hàm chính xử lý Lọc, Sắp xếp, Tìm kiếm và Render
 window.doSearch = function (page = 1) {
     currentPage = page;
 
-    // 1. Lấy tất cả các ô checkbox đang được tích (Checked)
+    // 1. Lấy dữ liệu từ bộ lọc và ô tìm kiếm
     const typeCheckboxes = document.querySelectorAll('.filter-type input[type="checkbox"]:checked');
     const selectedTypes = Array.from(typeCheckboxes).map(cb => cb.value);
 
@@ -113,12 +136,21 @@ window.doSearch = function (page = 1) {
     const sortCheckbox = document.querySelector('.filter-price input[type="checkbox"]:checked');
     const selectedSort = sortCheckbox ? sortCheckbox.value : null;
 
+    const searchInput = document.querySelector('.search-box input');
+    const keyword = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
     // 2. Tiến hành lọc (Filter) dữ liệu
     filteredBooks = allBooks.filter(book => {
         let matchType = true;
         let matchVendor = true;
+        let matchKeyword = true;
 
-        // Lọc theo Thể loại (Chấp nhận so khớp tương đối vì Value HTML và DB có thể viết khác nhau)
+        // Lọc theo từ khóa tìm kiếm (theo tên sách)
+        if (keyword !== '') {
+            matchKeyword = book.title.toLowerCase().includes(keyword);
+        }
+
+        // Lọc theo Thể loại
         if (selectedTypes.length > 0) {
             matchType = selectedTypes.some(selected => {
                 let normSelected = selected.toLowerCase().replace(/-/g, '');
@@ -138,7 +170,7 @@ window.doSearch = function (page = 1) {
             }
         }
 
-        return matchType && matchVendor;
+        return matchType && matchVendor && matchKeyword;
     });
 
     // 3. Tiến hành sắp xếp (Sort) dữ liệu nếu có
@@ -175,21 +207,25 @@ function renderProducts() {
 
     // Nếu không có kết quả nào phù hợp
     if (paginatedBooks.length === 0) {
-        listContainer.innerHTML = '<p style="text-align: center; width: 100%; padding: 50px 20px; font-size: 18px; color: #555;">Không tìm thấy sản phẩm nào phù hợp với bộ lọc.</p>';
+        listContainer.innerHTML = '<p style="text-align: center; width: 100%; padding: 50px 20px; font-size: 18px; color: #555;">Không tìm thấy sản phẩm nào phù hợp với bộ lọc và tìm kiếm.</p>';
         return;
     }
 
-    // Đổ dữ liệu thật vào cấu trúc HTML gốc của bạn
+    // Đổ dữ liệu thật vào cấu trúc HTML
+    // Lưu ý: Đã đổi <form> thành thẻ <a> để có thể chuyển hướng sang trang chi tiết
     listContainer.innerHTML = paginatedBooks.map((book) => {
         const discountedPrice = book.price * (100 - book.discount) / 100;
 
         // Định dạng giá tiền có dấu chấm (VNĐ)
         const formattedPrice = discountedPrice.toLocaleString('vi-VN') + '₫';
         const formattedOldPrice = book.price.toLocaleString('vi-VN') + '₫';
+        
+        // Đảm bảo object book trong database.js của bạn có trường id. Ví dụ: book.id
+        const productId = book.id || '#'; 
 
         return `
         <div class="item">
-            <form action="">
+            <a href="./item.html?id=${productId}" style="text-decoration: none; color: inherit;">
                 <div class="box-item">
                     <div class="img"><img src="${book.image}" alt="${book.title}"></div>
                     <h4 class="title-item">${book.title}</h4>
@@ -199,7 +235,7 @@ function renderProducts() {
                         <span class="price-old">${formattedOldPrice}</span>
                     </div>
                 </div>
-            </form>
+            </a>
         </div>`;
     }).join("");
 }
