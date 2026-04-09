@@ -3112,7 +3112,9 @@ let database = {
       "address": "An Giang",
       "id": "ABC",
       "password": "Tuilama@12",
-      "role": "user"
+      "role": "user",
+      "coupons": [] //bổ sung
+      
     }
   ],
   "orders": [

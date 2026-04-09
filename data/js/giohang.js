@@ -159,3 +159,73 @@ document.addEventListener("DOMContentLoaded", function () {
     // Chạy hàm kiểm tra ngay khi load trang
     handleViewMoreButton();
 });
+
+
+//kiểm tra đăng nhập trước khi thanh toán
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutButtons = document.querySelectorAll(".checkout-btn");
+
+    checkoutButtons.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            let user = localStorage.getItem("userCurr");
+
+            //  CHƯA ĐĂNG NHẬP
+            if (!user) {
+                e.preventDefault();
+
+                // Hiện thông báo
+                alert("Bạn cần đăng nhập trước khi thanh toán!");
+
+                // Delay 1 chút cho user đọc
+                setTimeout(function () {
+                    window.location.href = "dangnhap.html";
+                }, 800);
+
+                return;
+            }
+
+            //  ĐÃ ĐĂNG NHẬP
+            window.location.href = "thanhtoan.html";
+        });
+    });
+});
+
+
+
+
+//XỬ LÝ NÚT CHECK
+document.addEventListener("DOMContentLoaded", function () {
+    let userId = localStorage.getItem("userCurr");
+    if (!userId) return;
+
+    getUser(userId, function (user) {
+        let cart = user.cart || [];
+
+        const container = document.getElementById("cart-list");
+        container.innerHTML = "";
+
+        cart.forEach(item => {
+            const div = document.createElement("div");
+
+            div.innerHTML = `
+                <input type="checkbox" ${item.check ? "checked" : ""}>
+                <span>${item.title}</span>
+                <span>${item.price}</span>
+            `;
+
+            const checkbox = div.querySelector("input");
+
+            checkbox.addEventListener("change", function () {
+                item.check = this.checked ? 1 : 0;
+                setUser(user.id, { cart: cart });
+            });
+
+            container.appendChild(div);
+        });
+
+        // 👉 Nút thanh toán
+        document.getElementById("goCheckout").onclick = function () {
+            window.location.href = "thanhtoan.html";
+        };
+    });
+});
