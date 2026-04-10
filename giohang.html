@@ -111,11 +111,6 @@
                                                 XEM GIỎ HÀNG
                                             </button></a
                                         >
-                                        <!-- <a href="./thanhtoan.html" -->
-                                            <button class="btn-checkout" id="checkoutBtn">
-                                                THANH TOÁN
-                                            </button>
-                                        <!-- </a> -->
                                     </div>
                                 </div>
                             </div>
@@ -243,8 +238,8 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr>
+                <tbody id="cart-items-body">
+                    <!-- <tr>
                         <td>
                             <input type="checkbox" class="cart-checkbox" />
                         </td>
@@ -282,47 +277,7 @@
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <input type="checkbox" class="cart-checkbox" />
-                        </td>
-                        <td class="product-info">
-                            <img
-                                src="https://bizweb.dktcdn.net/thumb/medium/100/576/749/products/2cf02882-896e-4ad7-8f45-51c2e6ff77e8.jpg?v=1772442412947"
-                                class="book-img"
-                            />
-                            <p>
-                                Doraemon Movie Story Màu - Nobita và cuộc đại
-                                thủy chiến ở xứ sở Người cá
-                            </p>
-                        </td>
-                        <td class="price">
-                            <span class="new-price">31.500đ</span><br />
-                            <span class="old-price">35.000đ</span><br />
-                            <span class="discount">-10%</span>
-                        </td>
-                        <td class="quantity">
-                            <div class="quantity-group">
-                                <button class="btn-minus">-</button>
-                                <input
-                                    class="number"
-                                    type="text"
-                                    value="1"
-                                    min="1"
-                                    readonly
-                                />
-                                <button class="btn-plus">+</button>
-                            </div>
-                        </td>
-                        <td class="total-price">31.500đ</td>
-                        <td class="remove">
-                            <button type="button">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 
@@ -337,15 +292,13 @@
                 <div class="cart-footer">
                     <div class="summary-box">
                         <div class="total">
-                            Tổng thanh toán: <span>0đ</span>
+                            <!-- Tổng thanh toán: <span>0đ</span> -->
                         </div>
                         <div class="saving">
-                            Bạn tiết kiệm được: <span>0đ</span>
+                            <!-- Bạn tiết kiệm được: <span>0đ</span> -->
                         </div>
                         <!-- <a href="thanhtoan.html"> -->
-                            <button class="checkout-btn">
-                                Thanh toán ngay
-                            </button>
+                        <button class="checkout-btn">Thanh toán ngay</button>
                         <!-- </a> -->
                     </div>
                 </div>

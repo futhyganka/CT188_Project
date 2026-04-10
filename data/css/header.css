@@ -281,8 +281,8 @@
 /* Danh sách sản phẩm */
 .cart-body {
     padding: 15px;
-    max-height: 350px;
-    overflow-y: auto; /* Nếu nội dung dài hơn 350px thì cho hiện thanh cuộn */
+    /* max-height: 331px; */
+    overflow: hidden;
 }
 
 .cart-item {
@@ -331,8 +331,8 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 15px;
-    padding: 15px 15px 15px 5px;
+    font-size: 18px;
+    padding: 15px;
     background-color: #f7f7f7;
     margin-bottom: 15px;
 }
