@@ -281,7 +281,7 @@
 /* Danh sách sản phẩm */
 .cart-body {
     padding: 15px;
-    max-height: 331px;
+    /* max-height: 331px; */
     overflow: hidden;
 }
 

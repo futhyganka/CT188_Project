@@ -838,7 +838,7 @@ let database = {
             publish: "NXB Văn học",
             date: "2024",
             size: "13.5 x 20.5 cm",
-            weight: "230 gra",
+            weight: "230 gram",
             format: "Bìa mềm",
             price: 55000,
             quantity: 50,

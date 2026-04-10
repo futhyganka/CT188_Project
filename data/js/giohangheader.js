@@ -53,13 +53,14 @@ function updateDropdown() {
 
     if (!cartBodyDropdown) return;
 
+    if (badge) badge.innerText = data.length;
     cartBodyDropdown.innerHTML = "";
 
     let total = 0;
 
     let totalSaving = 0; // THÊM DÒNG NÀY
 
-    data.forEach(({ id, qty }) => {
+    data.forEach(({ id, qty }, i) => {
         getBook(id, (item) => {
             const giaGoc = item.price || 0;
 
@@ -83,7 +84,7 @@ function updateDropdown() {
 
                 </div>`;
 
-            cartBodyDropdown.insertAdjacentHTML("beforeend", itemHTML);
+            if (i < 3) cartBodyDropdown.innerHTML += itemHTML;
 
             // TÍNH TOÁN
 

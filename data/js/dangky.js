@@ -18,7 +18,7 @@ const inputs = registerForm.querySelectorAll(".auth-input");
 const errors = registerForm.querySelectorAll(".error-text");
 let isError = true;
 let passReg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[?!@#$%^&*-]).{8,}$/g;
-let emailReg = /^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,4}$/g;
+let emailReg = /^[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z]{2,4}$/;
 
 for(let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('input', (e) => {
