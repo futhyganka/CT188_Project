@@ -88,4 +88,7 @@ function addToCartCustom(id, quantity) {
 
         if (typeof updateDropdown === "function") updateDropdown();
     });
+
 }
+
+
