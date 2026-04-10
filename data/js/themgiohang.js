@@ -1,44 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Hàm này sẽ chạy mỗi khi trang web tải xong hoặc khi giỏ hàng thay đổi
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Hàm này sẽ chạy mỗi khi trang web tải xong hoặc khi giỏ hàng thay đổi
 
-    function handleViewMoreButton() {
-        // 1. Đếm số lượng sản phẩm đang có trong giỏ hàng nhỏ
+//     function handleViewMoreButton() {
+//         // 1. Đếm số lượng sản phẩm đang có trong giỏ hàng nhỏ
 
-        const cartItems = document.querySelectorAll(".cart-body .cart-item");
+//         const cartItems = document.querySelectorAll(".cart-body .cart-item");
 
-        // 2. Tìm nút "Xem thêm"
+//         // 2. Tìm nút "Xem thêm"
 
-        // const viewMoreBtn = document.getElementById("view-more-cart");
+//         // const viewMoreBtn = document.getElementById("view-more-cart");
 
-        // 3. Tìm badge
+//         // 3. Tìm badge
 
-        const badge = document.querySelector(".cart-btn .badge");
+//         const badge = document.querySelector(".cart-btn .badge");
 
-        const cartHeader = document.querySelector(".cart-header");
+//         const cartHeader = document.querySelector(".cart-header");
 
-        // if (viewMoreBtn) {
-        //     if (cartItems.length >= 3) {
-        //         // Nếu >= 3 sản phẩm thì hiện nút
+//         // if (viewMoreBtn) {
+//         //     if (cartItems.length >= 3) {
+//         //         // Nếu >= 3 sản phẩm thì hiện nút
 
-        //         viewMoreBtn.style.display = "inline-block";
-        //     } else {
-        //         // Nếu dưới 3 sản phẩm thì ẩn nút
+//         //         viewMoreBtn.style.display = "inline-block";
+//         //     } else {
+//         //         // Nếu dưới 3 sản phẩm thì ẩn nút
 
-        //         viewMoreBtn.style.display = "none";
-        //     }
-        // }
+//         //         viewMoreBtn.style.display = "none";
+//         //     }
+//         // }
 
-        // Cập nhật con số tượng trưng trên Badge và Header
+//         // Cập nhật con số tượng trưng trên Badge và Header
 
-        if (badge) badge.innerText = cartItems.length;
+//         if (badge) badge.innerText = cartItems.length;
 
-        if (cartHeader) cartHeader.innerText = `Giỏ hàng của tôi`;
-    }
+//         if (cartHeader) cartHeader.innerText = `Giỏ hàng của tôi`;
+//     }
 
-    // Chạy hàm kiểm tra ngay khi load trang
+//     // Chạy hàm kiểm tra ngay khi load trang
 
-    handleViewMoreButton();
-});
+//     handleViewMoreButton();
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
     const addBtn = document.querySelector(".btn.add");
