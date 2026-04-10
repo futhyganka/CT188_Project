@@ -147,6 +147,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleSearch = () => {
             suggestionBox.style.display = 'none';
             doSearch(1);
+            
+            const mainSection = document.getElementById('main');
+            if (mainSection) {
+                mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         };
 
         searchInput.addEventListener('keypress', (e) => {
