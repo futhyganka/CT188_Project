@@ -108,3 +108,96 @@ main .order .navbar.navbar-expand-sm .container-fluid .nav-link.active {
 main .order hr {
     margin-top: -4px;
 }
+
+main .order .content-order {
+
+}
+
+main .order .content-order > div {
+    display: none;
+}
+
+main .order .content-order > div.active {
+    display: block;
+}
+
+main .order .content-order .detail {
+    display: flex;
+    margin-top: 16px;
+}
+
+main .order .content-order .detail .info {
+    flex: 1;
+    border-right: solid 1px #ccc;
+}
+
+main .order .content-order .detail .info table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+main .order .content-order .detail .info table tr td:first-child {
+    width: 40px;
+}
+
+main .order .content-order .detail .info table tr td:last-child {
+    padding: 0 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+main .order .content-order .detail .products {
+    flex: 4;
+    margin: 0 4px;
+}
+
+main .order .content-order .detail .products .product {
+    display: flex;
+    margin-top: 8px;
+}
+
+main .order .content-order .detail .products .product .img {
+    width: 60px;
+}
+
+main .order .content-order .detail .products .product .img img {
+    width: 100%;
+}
+
+main .order .content-order .detail .products .product .detail-product {
+    position: relative;
+    width: calc(100% - 60px);
+}
+
+main .order .content-order .detail .products .product .title {
+    /* font-size: 18px; */
+    padding-left: 4px;
+    margin-bottom: 26px;
+}
+
+main .order .content-order .detail .products .product .price {
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+}
+
+main .order .content-order .detail .products .product .price .price-new {
+    color: var(--main-color);
+}
+
+main .order .content-order .detail .products .product .price .price-old {
+    opacity: 0.25;
+    text-decoration: line-through;
+}
+
+main .order .content-order .detail .products .qty {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+main .order .content-order .detail .products > .price,
+main .order .content-order .detail .products .ship {
+    text-align: right;
+}

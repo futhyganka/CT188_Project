@@ -145,6 +145,12 @@ function startAdminPage() {
     handleDropdown(0);
 }
 
+window.addEventListener('storage', (e) => {
+    getAllBook();
+    getAllUser();
+    getAllOrder();
+});
+
 // Lấy dữ liệu
 function getAllBook() {
     getBooks((books) => {

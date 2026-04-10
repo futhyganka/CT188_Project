@@ -32,6 +32,7 @@ function updateDropdown() {
     const data = JSON.parse(localStorage.getItem("cart")) || [];
     if (!cartBodyDropdown) return;
 
+    if (badge) badge.innerText = data.length;
     cartBodyDropdown.innerHTML = "";
     let total = 0;
 
@@ -53,7 +54,6 @@ function updateDropdown() {
 
     cartTotal.innerHTML = `TẠM TÍNH: <span>${formatCurrency(total)}</span>`;
 
-    if (badge) badge.innerText = data.length;
     if (cartHeader)
         cartHeader.innerText = `Giỏ hàng của tôi (${data.length} sản phẩm)`;
 }
