@@ -182,3 +182,88 @@ setupSeeMoreLink(book);
 function goToDetail(id) {
     window.location.href = `item.html?id=${id}`;
 }
+
+
+// ===== THÊM VÀO GIỎ HÀNG =====
+// ===== LẤY SẢN PHẨM HIỆN TẠI (demo - bạn có thể lấy từ database.js) =====
+const product = {
+    id: Date.now(),
+    name: document.querySelector(".title")?.innerText || "Sản phẩm demo",
+    price: document.querySelector(".new.price")?.innerText || "0đ",
+    oldPrice: document.querySelector(".oldPrice")?.innerText || "",
+    img: document.querySelector(".main-img")?.src || "",
+};
+
+// ===== TĂNG GIẢM SỐ LƯỢNG =====
+const qtyInput = document.querySelector(".qty");
+document.querySelector(".plus").onclick = () => {
+    qtyInput.value = parseInt(qtyInput.value) + 1;
+};
+
+document.querySelector(".minus").onclick = () => {
+    if (qtyInput.value > 1) {
+        qtyInput.value = parseInt(qtyInput.value) - 1;
+    }
+};
+
+// ===== THÊM VÀO GIỎ =====
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======MUA NGAY======
+//kiểm tra đăng nhập trước khi thanh toán
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutButtons = document.querySelectorAll(".checkout-btn");
+
+    checkoutButtons.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            let user = localStorage.getItem("userCurr");
+
+            //  CHƯA ĐĂNG NHẬP
+            if (!user) {
+                e.preventDefault();
+
+                // Hiện thông báo
+                alert("Bạn cần đăng nhập trước khi thanh toán!");
+
+                // Delay 1 chút cho user đọc
+                setTimeout(function () {
+                    window.location.href = "dangnhap.html";
+                }, 800);
+
+                return;
+            }
+
+            //  ĐÃ ĐĂNG NHẬP
+                const id = getIdFromURL();
+
+                // Lấy số lượng
+                const qty = document.querySelector(".qty").value;
+
+                // Chuyển trang kèm id + số lượng
+                window.location.href = `thanhtoan.html?id=${id}&qty=${qty}`;
+            // window.location.href = "thanhtoan.html";
+        });
+    });
+});
+
+// Lấy id từ URL hiện tại
+function getIdFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("id");
+}
+
+// Xử lý nút MUA NGAY
+document.querySelector(".btn.buy").onclick = function () {
+
+};

@@ -85,3 +85,16 @@
 .voucher-right button:hover{
     background: var(--dark-color);
 }
+
+
+/* trạng thái đã lưu */
+/* .voucher button.saved-btn {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    border: none;
+}
+
+.voucher button.saved-btn:hover {
+    background-color: #ccc;
+} */
