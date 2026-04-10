@@ -160,6 +160,7 @@
     background-color: #d71920;
     color: #fff;
     box-shadow: 0 4px 10px rgba(215, 25, 32, 0.3); 
+    border: 0px;
 }
 
 
@@ -250,3 +251,6 @@
     cursor: pointer;
 }
 
+#main .book-shop .bs-content .pagination-wrapper .pagination .page-item.active {
+    border: 0px;
+}
