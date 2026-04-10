@@ -115,20 +115,6 @@
     color: #d71920;
 }
 
-.filter-item input[type="radio"] {
-    display: none;
-}
-
-
-.filter-item input[type="radio"]:checked + i {
-    color: #d71920; /* Màu đỏ khi được chọn */
-    font-weight: bold;
-}
-
-.filter-item input[type="radio"]:checked ~ label {
-    color: #d71920;
-}
-
 .filter-item label {
     cursor: pointer;
     display: flex;

@@ -122,13 +122,18 @@ window.doSearch = function (page = 1) {
         }
 
         if (selectedTypes.length > 0) {
-            matchType = selectedTypes.some(selected => {
-                let normSelected = selected.toLowerCase().replace(/-/g, '');
-                return book.topic && book.topic.some(t => {
-                    let normTopic = t.toLowerCase().replace(/-/g, '');
-                    return normSelected.includes(normTopic) || normTopic.includes(normSelected);
+            if (!book.topic || book.topic.length !== selectedTypes.length) {
+                matchType = false;
+            } else {
+
+                matchType = selectedTypes.every(selected => {
+                    let normSelected = selected.toLowerCase().replace(/-/g, '');
+                    return book.topic.some(t => {
+                        let normTopic = t.toLowerCase().replace(/-/g, '');
+                        return normSelected.includes(normTopic) || normTopic.includes(normSelected);
+                    });
                 });
-            });
+            }
         }
 
         if (selectedVendors.length > 0) {
