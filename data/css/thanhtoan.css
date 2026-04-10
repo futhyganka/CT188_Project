@@ -156,8 +156,6 @@ textarea {
 .coupon-box {
     display: flex;
     gap: 10px;
-    margin: 20px 0;
-    /* padding: 20px 0; */
 }
 
 .coupon-box input {
@@ -220,4 +218,88 @@ textarea {
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+//mã giảm giá
+/* Wrapper */
+.coupon-input-wrap {
+    position: relative;
+    width: 100%;
+    flex: 1;
+}
+
+/* Dropdown */
+.coupon-suggest {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    display: block; /* 👉 test tạm */
+    z-index: 9999;  /* 👉 tăng cao lên */
+}
+/* Khi show */
+.coupon-suggest.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Item */
+.coupon-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* Bỏ border cuối */
+.coupon-item:last-child {
+    border-bottom: none;
+}
+
+/* Hover giống menu */
+.coupon-item:hover {
+    background-color: #f5f5f5;
+    color: var(--main-color);
+}
+
+/* Item đang chọn */
+.coupon-item.active {
+    background-color: #efefef;
+    font-weight: 500;
+}
+
+/* Scroll đẹp hơn */
+.coupon-suggest::-webkit-scrollbar {
+    width: 6px;
+}
+
+.coupon-suggest::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.coupon-suggest::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+.checkout-right {
+    position: relative; /* 🔥 FIX CHÍNH */
+}
+
+.checkout-container {
+    overflow: visible;
+}
+
+.coupon-input-wrap {
+    position: relative; /* 🔥 BẮT BUỘC */
 }

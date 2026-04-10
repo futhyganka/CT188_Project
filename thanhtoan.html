@@ -88,9 +88,12 @@
                     <div class="prod-price">31.500đ</div>
                 </div>
 
-                <div class="coupon-box">
-                    <input type="text" placeholder="Nhập mã giảm giá" />
-                    <button>Áp dụng</button>
+               <div class="coupon-box">
+                    <div class="coupon-input-wrap">
+                        <input type="text" id="couponInput" placeholder="Nhập mã giảm giá" />
+                        <div class="coupon-suggest" id="couponSuggest"></div>
+                    </div>
+                    <button id="applyCoupon">Áp dụng</button>
                 </div>
 
                 <div class="bill-detail">
@@ -109,7 +112,7 @@
 
                 <div class="action-footer">
                     <a href="giohang.html"> < Quay về giỏ hàng</a>
-                    <button class="btn-order" >ĐẶT HÀNG</button>
+                    <button class="btn-order" id="btnOrder" >ĐẶT HÀNG</button>
                 </div>
             </div>
         </div>
@@ -117,5 +120,6 @@
 
 
     <!-- script -->
+     <script src="./data/js/database.js"></script>
      <script src="./data/js/thanhtoan.js"></script>
 </html>

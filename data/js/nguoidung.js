@@ -114,3 +114,56 @@ function logOutUser() {
     localStorage.removeItem("userCurr");
     window.location.href = "./gioithieu.html";
 }
+
+//HIỂN THỊ ĐƠN HÀNG
+function renderOrders() {
+    let userId = localStorage.getItem("userCurr");
+    let container = document.querySelector(".order");
+
+    getUser(userId, function(user) {
+        if (!user || !user.order) {
+            container.innerHTML += "<p>Chưa có đơn hàng</p>";
+            return;
+        }
+
+        getOrders(function(orders) {
+            getBooks(function(books) {
+
+                let html = "";
+
+                user.order.forEach(orderId => {
+                    let order = orders.find(o => o.id === orderId);
+                    if (!order) return;
+
+                    html += `
+                        <div class="order-box">
+                            <h5>Mã đơn: ${order.id}</h5>
+                            <p>Ngày: ${order.date}</p>
+                            <p>Trạng thái: ${order.status}</p>
+                    `;
+
+                    order.product.forEach(p => {
+                        let book = books.find(b => b.id === p.id);
+
+                        if (book) {
+                            html += `
+                                <div class="order-item">
+                                    <img src="${book.img}" width="60">
+                                    <span>${book.name}</span>
+                                    <span>${book.price}đ x ${p.quantity}</span>
+                                </div>
+                            `;
+                        }
+                    });
+
+                    html += `</div><hr>`;
+                });
+
+                container.innerHTML += html;
+
+            });
+        });
+    });
+}
+
+renderOrders();

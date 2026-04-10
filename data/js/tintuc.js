@@ -1,53 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-            // Dùng Google News RSS để tìm TẤT CẢ các bài báo ở VN có từ khóa "Sách" trong vòng 30 ngày qua
-            const rssUrl = 'https://news.google.com/rss/search?q=sách+xuất+bản+when:30d&hl=vi&gl=VN&ceid=VN:vi'; 
-            
-            // Dùng rss2json để lấy dữ liệu
-            const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+    const rssUrl = 'https://news.google.com/rss/search?q=sách+xuất+bản+when:30d&hl=vi&gl=VN&ceid=VN:vi';
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const newsGrid = document.getElementById('news-grid');
-                    newsGrid.innerHTML = ''; // Xóa chữ "Đang tải..."
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const newsGrid = document.getElementById('news-grid');
+            newsGrid.innerHTML = '';
 
-                    if (data.status === 'ok') {
-                        // Lấy 9 bài viết mới nhất
-                        const articles = data.items.slice(0, 9); 
+            if (data.status === 'ok') {
+                const articles = data.items.slice(0, 9);
 
-                        articles.forEach(article => {
-                            // Xử lý ngày xuất bản
-                            const pubDate = new Date(article.pubDate);
-                            const dateString = `${pubDate.getDate()}/${pubDate.getMonth() + 1}/${pubDate.getFullYear()}`;
+                articles.forEach(article => {
+                    const pubDate = new Date(article.pubDate);
+                    const dateString = `${pubDate.getDate()}/${pubDate.getMonth() + 1}/${pubDate.getFullYear()}`;
 
-                            // --- XỬ LÝ ẢNH THUMBNAIL (NÂNG CẤP) ---
-                            let imageUrl = article.thumbnail;
+                    let imageUrl = article.thumbnail;
 
-                            // Nếu RSS không có sẵn thumbnail, thử bóc tách ảnh từ trong nội dung bài viết
-                            if (!imageUrl) {
-                                const imgMatch = article.description.match(/<img[^>]+src="([^">]+)"/);
-                                if (imgMatch && imgMatch[1]) {
-                                    imageUrl = imgMatch[1];
-                                }
-                            }
+                    if (!imageUrl && article.enclosure && article.enclosure.link) {
+                        imageUrl = article.enclosure.link;
+                    }
 
-                            // Nếu bài báo thực sự không có ảnh, lấy random 1 trong 3 ảnh bìa sách tuyệt đẹp này làm nền
-                            if (!imageUrl) {
-                                const defaultBookImages = [
-                                    'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600&q=80',
-                                    'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80',
-                                    'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80'
-                                ];
-                                imageUrl = defaultBookImages[Math.floor(Math.random() * defaultBookImages.length)];
-                            }
+                    if (!imageUrl) {
+                        const contentToSearch = article.content || article.description || "";
 
-                            // Dọn dẹp đoạn mô tả (loại bỏ các thẻ HTML rác của Google News)
-                            let cleanDesc = article.description.replace(/<[^>]*>?/gm, '');
-                            // Cắt ngắn nếu mô tả quá dài
-                            if(cleanDesc.length > 120) cleanDesc = cleanDesc.substring(0, 120) + '...';
+                        const parser = new DOMParser();
+                        const htmlDoc = parser.parseFromString(contentToSearch, 'text/html');
 
-                            // Tạo khối HTML
-                            const html = `
+                        const imgElement = htmlDoc.querySelector('img');
+
+                        if (imgElement) {
+                            imageUrl = imgElement.getAttribute('data-original') ||
+                                imgElement.getAttribute('data-src') ||
+                                imgElement.getAttribute('src');
+                        }
+                    }
+
+                    if (!imageUrl) {
+                        const defaultBookImages = [
+                            'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600&q=80',
+                            'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80',
+                            'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80'
+                        ];
+                        imageUrl = defaultBookImages[Math.floor(Math.random() * defaultBookImages.length)];
+                    }
+
+                    let cleanDesc = article.description.replace(/<[^>]*>?/gm, '');
+                    if (cleanDesc.length > 120) cleanDesc = cleanDesc.substring(0, 120) + '...';
+
+                    const html = `
                                 <div class="blog-item">
                                     <div class="blog-img">
                                         <a href="${article.link}" target="_blank">
@@ -72,14 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </div>
                                 </div>
                             `;
-                            newsGrid.innerHTML += html;
-                        });
-                    } else {
-                        newsGrid.innerHTML = '<p style="text-align:center; width:100%;">Lỗi không thể tải được tin tức sách.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Lỗi khi fetch tin tức:', error);
-                    document.getElementById('news-grid').innerHTML = '<p style="text-align:center; width:100%;">Đang bị gián đoạn kết nối, vui lòng thử lại sau.</p>';
+                    newsGrid.innerHTML += html;
                 });
+            } else {
+                newsGrid.innerHTML = '<p style="text-align:center; width:100%;">Lỗi không thể tải được tin tức sách.</p>';
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            document.getElementById('news-grid').innerHTML = '<p style="text-align:center; width:100%;">Đang bị gián đoạn kết nối, vui lòng thử lại sau.</p>';
         });
+});

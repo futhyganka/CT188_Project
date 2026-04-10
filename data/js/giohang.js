@@ -346,4 +346,7 @@ if (checkAll) {
         // 5. Vẽ lại bảng để cập nhật các checkbox con trên giao diện
         renderCartTable();
     });
+
 }
+
+
