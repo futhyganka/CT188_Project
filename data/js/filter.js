@@ -44,7 +44,6 @@ function toggleFilter(element) {
         icon.classList.replace('fa-solid', 'fa-regular');
         icon.classList.replace('fa-circle-check', 'fa-circle');
     }
-    
     doSearch(1);
 }
 
@@ -93,21 +92,67 @@ document.addEventListener('DOMContentLoaded', () => {
         filteredBooks = [...allBooks];
         doSearch(1);
     });
+
     const searchInput = document.querySelector('.search-box input');
     const searchIcon = document.querySelector('.search-box i');
+    const suggestionBox = document.getElementById('search-suggestions');
 
-    if (searchInput && searchIcon) {
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                doSearch(1);
+    if (searchInput && suggestionBox) {
+        searchInput.addEventListener('input', function() {
+            const keyword = this.value.toLowerCase().trim();
+
+            if (keyword.length === 0) {
+                suggestionBox.style.display = 'none';
+                return;
+            }
+
+            const matches = allBooks.filter(book => 
+                book.title.toLowerCase().includes(keyword)
+            );
+
+            if (matches.length > 0) {
+                suggestionBox.style.display = 'block';
+                suggestionBox.innerHTML = matches.map(book => {
+                    const price = book.price * (100 - book.discount) / 100;
+                    return `
+                        <a href="./item.html?id=${book.id}" class="suggestion-item">
+                            <img src="${book.image}" alt="${book.title}">
+                            <div class="suggestion-info">
+                                <div class="suggestion-title">${book.title}</div>
+                                <div class="suggestion-price">${price.toLocaleString('vi-VN')}₫</div>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+            } else {
+                suggestionBox.innerHTML = '<div style="padding:15px; text-align:center; color:#888;">Không tìm thấy sản phẩm</div>';
+                suggestionBox.style.display = 'block';
             }
         });
-        searchIcon.addEventListener('click', function () {
-            doSearch(1);
+
+        document.addEventListener('click', (e) => {
+            if (!document.querySelector('.search-box').contains(e.target)) {
+                suggestionBox.style.display = 'none';
+            }
         });
 
-        searchIcon.style.cursor = "pointer";
+        searchInput.addEventListener('focus', function() {
+            if (this.value.trim() !== "") {
+                suggestionBox.style.display = 'block';
+            }
+        });
+    }
+
+    if (searchInput && searchIcon) {
+        const handleSearch = () => {
+            suggestionBox.style.display = 'none';
+            doSearch(1);
+        };
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleSearch();
+        });
+        searchIcon.addEventListener('click', handleSearch);
     }
 });
 
