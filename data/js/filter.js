@@ -24,6 +24,18 @@ function toggleFilter(element) {
         });
     }
 
+    if (element.dataset.group === "NXB" && element.checked) {
+        const nxbCheckboxes = document.querySelectorAll('.filter-vendor input[type="checkbox"]');
+        nxbCheckboxes.forEach(cb => {
+            if (cb !== element && cb.checked) {
+                cb.checked = false;
+                const cbIcon = cb.parentElement.querySelector('i');
+                cbIcon.classList.replace('fa-solid', 'fa-regular');
+                cbIcon.classList.replace('fa-circle-check', 'fa-circle');
+            }
+        });
+    }
+
     const icon = element.parentElement.querySelector('i');
     if (element.checked) {
         icon.classList.replace('fa-regular', 'fa-solid');
@@ -32,6 +44,7 @@ function toggleFilter(element) {
         icon.classList.replace('fa-solid', 'fa-regular');
         icon.classList.replace('fa-circle-check', 'fa-circle');
     }
+    
     doSearch(1);
 }
 
@@ -125,7 +138,6 @@ window.doSearch = function (page = 1) {
             if (!book.topic || book.topic.length !== selectedTypes.length) {
                 matchType = false;
             } else {
-
                 matchType = selectedTypes.every(selected => {
                     let normSelected = selected.toLowerCase().replace(/-/g, '');
                     return book.topic.some(t => {
