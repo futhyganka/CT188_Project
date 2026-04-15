@@ -1,25 +1,39 @@
-// ===== LẤY ID =====
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+function displayBook() {
+    
+    // ===== LẤY ID =====
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
 
-// kiểm tra id
-if (!id) {
-    alert("Không tìm thấy sản phẩm!");
-    window.location.href = "index.html";
+    // kiểm tra id
+    if (!id) {
+        alert("Không tìm thấy sản phẩm!");
+        window.location.href = "index.html";
+    }
+
+    // ===== LẤY DATA TỪ DATABASE =====
+    getBook(id, (book) => {
+        if (!book) {
+            alert("Sản phẩm không tồn tại!");
+            window.location.href = "./gioithieu.html";
+        }
+
+        // render
+        renderBook(book);
+        loadRelatedBooks(book);
+        renderReviews(book.review);
+
+        // Gọi hàm 
+        setupSeeMoreLink(book);
+    })
+
 }
 
-// ===== LẤY DATA TỪ DATABASE =====
-const book = database.books.find(b => b.id === id);
+displayBook();
 
-if (!book) {
-    alert("Sản phẩm không tồn tại!");
-    window.location.href = "./gioithieu.html";
-}
+window.addEventListener('storage', (e) => {
+    displayBook();
+});
 
-// render
-renderBook(book);
-loadRelatedBooks(book);
-renderReviews(book.review);
 
 function renderReviews(reviews) {
     const container = document.querySelector(".evaluate .rating");
@@ -152,7 +166,7 @@ function setupSeeMoreLink(book) {
     const categoryFiles = {
         'lichsu': 'danhmuclichsu.html',
         'vhvn': 'danhmucvhvn.html',
-        'vhnn': 'danhmucvhnn.html',
+        'vhnn': 'danhmucvnnn.html',
         'truyentranh': 'danhmuctruyentranh.html', // Tên file theo hình ảnh ông gửi
         'kynang': 'danhmuckynang.html',
         'khoahoc': 'danhmuckhoahoc.html'
@@ -174,9 +188,6 @@ function setupSeeMoreLink(book) {
         seeMoreBtn.href = "danhmuckhoahoc.html";
     }
 }
-
-// Gọi hàm 
-setupSeeMoreLink(book);
 
 // ===== CHUYỂN TRANG =====
 function goToDetail(id) {

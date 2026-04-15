@@ -78,15 +78,15 @@ function displayOrderPageUser() {
                                     <table>
                                         <tr class="name">
                                             <td><b>Tên:</b></td>
-                                            <td>${user.name}</td>
+                                            <td>${order.name}</td>
                                         </tr>
                                         <tr class="phone">
                                             <td><b>Sđt:</b></td>
-                                            <td>${maskString(user.phone)}</td>
+                                            <td>${maskString(order.phone)}</td>
                                         </tr>
                                         <tr class="address">
                                             <td><b>ĐChỉ:</b></td>
-                                            <td>${maskString(user.address)}</td>
+                                            <td>${maskString(order.address)}</td>
                                         </tr>
                                     </table>
                                 </div>

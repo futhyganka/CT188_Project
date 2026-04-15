@@ -251,6 +251,3 @@
     cursor: pointer;
 }
 
-#main .book-shop .bs-content .pagination-wrapper .pagination .page-item.active {
-    border: 0px;
-}

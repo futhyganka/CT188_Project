@@ -4,7 +4,7 @@ const renderSections = () => {
         { topic: 'preorder',    class: 'section-pre',  file: 'danhmuctong.html' },
         { topic: 'lichsu',      class: 'section-ls',   file: 'danhmuclichsu.html' },
         { topic: 'vhvn',        class: 'section-vhvn', file: 'danhmucvhvn.html' },
-        { topic: 'vhnn',        class: 'section-vhnn', file: 'danhmucvhnn.html' },
+        { topic: 'vhnn',        class: 'section-vhnn', file: 'danhmucvnnn.html' },
         { topic: 'truyentranh', class: 'section-tt',   file: 'danhmuctruyentranh.html' },
         { topic: 'kynang',      class: 'section-kn',   file: 'danhmuckynang.html' },
         { topic: 'khoahoc',     class: 'section-kh',   file: 'danhmuckhoahoc.html' } 

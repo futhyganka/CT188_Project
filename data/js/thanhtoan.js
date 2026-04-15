@@ -354,6 +354,10 @@ function handleOrder(cartItems) {
         let order = {
             id: orderId,
             user: user.id,
+            email:document.getElementById("email").value,
+            name:document.getElementById("fullname").value,
+            phone:document.getElementById("phone").value,
+            address:document.getElementById("address").value,
             date: date,
             product: products,
             discount: discountAmount, // bạn có thể gán từ voucher
